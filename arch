@@ -1,5 +1,5 @@
 if [[ -z $STOW_FOLDERS ]]; then
-    STOW_FOLDERS="dmscripts,git,imwheel,qtile,shell,terminal,tmux,vim(s)"
+    STOW_FOLDERS="dmscripts,git,imwheel,leftwm,qtile,shell,terminal,tmux,vim(s)"
 fi
 
 if [[ -z $DOTFILES ]]; then

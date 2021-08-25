@@ -82,8 +82,13 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+#XDG config
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
+
 # add stow folders
-export STOW_FOLDERS="dmscripts,git,imwheel,qtile,shell,terminal,tmux,vim(s)"
+export STOW_FOLDERS="dmscripts,git,imwheel,leftwm,qtile,shell,terminal,tmux,vim(s)"
 
 # add dotfiles
 export DOTFILES=$HOME/.dotfiles
