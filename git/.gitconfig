@@ -1,0 +1,7 @@
+[user]
+	email = mccartney.beausl@gmail.com
+	name = BeauSLM
+[init]
+	defaultBranch = main
+; [url "git@github.com:"]
+;     insteadOf = https://github.com/
