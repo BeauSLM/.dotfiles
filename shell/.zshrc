@@ -406,6 +406,7 @@ compinit
 # tmux2
 alias tmux-sessionizer='sh ~/.local/bin/tmux-sessionizer.sh'
 bindkey -s ^f "tmux-sessionizer\n"
+bindkey -s ^k "tmux-sessionizer /home/beaum/.dotfiles\n"
 
 # Random colorscripts
 colorscript random

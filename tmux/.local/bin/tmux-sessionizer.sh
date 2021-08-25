@@ -1,9 +1,7 @@
-#!/usr/bin/env bash
-
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    items=`find ~/Code -maxdepth 2 -mindepth 2 -type d`
+    items=`find ~/Code -maxdepth 2 -mindepth 2 -type d ; find ~/.dotfiles -maxdepth 0 -type d`
     selected=`echo "$items" | fzf`
 fi
 

@@ -29,11 +29,12 @@ require("telescope").load_extension("git_worktree")
 require('telescope').load_extension('fzy_native')
 
 local M = {}
+-- may need to be find_files instead of git files
 M.search_dotfiles = function()
-    require("telescope.builtin").find_files({
+    require("telescope.builtin").git_files({
         prompt_title = "< VimRC >",
         cwd = vim.env.DOTFILES,
-        hidden = true,
+        -- hidden = true,
     })
 end
 
