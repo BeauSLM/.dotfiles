@@ -142,12 +142,14 @@ if [ -d "$HOME/.local/bin" ] ;
   then PATH="$HOME/.local/bin:$PATH"
 fi
 
-#list
-alias ls='ls --color=auto'
+# TODO: add more exa functionality (git??)
+# # alias ls='ls --color=auto'
+alias ls='exa'
 alias la='ls -a'
-alias ll='ls -la'
+# alias ll='ls -la'
+alias ll='ls -l -a --git'
 alias l='ls'
-alias l.="ls -A | egrep '^\.'"
+alias l.="ls -a | egrep '^\.'"
 
 #fix obvious typo's
 alias cd..='cd ..'
