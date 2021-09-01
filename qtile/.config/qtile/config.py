@@ -35,8 +35,6 @@ from libqtile import layout, bar, widget, hook
 from libqtile.widget import Spacer
 #import arcobattery
 
-import datetime
-
 #mod4 or mod = super key
 mod = "mod4"
 mod1 = "alt"
@@ -252,6 +250,8 @@ for i in groups:
         #Key([mod, "shift"], i.name, lazy.window.togroup(i.name) , lazy.group[i.name].toscreen()),
     ])
 
+# COLORS FOR THE BAR
+
 def init_colors():
     return [["#211C1C", "#211C1C"], # color 0, black
             ["#FD9353", "#FD9353"], # color 1, orange
@@ -286,8 +286,6 @@ layouts = [
     # layout.RatioTile(**layout_theme),
     # layout.Max(**layout_theme)
 ]
-
-# COLORS FOR THE BAR
 
 
 # WIDGETS FOR THE BAR
