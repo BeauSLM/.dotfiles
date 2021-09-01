@@ -75,6 +75,10 @@ Plugin 'p00f/nvim-ts-rainbow'
 Plugin 'ThePrimeagen/harpoon'
 Plugin 'ThePrimeagen/refactoring.nvim'
 
+" debug
+Plugin 'szw/vim-maximizer'
+Plugin 'puremourning/vimspector'
+
 " browser embed nvim
 Plugin 'glacambre/firenvim'
 

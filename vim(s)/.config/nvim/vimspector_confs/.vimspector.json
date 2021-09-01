@@ -1,0 +1,15 @@
+{
+    "configurations": {
+        "run": {
+            "adapter": "",
+            "configuration": {
+                "request": "launch",
+                "protocol": "auto", 
+                "stopOnEntry": true,
+                "console": "integratedTerminal",
+                "program": "${workspaceRoot}/",
+                "cwd": "${workspaceRoot}"
+            }
+        }
+    }
+}
