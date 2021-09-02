@@ -149,8 +149,20 @@ nnoremap <leader>u :UndotreeToggle<CR>
 " Help????
 nnoremap <leader>ghw :h <C-R>=expand("<cword>")<CR><CR>
 
+" primeagen's remaps (some from vid) dude these are nice ngl
+
+nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
+nnoremap <silent>Q <nop>
+nnoremap <leader>ghw :h <C-R>=expand("<cword>")<CR><CR>
+nnoremap Y y$
+
 " Harpoon baby
 " nnoremap <silent> <C-f> :lua require("harpoon.term").sendCommand(1, "sh ~/.config/nvim/tmux2.sh\n"); require("harpoon.term").gotoTerminal(1)<CR>
+
+augroup highlight_yank
+    autocmd!
+    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 100})
+augroup END
 
 " -----------------------Extensions---------------------------
 

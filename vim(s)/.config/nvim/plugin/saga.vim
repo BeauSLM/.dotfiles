@@ -15,7 +15,7 @@ nnoremap <leader>sh <cmd>lua require('lspsaga.signaturehelp').signature_help()<C
 nnoremap <leader>rn <cmd>lua require('lspsaga.rename').rename()<CR>
 
 " preview defintion
-nnoremap <leader>gd <cmd>lua require'lspsaga.provider'.preview_definition()<CR>
+nnoremap <leader>pd <cmd>lua require'lspsaga.provider'.preview_definition()<CR>
 
 " diagnostics schtuff
 nnoremap <silent><leader>sd <cmd>lua require'lspsaga.diagnostic'.show_line_diagnostics()<CR>
