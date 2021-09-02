@@ -47,7 +47,7 @@ Plugin 'edkolev/tmuxline.vim'
 Plugin 'bling/vim-bufferline'
 " Plugin 'akinsho/nvim-bufferline.lua'
 
-" Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 Plugin 'junegunn/gv.vim'
 
 Plugin 'mbbill/undotree'
@@ -155,6 +155,8 @@ nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
 nnoremap <silent>Q <nop>
 nnoremap <leader>ghw :h <C-R>=expand("<cword>")<CR><CR>
 nnoremap Y y$
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
 " Harpoon baby
 " nnoremap <silent> <C-f> :lua require("harpoon.term").sendCommand(1, "sh ~/.config/nvim/tmux2.sh\n"); require("harpoon.term").gotoTerminal(1)<CR>
