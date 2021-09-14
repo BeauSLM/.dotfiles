@@ -96,6 +96,28 @@ local snippets_paths = function()
     return paths
 end
 
+-- load snippets from vscode, however friendly-snippets likely provides (nearly) all of these already
+--[[
+   [ require("luasnip.loaders.from_vscode").load({
+   [     include = {
+   [           "bash",
+   [           "c",
+   [           "cpp",
+   [           "css",
+   [           "html",
+   [           -- "java",
+   [           "javascript",
+   [           "json",
+   [           "lua",
+   [           "python",
+   [           -- "rust",
+   [           "toml",
+   [           "typescript",
+   [           "yaml",
+   [     }
+   [ })
+   ]]
+
 require("luasnip.loaders.from_vscode").lazy_load({
     paths = snippets_paths(),
     include = nil,  -- Load all languages
