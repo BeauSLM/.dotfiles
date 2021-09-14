@@ -26,7 +26,7 @@ nmap <leader>drc <Plug>VimspectorRunToCursor
 nmap <leader>dbp <Plug>VimspectorToggleBreakpoint
 nmap <leader>dcbp <Plug>VimspectorToggleConditionalBreakpoint
 
-let g:vimspector_install_gadgets = [ 'vscode-cpptools', 'CodeLLDB', 'debugpy', 'vscode-bash-debug', 'local-lua-debugger-vscode', 'debugger-for-chrome', 'vscode-java-debug' ]
+let g:vimspector_install_gadgets = [ 'vscode-cpptools', 'CodeLLDB', 'debugpy', 'vscode-bash-debug', 'local-lua-debugger-vscode', 'debugger-for-chrome', 'vscode-java-debug', 'netcoredbg' ]
 " <Plug>VimspectorStop
 " <Plug>VimspectorPause
 " <Plug>VimspectorAddFunctionBreakpoint

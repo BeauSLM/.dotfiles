@@ -532,7 +532,8 @@ def assign_app_group(client):
     d[group_names[0]] = [ "Atom", "Subl3", "Geany", "Brackets", "Code-oss", "Code", "TelegramDesktop",
                "atom", "subl3", "geany", "brackets", "code-oss", "code", "telegramDesktop", "emacs",
                          "jetbrains-idea", "jetbrains-pycharm", "JetBrains Toolbox", "Alacritty",
-                         "jetbrains-clion", "gitkraken", "mysql-workbench-bin", "sqlitebrowser" ]
+                         "jetbrains-clion", "gitkraken", "mysql-workbench-bin", "sqlitebrowser",
+                         "sun-awt-X11-XFramePeer" ]
     d[group_names[1]] = ["Navigator", "Firefox", "Vivaldi-stable", "Vivaldi-snapshot", "Chromium", "Google-chrome", "Brave", "Brave-browser",
               "navigator", "firefox", "vivaldi-stable", "vivaldi-snapshot", "chromium", "google-chrome", "brave", "brave-browser", ]
     d[group_names[2]] = ["Discord", "discord", "zoom" ]

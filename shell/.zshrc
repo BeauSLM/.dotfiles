@@ -76,7 +76,7 @@ ZSH_THEME="cobalt2"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vscode alias-finder gitignore z sudo copydir copyfile themes tmux direnv vundle zsh-interactive-cd rust rustup cargo ripgrep systemd)
+plugins=(git vscode alias-finder gitignore z sudo copydir copyfile tmux direnv zsh-interactive-cd rust rustup cargo ripgrep systemd fzf)
 
 source $ZSH/oh-my-zsh.sh
 
