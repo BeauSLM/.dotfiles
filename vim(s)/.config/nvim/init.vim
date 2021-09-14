@@ -40,9 +40,8 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'sbdchd/neoformat'
 
 Plugin 'hrsh7th/nvim-compe'
-Plugin 'hrsh7th/vim-vsnip'
+Plugin 'L3MON4D3/LuaSnip'
 Plugin 'rafamadriz/friendly-snippets'
-" Plugin 'L3MON4D3/LuaSnip'
 Plugin 'cohama/lexima.vim'
 
 Plugin 'edkolev/tmuxline.vim'

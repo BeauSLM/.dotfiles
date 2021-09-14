@@ -1,4 +1,4 @@
--- from primeagen's telewcope.lua
+-- from primeagen's telescope.lua
 local actions = require('telescope.actions')
 require('telescope').setup {
     defaults = {
