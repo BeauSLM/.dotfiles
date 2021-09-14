@@ -1,6 +1,8 @@
 " -----------telescope.vim------------
 lua require('beauslm')
 
+nnoremap <leader>rr :lua require('beauslm.telescope').refactors()<CR>
+vnoremap <leader>rr :lua require('beauslm.telescope').refactors()<CR>
 nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
 nnoremap <C-p> :lua require('telescope.builtin').git_files()<CR>
 nnoremap <Leader>ff :lua require('telescope.builtin').find_files()<CR>
