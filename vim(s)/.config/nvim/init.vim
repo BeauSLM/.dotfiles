@@ -1,10 +1,10 @@
 "--------------------init.vim----------------------
 
 " TODO:
-" - primeagen's control f command/tmux stuff
-" - figure out the M function in telescope.lua
 " - find an alternate key for tabout
 " - bufferline --- do i really need one and if so which one?
+" - switch from vim-vsnip to Luasnip ASAP
+" - COMPE IS DEPRACATED GUESS WE'RE GOING TO CMP NOW FML
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -30,7 +30,6 @@ Plugin 'vim-airline/vim-airline'
 " Plugin 'kyazdani42/nvim-web-devicons'
 " Plugin 'vim-airline/vim-airline-themes'
 Plugin 'preservim/nerdcommenter'
-Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'Vimjas/vim-python-pep8-indent'
 Plugin 'christoomey/vim-tmux-navigator'
 " Plugin 'ThePrimeagen/vim-be-good'
@@ -39,8 +38,11 @@ Plugin 'flazz/vim-colorschemes'
 " Plugin 'morhetz/gruvbox'
 
 Plugin 'sbdchd/neoformat'
+
+Plugin 'hrsh7th/nvim-compe'
 Plugin 'hrsh7th/vim-vsnip'
 Plugin 'rafamadriz/friendly-snippets'
+" Plugin 'L3MON4D3/LuaSnip'
 Plugin 'cohama/lexima.vim'
 
 Plugin 'edkolev/tmuxline.vim'
@@ -54,7 +56,6 @@ Plugin 'mbbill/undotree'
 "---------------Nightly/Lsp plugins----------------
 Plugin 'neovim/nvim-lspconfig'
 Plugin 'kabouzeid/nvim-lspinstall'
-Plugin 'hrsh7th/nvim-compe'
 Plugin 'glepnir/lspsaga.nvim'
 Plugin 'simrat39/symbols-outline.nvim'
 
