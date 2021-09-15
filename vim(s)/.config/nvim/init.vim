@@ -14,7 +14,8 @@ Plug 'preservim/nerdcommenter'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'christoomey/vim-tmux-navigator'
 
-Plug 'flazz/vim-colorschemes'
+" Plug 'flazz/vim-colorschemes'
+Plug 'gruvbox-community/gruvbox'
 
 Plug 'sbdchd/neoformat'
 
@@ -100,12 +101,6 @@ set undofile
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
-
-" Colors
-set termguicolors
-" colorscheme gruvbox
-colorscheme monokai-chris
-" highlight Normal guibg=none
 
 " Fix dmscripts using neovim
 autocmd VimEnter * :silent exec "!kill -s SIGWINCH $PPID"
