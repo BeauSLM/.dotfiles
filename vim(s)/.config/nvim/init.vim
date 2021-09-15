@@ -2,91 +2,69 @@
 
 " TODO:
 " - find an alternate key for tabout
-" - bufferline --- do i really need one and if so which one?
-" - switch from vim-vsnip to Luasnip ASAP
 " - COMPE IS DEPRACATED GUESS WE'RE GOING TO CMP NOW FML
 
-set nocompatible              " be iMproved, required
-filetype off                  " required
+" Specify a directory for plugins
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin(stdpath('data') . '/plugged')
+"--------------------vim-plug----------------------
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+Plug 'vim-airline/vim-airline'
+Plug 'preservim/nerdcommenter'
+Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'christoomey/vim-tmux-navigator'
 
-"---------------------Vundle-----------------------
-call vundle#begin()
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-"--------------------------------------------------
-" Plugins for nvim .4
-" Plugin 'neoclide/coc.nvim', {'branch' : 'release'}
-" Plugin 'preservim/nerdtree'
-" Plugin 'Xuyuanp/nerdtree-git-plugin'
-" Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
-" Plugin 'tsony-tsonev/nerdtree-git-plugin'
-" Plugin 'ryanoasis/vim-devicons'
-" Plugin 'airblade/vim-gitgutter'
+Plug 'flazz/vim-colorschemes'
 
-Plugin 'vim-airline/vim-airline'
-" Plugin 'kyazdani42/nvim-web-devicons'
-" Plugin 'vim-airline/vim-airline-themes'
-Plugin 'preservim/nerdcommenter'
-Plugin 'Vimjas/vim-python-pep8-indent'
-Plugin 'christoomey/vim-tmux-navigator'
-" Plugin 'ThePrimeagen/vim-be-good'
+Plug 'sbdchd/neoformat'
 
-Plugin 'flazz/vim-colorschemes'
-" Plugin 'morhetz/gruvbox'
+Plug 'windwp/nvim-autopairs'
+Plug 'hrsh7th/nvim-compe'
+Plug 'L3MON4D3/LuaSnip'
+Plug 'rafamadriz/friendly-snippets'
 
-Plugin 'sbdchd/neoformat'
+Plug 'edkolev/tmuxline.vim'
+Plug 'bling/vim-bufferline'
 
-Plugin 'hrsh7th/nvim-compe'
-Plugin 'L3MON4D3/LuaSnip'
-Plugin 'rafamadriz/friendly-snippets'
-Plugin 'cohama/lexima.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
 
-Plugin 'edkolev/tmuxline.vim'
-Plugin 'bling/vim-bufferline'
-" Plugin 'akinsho/nvim-bufferline.lua'
-
-Plugin 'tpope/vim-fugitive'
-Plugin 'junegunn/gv.vim'
-
-Plugin 'mbbill/undotree'
+Plug 'mbbill/undotree'
 "---------------Nightly/Lsp plugins----------------
-Plugin 'neovim/nvim-lspconfig'
-Plugin 'kabouzeid/nvim-lspinstall'
-Plugin 'glepnir/lspsaga.nvim'
-Plugin 'simrat39/symbols-outline.nvim'
+Plug 'neovim/nvim-lspconfig'
+Plug 'kabouzeid/nvim-lspinstall'
+Plug 'glepnir/lspsaga.nvim'
+Plug 'simrat39/symbols-outline.nvim'
 
 " Telescope babeeeyyyyyyyyyy
-Plugin 'nvim-lua/plenary.nvim'
-Plugin 'nvim-lua/popup.nvim'
-Plugin 'nvim-telescope/telescope.nvim'
-Plugin 'nvim-telescope/telescope-fzy-native.nvim'
-Plugin 'ThePrimeagen/git-worktree.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
+Plug 'ThePrimeagen/git-worktree.nvim'
 
-" treesitter 
-Plugin 'nvim-treesitter/nvim-treesitter'
-Plugin 'nvim-treesitter/playground'
-Plugin 'p00f/nvim-ts-rainbow'
+" treesitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/playground'
+Plug 'p00f/nvim-ts-rainbow'
 
 " that prime guy's wizardry
-" Plugin 'mhinz/vim-rfc'
-Plugin 'ThePrimeagen/harpoon'
-Plugin 'ThePrimeagen/refactoring.nvim'
+" Plug 'mhinz/vim-rfc'
+Plug 'ThePrimeagen/harpoon'
+Plug 'ThePrimeagen/refactoring.nvim'
 
 " debug
-Plugin 'szw/vim-maximizer'
-Plugin 'puremourning/vimspector'
+Plug 'szw/vim-maximizer'
+Plug 'puremourning/vimspector'
 
 " browser embed nvim
-Plugin 'glacambre/firenvim'
-
-" Plugin 'alvan/vim-closetag'
+Plug 'glacambre/firenvim'
 
 "--------------------------------------------------
-call vundle#end()            " required
-filetype plugin indent on    " required
+" Initialize plugin system
+call plug#end()
+
+filetype plugin indent on
 
 "------------------BASIC SETUP---------------------
 " Numbers, normal tabbing, indenting, etc.
@@ -150,7 +128,6 @@ nnoremap <leader>u :UndotreeToggle<CR>
 nnoremap <leader>ghw :h <C-R>=expand("<cword>")<CR><CR>
 
 " primeagen's remaps (some from vid) dude these are nice ngl
-
 nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
 nnoremap <silent>Q <nop>
 nnoremap <leader>ghw :h <C-R>=expand("<cword>")<CR><CR>
