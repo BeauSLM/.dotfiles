@@ -7,6 +7,7 @@ require("beauslm.harpoon")
 require("beauslm.git-worktree")
 require("beauslm.compe")
 require("beauslm.treesitter")
+require("beauslm.autopairs")
 require("beauslm.refactoring")
 require("beauslm.saga")
 
