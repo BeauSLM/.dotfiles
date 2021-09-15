@@ -1,3 +1,5 @@
+#!/bin/sh
+
 if [[ -z $STOW_FOLDERS ]]; then
     STOW_FOLDERS="dmscripts,git,imwheel,leftwm,qtile,shell,terminal,tmux,vim(s)"
 fi
