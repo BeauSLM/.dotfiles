@@ -5,8 +5,8 @@ vnoremap <silent><leader>ca :<C-U>lua require('lspsaga.codeaction').range_code_a
 nnoremap <silent>K <cmd>lua require('lspsaga.hover').render_hover_doc()<CR>
 
 " may be optional, scroll command
-nnoremap <silent> <C-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>
-nnoremap <silent> <C-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>
+" nnoremap <silent> <C-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>
+" nnoremap <silent> <C-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>
 
 " signature help
 nnoremap <leader>sh <cmd>lua require('lspsaga.signaturehelp').signature_help()<CR>

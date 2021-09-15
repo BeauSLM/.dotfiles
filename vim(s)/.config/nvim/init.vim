@@ -130,7 +130,7 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 " Harpoon baby
-" nnoremap <silent> <C-f> :lua require("harpoon.term").sendCommand(1, "sh ~/.config/nvim/tmux2.sh\n"); require("harpoon.term").gotoTerminal(1)<CR>
+nnoremap <silent> <C-f> :silent !tmux neww tmux-sessionizer<CR>
 
 augroup highlight_yank
     autocmd!
