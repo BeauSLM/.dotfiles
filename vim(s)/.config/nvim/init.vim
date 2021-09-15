@@ -83,7 +83,6 @@ set signcolumn=number
 set hidden
 set cmdheight=2
 set noswapfile
-syntax on
 
 " Search things
 set incsearch

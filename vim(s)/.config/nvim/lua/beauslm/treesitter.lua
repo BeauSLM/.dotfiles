@@ -22,8 +22,14 @@ require'nvim-treesitter.configs'.setup {
       "typescript",
       "yaml",
   },
+  -- indent {
+  --     enable = true
+  -- },
   highlight = {
     enable = true,              -- false will disable the whole extension
+  },
+  incremental_selection = {
+      enable = true
   },
   playground = {
     enable = true,
