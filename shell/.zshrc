@@ -97,7 +97,7 @@ export DOTFILES=$HOME/.dotfiles
 export PATH=$HOME/.emacs.d/bin:$PATH
 
 # nvim as manpager
-export MANPAGER="nvim -c 'set ft=man' -"
+export MANPAGER='nvim +Man!'
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -422,6 +422,11 @@ alias personal='cp -Rf /personal/* ~'
 #enable autocomplete
 autoload -Uz compinit
 compinit
+
+# main monitor brightness
+alias brightness1='xrandr --output DP-2 --brightness'
+# second monitor brightness
+alias brightness2='xrandr --output DP-0 --brightness'
 
 # tmux-sessionizer
 bindkey -s ^f "tmux-sessionizer\n"

@@ -1,5 +1,5 @@
 " -----------telescope.vim------------
-lua require('beauslm')
+lua require('beauslm.telescope')
 
 nnoremap <leader>rr :lua require('beauslm.telescope').refactors()<CR>
 vnoremap <leader>rr :lua require('beauslm.telescope').refactors()<CR>
