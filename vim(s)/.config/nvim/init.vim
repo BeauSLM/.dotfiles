@@ -28,13 +28,14 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'bling/vim-bufferline'
 
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim'
 
 Plug 'mbbill/undotree'
 "---------------Nightly/Lsp plugins----------------
 Plug 'neovim/nvim-lspconfig'
 Plug 'kabouzeid/nvim-lspinstall'
-Plug 'glepnir/lspsaga.nvim'
+" Plug 'glepnir/lspsaga.nvim'
 Plug 'simrat39/symbols-outline.nvim'
 
 " Telescope babeeeyyyyyyyyyy
@@ -109,7 +110,7 @@ autocmd VimEnter * :silent exec "!kill -s SIGWINCH $PPID"
 let mapleader = " "
 
 " FINALLY WE CAN EXIT VIM EASY
-nnoremap <silent>ZX :q!<CR>
+nnoremap <C-q> :q!<CR>
 
 " tabout baby
 " inoremap <expr> <Tab> getline('.')[col('.')-1] =~? '[]>)}''"`]' ? '<Right>' : '<Tab>'
