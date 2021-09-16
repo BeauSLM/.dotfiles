@@ -108,6 +108,9 @@ autocmd VimEnter * :silent exec "!kill -s SIGWINCH $PPID"
 " ------------------------Mapping-----------------------------
 let mapleader = " "
 
+" FINALLY WE CAN EXIT VIM EASY
+nnoremap <silent>ZX :q!<CR>
+
 " tabout baby
 " inoremap <expr> <Tab> getline('.')[col('.')-1] =~? '[]>)}''"`]' ? '<Right>' : '<Tab>'
 
