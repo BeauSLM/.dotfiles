@@ -249,20 +249,20 @@ ctrl + alt + a
 #################################################################
 
 #Wallpaper trash
-alt + t
-    variety -t
+# alt + t
+#     variety -t
 
 #Wallpaper next
-alt + n
-    variety -n
+# alt + n
+#     variety -n
 
 #Wallpaper previous
-alt + p
-    variety -p
+# alt + p
+#     variety -p
 
 #Wallpaper favorite
-alt + f
-    variety -f
+# alt + f
+#     variety -f
 
 #Wallpaper previous
 #alt + Left
@@ -281,12 +281,12 @@ alt + f
     # variety --resume
 
 #Xfce4-appfinder
-alt + F2
-    xfce4-appfinder --collapsed
+# alt + F2
+#     xfce4-appfinder --collapsed
 
 #Xfce4-appfinder
-alt + F3
-    xfce4-appfinder
+# alt + F3
+#     xfce4-appfinder
 
 
 #################################################################
@@ -294,24 +294,24 @@ alt + F3
 #################################################################
 
 #Wallpaper trash
-alt + shift + t
-    variety -t && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
+# alt + shift + t
+#     variety -t && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
 
 #Wallpaper next
-alt + shift + n
-    variety -n && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
+# alt + shift + n
+#     variety -n && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
 
 #Wallpaper previous
-alt + shift + p
-    variety -p && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
+# alt + shift + p
+#     variety -p && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
 
 #Wallpaper favorite
-alt + shift + f
-    variety -f && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
+# alt + shift + f
+#     variety -f && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
 
 #Wallpaper update
-alt + shift + u
-    wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
+# alt + shift + u
+#     wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
 
 #################################################################
 # CONTROL + SHIFT KEYS
