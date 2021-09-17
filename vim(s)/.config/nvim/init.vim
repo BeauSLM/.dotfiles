@@ -38,6 +38,9 @@ Plug 'kabouzeid/nvim-lspinstall'
 " Plug 'glepnir/lspsaga.nvim'
 Plug 'simrat39/symbols-outline.nvim'
 
+" lsp graphical stuff
+Plug 'gfanto/fzf-lsp.nvim'
+
 " Telescope babeeeyyyyyyyyyy
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
