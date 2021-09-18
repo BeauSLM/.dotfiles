@@ -1,55 +1,29 @@
-"---------------------.vimrc-----------------------
+call plug#begin()
+Plug 'gruvbox-community/gruvbox'
 
-set nocompatible              " be iMproved, required
-filetype off                  " required
+Plug 'vim-airline/vim-airline'
+Plug 'preservim/nerdcommenter'
+Plug 'christoomey/vim-tmux-navigator'
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+Plug 'gruvbox-community/gruvbox'
 
-"---------------------Vundle-----------------------
-call vundle#begin()
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-"--------------------------------------------------
-" Plugin 'preservim/nerdtree'
-" Plugin 'Xuyuanp/nerdtree-git-plugin'
-" Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
-" Plugin 'tsony-tsonev/nerdtree-git-plugin'
-" Plugin 'ryanoasis/vim-devicons'
-" Plugin 'airblade/vim-gitgutter'
+Plug 'edkolev/tmuxline.vim'
+Plug 'bling/vim-bufferline'
 
-Plugin 'vim-airline/vim-airline'
-" Plugin 'vim-airline/vim-airline-themes'
-Plugin 'preservim/nerdcommenter'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'Vimjas/vim-python-pep8-indent'
-Plugin 'christoomey/vim-tmux-navigator'
-" " Plugin 'ThePrimeagen/vim-be-good'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+Plug 'junegunn/gv.vim'
 
-Plugin 'flazz/vim-colorschemes'
-" " Plugin 'morhetz/gruvbox'
+Plug 'mbbill/undotree'
 
-Plugin 'sbdchd/neoformat'
-Plugin 'hrsh7th/vim-vsnip'
-Plugin 'rafamadriz/friendly-snippets'
-Plugin 'cohama/lexima.vim'
+Plug 'szw/vim-maximizer'
+Plug 'puremourning/vimspector'
+call plug#end()
 
-Plugin 'edkolev/tmuxline.vim'
-Plugin 'bling/vim-bufferline'
+set termguicolors
+colorscheme gruvbox
+set background=dark
 
-Plugin 'tpope/vim-fugitive'
-Plugin 'junegunn/gv.vim'
-
-Plugin 'mbbill/undotree'
-
-Plugin 'alvan/vim-closetag'
-
-"--------------------------------------------------
-call vundle#end()            " required
-filetype plugin indent on    " required
-
-"------------------BASIC SETUP---------------------
-" Numbers, normal tabbing, indenting, etc.
 set nu
 set nowrap
 set relativenumber
@@ -65,48 +39,120 @@ set signcolumn=number
 set hidden
 set cmdheight=2
 set noswapfile
-syntax on
 
-" Search things
 set incsearch
 set nohlsearch
 set ignorecase
 set smartcase
 
-" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
-" delays and poor user experience.
 set updatetime=50
 
-" Undo shenanigans
-set undodir=~/.vim/undodir
+set undodir =~/.vim/undodir
 set undofile
 
-" Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
 
-" Colors
-set termguicolors
-" colorscheme gruvbox
-" colorscheme monokai-chris
-" highlight Normal guibg=none
-
-let g:bufferline_echo = 0
-
-" Fix dmscripts using neovim
-autocmd VimEnter * :silent exec "!kill -s SIGWINCH $PPID"
-
-" ------------------------Mapping-----------------------------
 let mapleader = " "
 
-" tabout baby
-" inoremap <expr> <Tab> getline('.')[col('.')-1] =~? '[]>)}''"`]' ? '<Right>' : '<Tab>'
+nnoremap <C-q> :q!<CR>
 
-" Comments
 map <leader>/ <plug>NERDCommenterToggle
 map <leader>? <plug>NERDCommenterSexy
 
-" Undotree
-" nnoremap <leader>u :UndotreeToggle<CR>
+nnoremap <leader>u :UndotreeToggle<CR>
 
-" Help????
 nnoremap <leader>ghw :h <C-R>=expand("<cword>")<CR><CR>
+
+nnoremap <Leader><CR> :so ~/.vimrc<CR>
+nnoremap <silent>Q <nop>
+nnoremap <leader>ghw :h <C-R>=expand("<cword>")<CR><CR>
+nnoremap Y y$
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
+augroup highlight_yank
+    autocmd!
+    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 100})
+augroup END
+
+nnoremap <leader>ga :Git fetch --all<CR>
+nnoremap <leader>grum :Git rebase upstream/master<CR>
+nnoremap <leader>grom :Git rebase origin/master<CR>
+nnoremap <leader>grbi :Git rebase -i HEAD~
+
+nmap <leader>gd :Git diff<CR>
+nmap <leader>gj :diffget //3<CR>
+nmap <leader>gf :diffget //2<CR>
+nmap <leader>gs :G<CR>
+nmap <leader>gl :Git log<CR>
+
+set termguicolors
+let g:gruvbox_italic=1
+
+let g:beauslm_colorscheme = "gruvbox"
+fun! ColorMyPencils()
+    if exists('+termguicolors')
+        let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+        let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    endif
+    let g:gruvbox_invert_selection='0'
+
+    set background=dark
+    if has('nvim')
+        call luaeval('vim.cmd("colorscheme " .. _A[1])', [g:beauslm_colorscheme])
+    else
+        colorscheme gruvbox
+    endif
+
+    highlight ColorColumn ctermbg=0 guibg=grey
+endfun
+call ColorMyPencils()
+
+nnoremap <leader>cmp :call ColorMyPencils()<CR>
+nnoremap <leader>vwb :let g:beauslm_colorscheme =
+
+let g:airline_powerline_fonts = 1
+let g:bufferline_echo = 0
+let g:airline#extensions#branch#enabled = 1
+
+let g:neoformat_basic_format_trim = 1
+
+
+fun! GotoWindow(id)
+    call win_gotoid(a:id)
+    MaximizerToggle
+endfun
+
+" Debugger remaps
+nnoremap <leader>m :MaximizerToggle!<CR>
+nnoremap <leader>dd :call vimspector#Launch()<CR>
+nnoremap <leader>dc :call GotoWindow(g:vimspector_session_windows.code)<CR>
+nnoremap <leader>dt :call GotoWindow(g:vimspector_session_windows.tagpage)<CR>
+nnoremap <leader>dv :call GotoWindow(g:vimspector_session_windows.variables)<CR>
+nnoremap <leader>dw :call GotoWindow(g:vimspector_session_windows.watches)<CR>
+nnoremap <leader>ds :call GotoWindow(g:vimspector_session_windows.stack_trace)<CR>
+nnoremap <leader>do :call GotoWindow(g:vimspector_session_windows.output)<CR>
+nnoremap <leader>dte :call GotoWindow(g:vimspector_session_windows.terminal)<CR>
+
+nnoremap <leader>de :call vimspector#Reset()<CR>
+
+nnoremap <leader>dtcb :call vimspector#ClearLineBreakpoint()<CR>
+
+nmap <leader>dl <Plug>VimspectorStepInto
+nmap <leader>dj <Plug>VimspectorStepOver
+nmap <leader>dk <Plug>VimspectorStepOut
+nmap <leader>d_ <Plug>VimspectorRestart
+nnoremap <leader>d<space> :call vimspector#Continue()<CR>
+
+nmap <leader>drc <Plug>VimspectorRunToCursor
+nmap <leader>dbp <Plug>VimspectorToggleBreakpoint
+nmap <leader>dcbp <Plug>VimspectorToggleConditionalBreakpoint
+
+let g:vimspector_install_gadgets = [ 'vscode-cpptools', 'CodeLLDB', 'debugpy', 'vscode-bash-debug', 'local-lua-debugger-vscode', 'debugger-for-chrome', 'vscode-java-debug', 'netcoredbg' ]
+
+let g:NERDCreateDefaultMappings = 0
+let g:NERDSpaceDelims = 1
+let g:NERDDefaultAlign = 'left'
+let g:NERDCommentEmptyLines = 1
+let g:NERDTrimTrailingWhitespace = 1
+let g:NERDToggleCheckAllLines = 1
