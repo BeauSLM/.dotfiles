@@ -65,6 +65,7 @@ Plug 'puremourning/vimspector'
 " browser embed nvim
 Plug 'glacambre/firenvim'
 
+Plug 'ThePrimeagen/vim-be-good'
 "--------------------------------------------------
 " Initialize plugin system
 call plug#end()

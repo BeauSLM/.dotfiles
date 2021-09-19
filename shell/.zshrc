@@ -429,8 +429,8 @@ alias brightness1='xrandr --output DP-2 --brightness'
 alias brightness2='xrandr --output DP-0 --brightness'
 
 # tmux-sessionizer
-bindkey -s ^f "tmux-sessionizer\n"
-bindkey -s ^k "tmux-sessionizer /home/beaum/.dotfiles\n"
+bindkey -s ^f "^utmux-sessionizer\n"
+bindkey -s ^k "^utmux-sessionizer /home/beaum/.dotfiles\n"
 
 # Random colorscripts
 colorscript random
