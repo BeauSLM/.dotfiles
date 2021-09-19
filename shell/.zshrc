@@ -216,7 +216,7 @@ alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias update-fc='sudo fc-cache -fv'
 
 #copy/paste all content of /etc/skel over to home folder - backup of config created - beware
-alias skel='cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S) && cp -rf /etc/skel/* ~'
+alias skel='[ -d ~/.config ] || mkdir ~/.config && cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S) && cp -rf /etc/skel/* ~'
 #backup contents of /etc/skel to hidden backup folder in home/user
 alias bupskel='cp -Rf /etc/skel ~/.skel-backup-$(date +%Y.%m.%d-%H.%M.%S)'
 
@@ -242,6 +242,7 @@ alias hw="hwinfo --short"
 
 #skip integrity check
 alias paruskip='paru -S --mflags --skipinteg'
+alias yayskip='yay -S --mflags --skipinteg'
 alias trizenskip='trizen -S --skipinteg'
 
 #check vulnerabilities microcode
@@ -326,6 +327,8 @@ alias fix-keyserver="[ -d ~/.gnupg ] || mkdir ~/.gnupg ; cp /etc/pacman.d/gnupg/
 #fixes
 alias fix-permissions="sudo chown -R $USER:$USER ~/.config ~/.local"
 alias keyfix="/usr/local/bin/arcolinux-fix-pacman-databases-and-keys"
+alias key-fix="/usr/local/bin/arcolinux-fix-pacman-databases-and-keys"
+alias fixkey="/usr/local/bin/arcolinux-fix-pacman-databases-and-keys"
 alias fix-key="/usr/local/bin/arcolinux-fix-pacman-databases-and-keys"
 alias fix-sddm-config="/usr/local/bin/arcolinux-fix-sddm-config"
 alias fix-pacman-conf="/usr/local/bin/arcolinux-fix-pacman-conf"
@@ -400,22 +403,26 @@ alias personal='cp -Rf /personal/* ~'
 [[ -f ~/.zshrc-personal ]] && . ~/.zshrc-personal
 
 # reporting tools - install when not installed
-# install neofetch
 # neofetch
-# install screenfetch
+#neofetch | lolcat
 #screenfetch
-# install ufetch-git
+#screenfetch | lolcat
 #ufetch
-# install ufetch-arco-git
+#ufetch | lolcat
 #ufetch-arco
-# install arcolinux-paleofetch-git
+#ufetch-arco
 #paleofetch
-# install alsi
+#paleofetch | lolcat
 #alsi
-# install arcolinux-bin-git - standard on ArcoLinux isos (or sfetch - smaller)
+#alsi | lolcat
 #hfetch
-# install lolcat
+#hfetch | lolcat
+#sfetch
 #sfetch | lolcat
+#sysinfo
+#sysinfo | lolcat
+#sysinfo-retro
+#sysinfo-retro | lolcat
 
 # ME ME ME
 

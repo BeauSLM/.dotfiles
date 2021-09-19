@@ -208,6 +208,8 @@ alias fix-keyserver="[ -d ~/.gnupg ] || mkdir ~/.gnupg ; cp /etc/pacman.d/gnupg/
 #fixes
 alias fix-permissions="sudo chown -R $USER:$USER ~/.config ~/.local"
 alias keyfix="/usr/local/bin/arcolinux-fix-pacman-databases-and-keys"
+alias key-fix="/usr/local/bin/arcolinux-fix-pacman-databases-and-keys"
+alias fixkey="/usr/local/bin/arcolinux-fix-pacman-databases-and-keys"
 alias fix-key="/usr/local/bin/arcolinux-fix-pacman-databases-and-keys"
 alias fix-sddm-config="/usr/local/bin/arcolinux-fix-sddm-config"
 alias fix-pacman-conf="/usr/local/bin/arcolinux-fix-pacman-conf"
@@ -282,21 +284,21 @@ alias personal='cp -Rf /personal/* ~'
 [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 
 # reporting tools - install when not installed
-# install neofetch
-# neofetch
-# install screenfetch
+neofetch
+#neofetch | lolcat
 #screenfetch
-# install ufetch-git
+#screenfetch | lolcat
 #ufetch
-# install ufetch-arco-git
+#ufetch | lolcat
 #ufetch-arco
-# install arcolinux-paleofetch-git
+#ufetch-arco
 #paleofetch
-# install alsi
+#paleofetch | lolcat
 #alsi
-# install arcolinux-bin-git - standard on ArcoLinux isos (or sfetch - smaller)
+#alsi | lolcat
 #hfetch
-# install lolcat
+#hfetch | lolcat
+#sfetch
 #sfetch | lolcat
 
 # ME ME ME
