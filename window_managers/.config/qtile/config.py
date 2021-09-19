@@ -34,7 +34,6 @@ from libqtile import layout, bar, widget, hook
 from libqtile.config import Click, Drag, Group, Key, Match, Screen, Rule, KeyChord
 from libqtile.command import lazy
 from libqtile.widget import Spacer
-#import arcobattery
 
 #mod4 or mod = super key
 mod = "mod4"
