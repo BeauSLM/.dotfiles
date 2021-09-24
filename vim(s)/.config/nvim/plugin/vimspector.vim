@@ -16,7 +16,7 @@ nnoremap <leader>dte :call GotoWindow(g:vimspector_session_windows.terminal)<CR>
 
 nnoremap <leader>de :call vimspector#Reset()<CR>
 
-nnoremap <leader>dtcb :call vimspector#ClearLineBreakpoint()<CR>
+nnoremap <leader>dtcb :call vimspector#ClearBreakpoints()<CR>
 
 nmap <leader>dl <Plug>VimspectorStepInto
 nmap <leader>dj <Plug>VimspectorStepOver

@@ -24,5 +24,5 @@
 " nnoremap <silent><leader>vn <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_next()<CR>
 "
 " " TERMINAL YAYYYYY
-" nnoremap <silent> <A-d> <cmd>lua require('lspsaga.floaterm').open_float_terminal()<CR>
-" tnoremap <silent> <A-d> <C-\><C-n>:lua require('lspsaga.floaterm').close_float_terminal()<CR>
+nnoremap <silent> <A-d> <cmd>lua require('lspsaga.floaterm').open_float_terminal()<CR>
+tnoremap <silent> <A-d> <C-\><C-n>:lua require('lspsaga.floaterm').close_float_terminal()<CR>

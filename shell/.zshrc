@@ -88,7 +88,7 @@ export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
 
 # add stow folders
-export STOW_FOLDERS="dmscripts,git,imwheel,leftwm,qtile,shell,terminal,tmux,vim(s)"
+export STOW_FOLDERS="cli_utilities,dmscripts,git,other_config,shell,terminal,tmux,vim(s),window_managers"
 
 # add dotfiles
 export DOTFILES=$HOME/.dotfiles
@@ -184,9 +184,6 @@ alias whichvga="/usr/local/bin/arcolinux-which-vga"
 #free
 alias free="free -mt"
 
-#use all cores
-alias uac="sh ~/.bin/main/000*"
-
 #continue download
 alias wget="wget -c"
 
@@ -256,6 +253,7 @@ alias mirrora="sudo reflector --latest 30 --number 10 --sort age --save /etc/pac
 #our experimental - best option for the moment
 alias mirrorx="sudo reflector --age 6 --latest 20  --fastest 20 --threads 5 --sort rate --protocol https --save /etc/pacman.d/mirrorlist"
 alias mirrorxx="sudo reflector --age 6 --latest 20  --fastest 20 --threads 20 --sort rate --protocol https --save /etc/pacman.d/mirrorlist"
+alias ram='rate-arch-mirrors'
 
 #mounting the folder Public for exchange between host and guest on virtualbox
 alias vbm="sudo /usr/local/bin/arcolinux-vbox-share"
@@ -441,3 +439,5 @@ bindkey -s ^k "^utmux-sessionizer /home/beaum/.dotfiles\n"
 
 # Random colorscripts
 colorscript random
+
+source /home/beaum/.config/broot/launcher/bash/br

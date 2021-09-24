@@ -573,4 +573,10 @@ end)
 -- Enable sloppy focus, so that focus follows mouse.
 client.connect_signal("mouse::enter", function(c)
     c:activate { context = "mouse_enter", raise = false }
-end)_
+end)
+
+-- Autostart applications
+awful.spawn_with_shell("imwheel")
+awful.spawn_with_shell("nitrogen --restore")
+awful.spawn_with_shell("mailspring -- background")
+awful.spawn_with_shell("discord --start-minimized")

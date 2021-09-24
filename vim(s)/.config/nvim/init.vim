@@ -35,17 +35,18 @@ Plug 'mbbill/undotree'
 "---------------Nightly/Lsp plugins----------------
 Plug 'neovim/nvim-lspconfig'
 Plug 'kabouzeid/nvim-lspinstall'
-" Plug 'glepnir/lspsaga.nvim'
+Plug 'glepnir/lspsaga.nvim'
 Plug 'simrat39/symbols-outline.nvim'
 
 " lsp graphical stuff
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'gfanto/fzf-lsp.nvim'
 
 " Telescope babeeeyyyyyyyyyy
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-telescope/telescope-fzy-native.nvim'
+Plug 'nvim-telescope/telescope-fzy-native.nvim', { 'do': 'make' }
 Plug 'ThePrimeagen/git-worktree.nvim'
 
 " treesitter
@@ -66,6 +67,7 @@ Plug 'puremourning/vimspector'
 Plug 'glacambre/firenvim'
 
 Plug 'ThePrimeagen/vim-be-good'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 "--------------------------------------------------
 " Initialize plugin system
 call plug#end()

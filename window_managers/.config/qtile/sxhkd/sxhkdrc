@@ -73,7 +73,7 @@ super + s
 
 #Discord
 super + shift + d
-    discord
+    discord-canary --no-sandbox
 
 #reload sxhkd:
 super + shift + s

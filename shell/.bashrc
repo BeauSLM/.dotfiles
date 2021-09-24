@@ -309,3 +309,5 @@ export PATH=$HOME/.emacs.d/bin:$PATH
 # Random colorscripts
 colorscript random
 . "$HOME/.cargo/env"
+
+source /home/beaum/.config/broot/launcher/bash/br
