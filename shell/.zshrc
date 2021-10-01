@@ -336,6 +336,10 @@ alias fix-pacman-keyserver="/usr/local/bin/arcolinux-fix-pacman-gpg-conf"
 alias big="expac -H M '%m\t%n' | sort -h | nl"
 alias downgrada="sudo downgrade --ala-url https://ant.seedhost.eu/arcolinux/"
 
+#hblock (stop tracking with hblock)
+#use unhblock to stop using hblock
+alias unhblock="hblock -S none -D none"
+
 #systeminfo
 alias probe="sudo -E hw-probe -all -upload"
 alias sysfailed="systemctl list-units --failed"
@@ -402,24 +406,18 @@ alias personal='cp -Rf /personal/* ~'
 
 # reporting tools - install when not installed
 # neofetch
-#neofetch | lolcat
 #screenfetch
-#screenfetch | lolcat
-#ufetch
-#ufetch | lolcat
-#ufetch-arco
-#ufetch-arco
-#paleofetch
-#paleofetch | lolcat
 #alsi
-#alsi | lolcat
+#paleofetch
+#fetch
 #hfetch
-#hfetch | lolcat
 #sfetch
-#sfetch | lolcat
+#ufetch
+#ufetch-arco
+#pfetch
 #sysinfo
-#sysinfo | lolcat
 #sysinfo-retro
+#cpufetch
 #sysinfo-retro | lolcat
 
 # ME ME ME

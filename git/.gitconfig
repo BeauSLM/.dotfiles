@@ -1,12 +1,12 @@
 [user]
 	email = mccartney.beausl@gmail.com
-	name = BeauSLM
+	name = Beau McCartney
 [init]
-	defaultBranch = main
-; [url "git@github.com:"]
-;     insteadOf = https://github.com/
+	defaultBranch = master
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
+[core]
+	editor = nvim

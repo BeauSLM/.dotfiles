@@ -18,6 +18,7 @@ export HISTCONTROL=ignoreboth:erasedups
 
 export EDITOR='nvim'
 export VISUAL='nvim'
+export MANPAGER='nvim +Man!'
 
 PS1='[\u@\h \W]\$ '
 
