@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# TODO: sort list from both files, then input to fzf
 selected=`cat ~/.tmux-cht-languages ~/.tmux-cht-command | fzf`
 if [[ -z $selected ]]; then
     exit 0

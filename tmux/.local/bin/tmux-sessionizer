@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 
+# dmenu script
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    items=`find ~/Code -maxdepth 2 -mindepth 2 -type d ; find ~/.dotfiles -maxdepth 0 -type d`
+    items=`fd . '/home/beaum/Code' --min-depth 2 --max-depth 2 --type d\
+        ; echo /home/beaum/.dotfiles\
+        ; echo /home/beaum/.dotfiles/scripts`
     selected=`echo "$items" | fzf`
 fi
 
