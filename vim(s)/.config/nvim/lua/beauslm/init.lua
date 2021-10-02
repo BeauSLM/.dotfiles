@@ -9,7 +9,6 @@ require("beauslm.compe")
 require("beauslm.treesitter")
 require("beauslm.autopairs")
 require("beauslm.refactoring")
-require("beauslm.saga")
 
 P = function(v)
   print(vim.inspect(v))
@@ -35,5 +34,4 @@ local opts = {
 }
 
 require('symbols-outline').setup(opts)
-require'fzf_lsp'.setup()
 

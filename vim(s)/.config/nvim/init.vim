@@ -27,11 +27,17 @@ Plug 'rafamadriz/friendly-snippets'
 Plug 'edkolev/tmuxline.vim'
 Plug 'bling/vim-bufferline'
 
+" ode to tpope
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-eunuch'
 
 Plug 'mbbill/undotree'
+Plug 'voldikss/vim-floaterm'
 "---------------Nightly/Lsp plugins----------------
 Plug 'neovim/nvim-lspconfig'
 Plug 'kabouzeid/nvim-lspinstall'

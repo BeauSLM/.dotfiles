@@ -1,3 +1,4 @@
+-- TODO: more config, especially with treesitter
 -----------autopairs.lua------------
 
 require("nvim-autopairs.completion.compe").setup({
