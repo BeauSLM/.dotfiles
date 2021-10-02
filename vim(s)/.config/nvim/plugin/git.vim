@@ -4,11 +4,12 @@ nnoremap <leader>ga :Git fetch --all<CR>
 nnoremap <leader>grum :Git rebase upstream/master<CR>
 nnoremap <leader>grom :Git rebase origin/master<CR>
 
+nmap <leader>G :Git<CR>
 nmap <leader>gd :Git difftool<CR>
 nmap <leader>gD :Git diff<CR>
+nmap <leader>gb :Git blame
 nmap <leader>gj :diffget //3<CR>
 nmap <leader>gf :diffget //2<CR>
-nmap <leader>gs :G<CR>
 
 " gv THIS SHIT'S FUCKIN MAGICAL
 nmap <leader>gl :GV<CR>

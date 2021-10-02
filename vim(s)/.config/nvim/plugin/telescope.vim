@@ -14,3 +14,14 @@ nnoremap <leader>vrc :lua require('beauslm.telescope').search_dotfiles()<CR>
 nnoremap <leader>gc :lua require('beauslm.telescope').git_branches()<CR>
 nnoremap <leader>gw :lua require('telescope').extensions.git_worktree.git_worktrees()<CR>
 nnoremap <leader>gm :lua require('telescope').extensions.git_worktree.create_git_worktree()<CR>
+
+nnoremap <leader>gs :lua require('telescope.builtin').git_status()<CR>
+
+" lsp stuff
+nnoremap <leader>gr :lua require('telescope.builtin').lsp_references()<CR>
+nnoremap <leader>ca :lua require('telescope.builtin').lsp_code_actions()<CR>
+nnoremap <leader>sd :lua require('telescope.builtin').lsp_document_diagnostics()<CR>
+nnoremap <leader>gi :lua require('telescope.builtin').lsp_implementations()<CR>
+nnoremap <silent>gd :lua require('telescope.builtin').lsp_definitions()<CR>
+nnoremap <leader>D :lua require('telescope.builtin').lsp_type_definitions()<CR>
+nnoremap <leader>so :lua require('telescope.builtin').treesitter()<CR>
