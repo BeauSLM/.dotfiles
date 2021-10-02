@@ -42,6 +42,7 @@ Plug 'voldikss/vim-floaterm'
 Plug 'neovim/nvim-lspconfig'
 Plug 'kabouzeid/nvim-lspinstall'
 Plug 'simrat39/symbols-outline.nvim'
+Plug 'onsails/lspkind-nvim'
 
 " Telescope babeeeyyyyyyyyyy
 Plug 'nvim-lua/plenary.nvim'

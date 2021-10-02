@@ -7,3 +7,4 @@ let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 nnoremap <leader>sO :SymbolsOutline<CR>
 
 highlight link CompeDocumentation NormalFloat
+lua require('lspkind').init()
