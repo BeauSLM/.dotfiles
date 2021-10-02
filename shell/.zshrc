@@ -431,6 +431,9 @@ alias brightness1='xrandr --output DP-2 --brightness'
 # second monitor brightness
 alias brightness2='xrandr --output DP-0 --brightness'
 
+# nvim config
+alias vrc='tmux-sessionizer /home/beaum/.dotfiles/vim\(s\)/.config/nvim'
+
 # tmux-sessionizer
 bindkey -s ^f "^utmux-sessionizer\n"
 bindkey -s ^k "^utmux-sessionizer /home/beaum/.dotfiles\n"

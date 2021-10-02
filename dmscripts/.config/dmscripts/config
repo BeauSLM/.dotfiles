@@ -7,8 +7,9 @@
 
 # Defined variables, modify anything in quotes to your prefered software
 
-DMENU="dmenu"
-# DMENU="rofi -dmenu"
+# -p is needed as we use prompts, alternative programs have to handle prompts well.
+
+DMENU="dmenu -i -l 20 -p"
 
 DMBROWSER="brave"
 
@@ -16,9 +17,37 @@ DMTERM="alacritty -e"
 
 DMEDITOR="${DMTERM} nvim"
 
+DMPDFVIEWER="${DMTERM} zathura"
+
 # dm-logout
 logout_locker='slock'
 # logout_locker='dm-tool lock'
+
+# This case statement lets you change what the DMENU variable is for different scripts, so if you
+# want a unique variable for each script you can
+# syntax is as follows:
+# "<ending-of-script>") DMENU="your variable here"
+# *) should be left blank, global variables are defined above
+
+# include -p in standard dmenu as we use prompts by default
+case "${0##*-}" in
+#  "colpick") DMENU="dmenu -i -p";;
+#  "confedit") DMENU="dmenu -i -l 30 -p";;
+#  "youtube") DMBROWSER="firefox";;
+  *);;
+esac
+
+# "${0##*-}" means grab the 0th argument (which is always the path to the program) starting from the
+# last dash. This gives us the word after the - which is what we are searching for in the case
+# statement. ie dm-man -> man
+
+# An awk equivalent is: 
+# awk -F"-" '{print $NF}'
+# Sadly cut has no easy equivalent
+
+# TODO: Move almost all of these variables into the case statement
+# TODO: Make some of the more useful ones general variables
+# IE a pictures directory, an audio directory, config locations, etc
 
 # dm-bookman 
 bookman_show_source=1
@@ -33,8 +62,10 @@ setbg_dir="${HOME}/Pictures/Wallpapers"
 maim_dir="${HOME}/Screenshots"
 maim_file_prefix="maim"
 
+# dm-note
+note_dir="${HOME}/.config/dmscripts/dmnote"
+
 # dm-confedit
-confedit_editor="$DMEDITOR"
 declare -A confedit_list
 confedit_list[dmscripts]="$HOME/.config/dmscripts/config"
 confedit_list[airline]="$HOME/.config/nvim/plugin/airline.vim"
@@ -61,7 +92,7 @@ confedit_list[dwmblocks]="$HOME/dwmblocks-distrotube/blocks.def.h"
 confedit_list[gdb]="$HOME/.config/gdb/gdbinit"
 confedit_list[fish]="$HOME/.config/fish/config.fish"
 confedit_list[git]="$HOME/.gitconfig"
-confedit_list[git-fugitive]="$HOME/.config/nvim/plugin/git.vim"
+confedit_list[fugitive]="$HOME/.config/nvim/plugin/git.vim"
 confedit_list[git-worktree.lua]="$HOME/.config/nvim/lua/beauslm/git-worktree.lua"
 confedit_list[harpoon]="$HOME/.config/nvim/plugin/harpoon.vim"
 confedit_list[harpoon.lua]="$HOME/.config/nvim/lua/beauslm/harpoon.lua"
@@ -202,11 +233,13 @@ colpick_list[purple]="#bd9cf9"
 
 # dm-translate config
 # Uncomment to manually set the languages dm-translate will show
-# Get language codes from here: https://github.com/TheDavidDelta/lingva-translate/blob/main/utils/languages.json
-
+# LibreTranslate languages:
+#   - `curl -Ss "https://libretranslate.de/languages" | jq`
+# Lingva Translate languages:
+#   - `curl -Ss "https://lingva.ml/api/v1/languages/source" | jq`
 # translate_list="manual"
 # declare -A lang_map
-# lang_map[Swedish]=sv
+# lang_map[Spanish]=es
 # lang_map[English]=en
 # lang_map[Automatic]=auto
 
@@ -232,4 +265,4 @@ declare -A currencies
 # currencies[Monero]="XMR"
 # see: https://rate.sx/:currencies and https://rate.sx/:coins
 
-_revision=17
+_revision=21
