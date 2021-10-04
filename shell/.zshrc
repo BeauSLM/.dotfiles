@@ -438,7 +438,13 @@ alias vrc='tmux-sessionizer /home/beaum/.dotfiles/vim\(s\)/.config/nvim'
 bindkey -s ^f "^utmux-sessionizer\n"
 bindkey -s ^k "^utmux-sessionizer /home/beaum/.dotfiles\n"
 
+
+source /home/beaum/.config/broot/launcher/bash/br
+
 # Random colorscripts
 colorscript random
 
-source /home/beaum/.config/broot/launcher/bash/br
+
+# BEGIN_KITTY_SHELL_INTEGRATION
+if test -e "$HOME/Code/Source_Installs/kitty/shell-integration/kitty.zsh"; then source "$HOME/Code/Source_Installs/kitty/shell-integration/kitty.zsh"; fi
+# END_KITTY_SHELL_INTEGRATION
