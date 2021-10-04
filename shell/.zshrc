@@ -1,29 +1,9 @@
 # TODO: configure zsh vi mode
+# TODO: zinit?
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Path to your oh-my-zsh installation.
-#installation via script from github
-#export ZSH="/home/$USER/.oh-my-zsh"
-#installation via paru -S oh-my-zsh-git
 export ZSH=/usr/share/oh-my-zsh/
-
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# if you installed the package oh-my-zsh-powerline-theme-git then you type here "powerline" as zsh theme
-ZSH_THEME="cobalt2"
-
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
-# If set to an empty array, this variable will have no effect.
-
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-# ZSH_THEME_RANDOM_IGNORED=(pygmalion tjkirch_mod)
-
+source $ZSH/oh-my-zsh.sh
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -71,14 +51,6 @@ ZSH_THEME="cobalt2"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git vscode alias-finder gitignore z sudo copydir copyfile tmux direnv zsh-interactive-cd rust rustup cargo ripgrep systemd fzf)
-
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -425,6 +397,8 @@ alias personal='cp -Rf /personal/* ~'
 #enable autocomplete
 autoload -Uz compinit
 compinit
+# autoload -U +X bashcompinit && bashcompinit
+# autoload -U +X compinit && compinit
 
 # main monitor brightness
 alias brightness1='xrandr --output DP-2 --brightness'
@@ -441,9 +415,49 @@ bindkey -s ^k "^utmux-sessionizer /home/beaum/.dotfiles\n"
 
 source /home/beaum/.config/broot/launcher/bash/br
 
+### Added by Zinit's installer
+if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
+    print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
+    command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
+        print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
+        print -P "%F{160}▓▒░ The clone has failed.%f%b"
+fi
+
+source "$HOME/.zinit/bin/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zinit-zsh/z-a-rust \
+    zinit-zsh/z-a-as-monitor \
+    zinit-zsh/z-a-patch-dl \
+    zinit-zsh/z-a-bin-gem-node
+
+### End of Zinit's installer chunk
+zinit snippet OMZP::git
+zinit snippet OMZP::alias-finder
+zinit snippet OMZP::gitignore
+zinit snippet OMZP::copydir
+zinit snippet OMZP::copyfile
+zinit snippet OMZP::sudo
+zinit snippet OMZP::tmux
+zinit snippet OMZP::direnv
+zinit snippet OMZP::zsh-interactive-cd
+
+zinit ice svn
+zinit snippet OMZP::z
+
+zinit light spaceship-prompt/spaceship-prompt
+
+# zinit ice wait lucid atload'_zsh_autosuggest_start'
+# zinit light zsh-users/zsh-autosuggestions
+
+
 # Random colorscripts
 colorscript random
-
 
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -e "$HOME/Code/Source_Installs/kitty/shell-integration/kitty.zsh"; then source "$HOME/Code/Source_Installs/kitty/shell-integration/kitty.zsh"; fi
