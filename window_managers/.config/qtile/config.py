@@ -548,7 +548,7 @@ def assign_app_group(client):
     #           "inkscape", "nomacs", "ristretto", "nitrogen", "feh", ]
     d[group_names[7]] = ["VirtualBox Manager", "VirtualBox Machine", "Vmplayer",
               "virtualbox manager", "virtualbox machine", "vmplayer", ]
-    d[group_names[8]] = ["Vlc","vlc", "Mpv", "mpv" ]
+    d[group_names[8]] = ["Vlc","vlc", "Mpv", "mpv", "obs" ]
     d[group_names[9]] = ["Meld", "meld", "org.gnome.meld", "org.gnome.Meld" ]
     ######################################################################################
 
