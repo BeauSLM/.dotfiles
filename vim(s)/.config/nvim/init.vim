@@ -41,6 +41,7 @@ Plug 'voldikss/vim-floaterm'
 "---------------Nightly/Lsp plugins----------------
 Plug 'neovim/nvim-lspconfig'
 Plug 'kabouzeid/nvim-lspinstall'
+Plug 'nvim-lua/lsp_extensions.nvim'
 Plug 'simrat39/symbols-outline.nvim'
 Plug 'onsails/lspkind-nvim'
 
