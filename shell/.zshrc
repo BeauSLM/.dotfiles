@@ -90,7 +90,7 @@ export MANPAGER='nvim +Man!'
 ####   ARCOLINUX SETTINGS   ####
 
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 setopt GLOB_DOTS
 #share commands between terminal instances or not
@@ -437,27 +437,56 @@ zinit light-mode for \
     zinit-zsh/z-a-bin-gem-node
 
 ### End of Zinit's installer chunk
+zinit ice wait lucid
 zinit snippet OMZP::git
+zinit ice wait lucid
 zinit snippet OMZP::alias-finder
+zinit ice wait lucid
 zinit snippet OMZP::gitignore
+zinit ice wait lucid
 zinit snippet OMZP::copydir
+zinit ice wait lucid
 zinit snippet OMZP::copyfile
+zinit ice wait lucid
 zinit snippet OMZP::sudo
+zinit ice wait lucid
 zinit snippet OMZP::tmux
+zinit ice wait lucid
 zinit snippet OMZP::direnv
+zinit ice wait lucid
 zinit snippet OMZP::zsh-interactive-cd
+
+zinit ice wait lucid as"completion"
+zinit snippet 'https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/rust/_rust'
+zinit ice wait lucid
+zinit snippet OMZP::rustup
+zinit ice wait lucid
+zinit snippet OMZP::cargo
+
+zinit ice wait lucid as"completion"
+zinit snippet 'https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/ripgrep/_ripgrep'
+zinit ice wait lucid
+zinit snippet OMZP::systemd
+zinit ice wait lucid
+zinit snippet OMZP::fzf
+zinit light zdharma/fast-syntax-highlighting
+zinit ice wait lucid
+zinit light zsh-users/zsh-completions
 
 zinit ice svn
 zinit snippet OMZP::z
 
-zinit light spaceship-prompt/spaceship-prompt
 
-# zinit ice wait lucid atload'_zsh_autosuggest_start'
-# zinit light zsh-users/zsh-autosuggestions
+zinit ice wait lucid atload'_zsh_autosuggest_start'
+zinit light zsh-users/zsh-autosuggestions
 
+# zinit light spaceship-prompt/spaceship-prompt
+zinit ice as"command" from"gh-r" atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" atpull"%atclone" src"init.zsh"
+zinit light starship/starship
 
 # Random colorscripts
-colorscript random
+# colorscript random
+
 
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -e "$HOME/Code/Source_Installs/kitty/shell-integration/kitty.zsh"; then source "$HOME/Code/Source_Installs/kitty/shell-integration/kitty.zsh"; fi
