@@ -285,7 +285,7 @@ alias personal='cp -Rf /personal/* ~'
 [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 
 # reporting tools - install when not installed
-neofetch
+# neofetch
 #neofetch | lolcat
 #screenfetch
 #screenfetch | lolcat
@@ -307,8 +307,10 @@ neofetch
 # Add doom emacs commands to path
 export PATH=$HOME/.emacs.d/bin:$PATH
 
-# Random colorscripts
-colorscript random
 . "$HOME/.cargo/env"
 
 source /home/beaum/.config/broot/launcher/bash/br
+
+# Random colorscripts
+# colorscript random
+eval "$(starship init bash)"

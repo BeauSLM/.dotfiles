@@ -408,6 +408,9 @@ alias brightness2='xrandr --output DP-0 --brightness'
 # nvim config
 alias vrc='tmux-sessionizer /home/beaum/.dotfiles/vim\(s\)/.config/nvim'
 
+# Source_Installs
+alias si='tmux-sessionizer /home/beaum/Code/Source_Installs'
+
 # tmux-sessionizer
 bindkey -s ^f "^utmux-sessionizer\n"
 bindkey -s ^k "^utmux-sessionizer /home/beaum/.dotfiles\n"
@@ -437,6 +440,9 @@ zinit light-mode for \
     zinit-zsh/z-a-bin-gem-node
 
 ### End of Zinit's installer chunk
+# zinit light spaceship-prompt/spaceship-prompt
+zinit light zdharma/fast-syntax-highlighting
+
 zinit ice wait lucid
 zinit snippet OMZP::git
 zinit ice wait lucid
@@ -469,7 +475,6 @@ zinit ice wait lucid
 zinit snippet OMZP::systemd
 zinit ice wait lucid
 zinit snippet OMZP::fzf
-zinit light zdharma/fast-syntax-highlighting
 zinit ice wait lucid
 zinit light zsh-users/zsh-completions
 
@@ -480,16 +485,12 @@ zinit snippet OMZP::z
 zinit ice wait lucid atload'_zsh_autosuggest_start'
 zinit light zsh-users/zsh-autosuggestions
 
-# zinit light spaceship-prompt/spaceship-prompt
-zinit ice as"command" from"gh-r" atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" atpull"%atclone" src"init.zsh"
-zinit light starship/starship
-
 # Random colorscripts
 # colorscript random
 
-
-
 fpath+=${ZDOTDIR:-~}/.zsh_functions
+
+eval "$(starship init zsh)"
 
 
 # BEGIN_KITTY_SHELL_INTEGRATION
