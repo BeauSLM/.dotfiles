@@ -70,6 +70,9 @@ export PATH=$HOME/.emacs.d/bin:$PATH
 
 # nvim as manpager
 export MANPAGER='nvim +Man!'
+# bat as manpager???
+# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+# man 2 select
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -94,8 +97,8 @@ export MANPAGER='nvim +Man!'
 
 setopt GLOB_DOTS
 #share commands between terminal instances or not
-unsetopt SHARE_HISTORY
-#setopt SHARE_HISTORY
+# unsetopt SHARE_HISTORY
+setopt SHARE_HISTORY
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return

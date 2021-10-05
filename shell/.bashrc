@@ -310,6 +310,7 @@ export PATH=$HOME/.emacs.d/bin:$PATH
 . "$HOME/.cargo/env"
 
 source /home/beaum/.config/broot/launcher/bash/br
+source /home/beaum/Code/Source_Installs/alacritty/extra/completions/alacritty.bash
 
 # Random colorscripts
 # colorscript random
