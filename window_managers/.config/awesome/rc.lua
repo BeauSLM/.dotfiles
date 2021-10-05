@@ -576,7 +576,7 @@ client.connect_signal("mouse::enter", function(c)
 end)
 
 -- Autostart applications
-awful.spawn_with_shell("imwheel")
-awful.spawn_with_shell("nitrogen --restore")
-awful.spawn_with_shell("mailspring -- background")
-awful.spawn_with_shell("discord --start-minimized")
+awful.spawn("imwheel")
+-- awful.spawn("nitrogen --restore")
+awful.spawn("mailspring --background")
+awful.spawn("discord-canary --no-sandbox --start-minimized")
