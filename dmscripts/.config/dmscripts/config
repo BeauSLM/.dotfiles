@@ -13,7 +13,7 @@ DMENU="dmenu -i -l 20 -p"
 
 DMBROWSER="brave"
 
-DMTERM="alacritty -e"
+DMTERM="kitty -e"
 
 DMEDITOR="${DMTERM} nvim"
 

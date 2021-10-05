@@ -111,9 +111,6 @@ set undofile
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
 
-" Fix dmscripts using neovim
-autocmd VimEnter * :silent exec "!kill -s SIGWINCH $PPID"
-
 " ------------------------Mapping-----------------------------
 let mapleader = " "
 

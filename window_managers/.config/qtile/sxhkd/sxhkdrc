@@ -34,9 +34,9 @@ super + v
 super + m
     mailspring
 
-#Alacritty
+#Terminal
 super + Return
-    alacritty
+    kitty
 
 #Xkill
 super + Escape
@@ -55,9 +55,9 @@ super + t
     thunderbird
 
 #Keyboard dependent
-#alacritty
+# Terminal
 super + KP_Enter
-	alacritty
+	kitty
 
 #OneNote
 super + o
@@ -145,9 +145,9 @@ ctrl + alt + a
 
 
 #Keyboard dependent
-#alacritty
+# Terminal
 #ctrl + alt + KP_Enter
-#     alacritty
+#     kitty
 
 
 #################################################################
@@ -164,7 +164,7 @@ ctrl + alt + a
 
 #htop
 ctrl + shift + Escape
-    alacritty -e htop
+    kitty -e htop
 
 
 #################################################################
