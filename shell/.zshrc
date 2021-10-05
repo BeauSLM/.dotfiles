@@ -488,6 +488,10 @@ zinit light starship/starship
 # colorscript random
 
 
+
+fpath+=${ZDOTDIR:-~}/.zsh_functions
+
+
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -e "$HOME/Code/Source_Installs/kitty/shell-integration/kitty.zsh"; then source "$HOME/Code/Source_Installs/kitty/shell-integration/kitty.zsh"; fi
 # END_KITTY_SHELL_INTEGRATION
