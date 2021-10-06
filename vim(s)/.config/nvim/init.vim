@@ -1,7 +1,7 @@
 "--------------------init.vim----------------------
 
 " TODO:
-" - find an alternate key for tabout
+" move to williamboman/nvim-lsp-installer
 " - COMPE IS DEPRACATED GUESS WE'RE GOING TO CMP NOW FML
 
 " Specify a directory for plugins
