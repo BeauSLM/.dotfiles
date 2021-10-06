@@ -8,4 +8,4 @@ nnoremap <leader>sO :SymbolsOutline<CR>
 
 highlight link CompeDocumentation NormalFloat
 lua require('lspkind').init()
-autocmd InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *.rs :lua require'lsp_extensions'.inlay_hints{ prefix = ' » ', highlight = "NonText", enabled = {"ChainingHint"} }
+autocmd CursorMoved,BufAdd,BufNew,BufNewFile,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *.rs :lua require'lsp_extensions'.inlay_hints{ prefix = ' » ', enabled = {"ChainingHint", "ParameterHint", "TypeHint"} }
