@@ -1,8 +1,10 @@
 "--------------------init.vim----------------------
 
 " TODO:
-" move to williamboman/nvim-lsp-installer
+" - move to williamboman/nvim-lsp-installer
 " - COMPE IS DEPRACATED GUESS WE'RE GOING TO CMP NOW FML
+" - load language plugins only for that language
+" - don't load all plugins when used as manpage
 
 " Specify a directory for plugins
 " - Avoid using standard Vim directory names like 'plugin'
