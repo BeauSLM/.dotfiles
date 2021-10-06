@@ -70,6 +70,7 @@ declare -A confedit_list
 confedit_list[dmscripts]="$HOME/.config/dmscripts/config"
 confedit_list[airline]="$HOME/.config/nvim/plugin/airline.vim"
 confedit_list[alacritty]="$HOME/.config/alacritty/alacritty.yml"
+confedit_list[aliases.fish]="$HOME/.config/fish/aliases.fish"
 confedit_list[autopairs]="$HOME/.config/nvim/lua/beauslm/autopairs.lua"
 confedit_list[autostart-qtile]="$HOME/.config/qtile/scripts/autostart.sh"
 confedit_list[awesome]="$HOME/.config/awesome/rc.lua"
