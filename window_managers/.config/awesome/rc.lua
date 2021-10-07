@@ -2,7 +2,6 @@
 -- dmenu/dmscript bindings
 -- app launch bindings
 -- Mess with the tiling
--- Move focus from screen to screen
 -- Move focus from app to app
 
 -- If LuaRocks is installed, make sure that packages installed through it are
@@ -265,10 +264,10 @@ globalkeys = gears.table.join(
               {description = "swap with next client by index", group = "client"}),
     awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.byidx( -1)    end,
               {description = "swap with previous client by index", group = "client"}),
-    awful.key({ modkey, "Control" }, "j", function () awful.screen.focus_relative( 1) end,
-              {description = "focus the next screen", group = "screen"}),
-    awful.key({ modkey, "Control" }, "k", function () awful.screen.focus_relative(-1) end,
-              {description = "focus the previous screen", group = "screen"}),
+    awful.key({ modkey, "Control" }, "j", function () awful.screen.focus_bydirection("left") end,
+              {description = "screen focus left", group = "screen"}),
+    awful.key({ modkey, "Control" }, "k", function () awful.screen.focus_bydirection("right") end,
+              {description = "screen focus right", group = "screen"}),
     awful.key({ modkey,           }, "u", awful.client.urgent.jumpto,
               {description = "jump to urgent client", group = "client"}),
     awful.key({ modkey,           }, "Tab",
