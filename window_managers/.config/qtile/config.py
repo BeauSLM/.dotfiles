@@ -291,7 +291,7 @@ layouts = [
 # WIDGETS FOR THE BAR
 
 def init_widgets_defaults():
-    return dict(font="Noto Sans",
+    return dict(font="JetBrainsMono",
                 fontsize = 12,
                 padding = 2,
                 background=colors[0])
@@ -301,7 +301,7 @@ widget_defaults = init_widgets_defaults()
 def init_widgets_list():
     prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
     widgets_list = [
-               widget.GroupBox(font="FontAwesome",
+               widget.GroupBox(font="JetBrainsMono",
                         fontsize = 16,
                         margin_y = -1,
                         margin_x = 0,
@@ -324,7 +324,7 @@ def init_widgets_list():
                         background = colors[0]
                         ),
                widget.CurrentLayout(
-                        font = "Noto Sans Bold",
+                        font = "JetBrainsMono",
                         foreground = colors[7],
                         background = colors[0]
                         ),
@@ -334,13 +334,13 @@ def init_widgets_list():
                         foreground = colors[2],
                         background = colors[0]
                         ),
-               widget.WindowName(font="Noto Sans",
+               widget.WindowName(font="JetBrainsMono",
                         fontsize = 12,
                         foreground = colors[7],
                         background = colors[0],
                         ),
                # widget.Net(
-               #          font="Noto Sans",
+               #          font="JetBrainsMono",
                #          fontsize=12,
                #          interface="enp0s31f6",
                #          foreground=colors[2],
@@ -354,7 +354,7 @@ def init_widgets_list():
                #          background = colors[0]
                #          ),
                # widget.NetGraph(
-               #          font="Noto Sans",
+               #          font="JetBrainsMono",
                #          fontsize=12,
                #          bandwidth="down",
                #          interface="auto",
@@ -405,7 +405,7 @@ def init_widgets_list():
                #          background = colors[0]
                #          ),
                # widget.Battery(
-               #          font="Noto Sans",
+               #          font="JetBrainsMono",
                #          update_interval = 10,
                #          fontsize = 12,
                #          foreground = colors[2],
@@ -444,7 +444,7 @@ def init_widgets_list():
                #          fontsize=16
                #          ),
                # widget.Memory(
-               #          font="Noto Sans",
+               #          font="JetBrainsMono",
                #          format = '{MemUsed}M/{MemTotal}M',
                #          update_interval = 1,
                #          fontsize = 12,
@@ -458,7 +458,7 @@ def init_widgets_list():
                #          background = colors[0]
                #          ),
                widget.TextBox(
-                        font="FontAwesome",
+                        font="JetBrainsMono",
                         text="  ",
                         foreground=colors[3],
                         background=colors[0],
