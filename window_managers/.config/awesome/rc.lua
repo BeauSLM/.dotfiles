@@ -1,3 +1,10 @@
+-- TODO: 
+-- dmenu/dmscript bindings
+-- app launch bindings
+-- Mess with the tiling
+-- Move focus from screen to screen
+-- Move focus from app to app
+
 -- If LuaRocks is installed, make sure that packages installed through it are
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
 pcall(require, "luarocks.loader")
@@ -61,7 +68,6 @@ modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
-    awful.layout.suit.floating,
     awful.layout.suit.tile,
     awful.layout.suit.tile.left,
     awful.layout.suit.tile.bottom,
@@ -74,6 +80,7 @@ awful.layout.layouts = {
     awful.layout.suit.max.fullscreen,
     awful.layout.suit.magnifier,
     awful.layout.suit.corner.nw,
+    awful.layout.suit.floating,
     -- awful.layout.suit.corner.ne,
     -- awful.layout.suit.corner.sw,
     -- awful.layout.suit.corner.se,
@@ -169,7 +176,7 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
+    awful.tag({ "Dev", "Web", "Chat", "Office", "Mail", "Files", "Music", "Vb", "Video", "Meld" }, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -489,13 +496,50 @@ awful.rules.rules = {
       }, properties = { floating = true }},
 
     -- Add titlebars to normal clients and dialogs
-    { rule_any = {type = { "normal", "dialog" }
-      }, properties = { titlebars_enabled = true }
-    },
+    -- { rule_any = {type = { "normal", "dialog" }
+    --   }, properties = { titlebars_enabled = true }
+    -- },
 
-    -- Set Firefox to always map on the tag named "2" on screen 1.
-    -- { rule = { class = "Firefox" },
-    --   properties = { screen = 1, tag = "2" } },
+    -- Dev tag
+    { rule_any = { class = { "kitty", "Alacritty", "Code", "emacs", "sun-awt-X11-XFramePeer" } },
+      properties = { tag = "Dev", switchtotag = true } },
+
+    -- Web tag
+    { rule = { class = "Brave-browser" }, -- add firefox
+      properties = { tag = "Web", switchtotag = true } },
+
+    -- Chat tag
+    { rule_any = { class = { "discord", "zoom" } },
+      properties = { tag = "Chat", switchtotag = true } },
+
+    -- Office tag
+    { rule_any = { class = { "libreoffice", "p3x-onenote", "notion", "notion-app", "FoxitReader", "org.pwmt.zathura" } },
+      properties = { tag = "Office", switchtotag = true } },
+
+    -- Mail tag
+    { rule_any = { class = { "Mail", "mailspring" } },
+      properties = { tag = "Mail", switchtotag = true } },
+
+    -- Files tag
+    { rule = { class = "Thunar" },
+      properties = { tag = "Files", switchtotag = true } },
+
+    -- Music tag
+    { rule = { class = "Spotify" },
+      properties = { tag = "Music", switchtotag = true } },
+
+    -- Vb tag
+    { rule_any = { class = { "VirtualBox Manager", "VirtualBox Machine", "Vmplayer",
+              "virtualbox manager", "virtualbox machine", "vmplayer" } },
+      properties = { tag = "Vb", switchtotag = true } },
+
+    -- Video tag
+    { rule_any = { class = "Vlc","vlc", "Mpv", "mpv", "obs" },
+      properties = { tag = "Video", switchtotag = true } },
+
+    -- Meld tag
+    { rule_any = { class = "Meld", "meld", "org.gnome.meld", "org.gnome.Meld" },
+      properties = { tag = "Meld", switchtotag = true } },
 }
 -- }}}
 
