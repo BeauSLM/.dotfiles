@@ -184,7 +184,7 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "Dev", "Web", "Chat", "Office", "Mail", "Files", "Music", "Vb", "Video", "Meld" }, s, awful.layout.layouts[1])
+    awful.tag({ "Dev", "Web", "Chat", "Office", "Mail", "Files", "Music", "Vb", "Video" }, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -528,7 +528,7 @@ awful.rules.rules = {
       properties = { tag = "Dev", switchtotag = true } },
 
     -- Web tag
-    { rule = { class = "Brave-browser" }, -- add firefox
+    { rule = { class = "Brave-browser" },
       properties = { tag = "Web", switchtotag = true } },
 
     -- Chat tag
@@ -540,11 +540,11 @@ awful.rules.rules = {
       properties = { tag = "Office", switchtotag = true } },
 
     -- Mail tag
-    { rule_any = { class = { "Mail", "mailspring" } },
+    { rule_any = { class = { "Mail", "mailspring", "Mailspring", "Thunderbird" } },
       properties = { tag = "Mail", switchtotag = true } },
 
     -- Files tag
-    { rule = { class = "Thunar" },
+    { rule_any = { class = { "Thunar", "Meld", "meld", "org.gnome.meld", "org.gnome.Meld" } },
       properties = { tag = "Files", switchtotag = true } },
 
     -- Music tag
@@ -560,9 +560,6 @@ awful.rules.rules = {
     { rule_any = { class = "Vlc", "vlc", "Mpv", "mpv", "obs" },
       properties = { tag = "Video", switchtotag = true } },
 
-    -- Meld tag
-    { rule_any = { class = "Meld", "meld", "org.gnome.meld", "org.gnome.Meld" },
-      properties = { tag = "Meld", switchtotag = true } },
 }
 -- }}}
 
@@ -630,6 +627,7 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
+-- lol this if does literally nothing so fix it
 if awesome.startup then
     -- Autostart applications
     awful.spawn("imwheel")
