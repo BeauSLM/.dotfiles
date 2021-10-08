@@ -2,7 +2,6 @@
 -- dmenu/dmscript bindings
 -- app launch bindings
 -- Mess with the tiling
--- Move focus from app to app
 -- Startup once hook for autostart apps
 
 -- If LuaRocks is installed, make sure that packages installed through it are
@@ -247,18 +246,16 @@ globalkeys = gears.table.join(
 
     awful.key({ modkey,           }, "j",
         function ()
-            awful.client.focus.byidx( 1)
+            awful.client.focus.bydirection("left")
         end,
-        {description = "focus next by index", group = "client"}
+        {description = "move focus left", group = "client"}
     ),
     awful.key({ modkey,           }, "k",
         function ()
-            awful.client.focus.byidx(-1)
+            awful.client.focus.bydirection("right")
         end,
-        {description = "focus previous by index", group = "client"}
+        {description = "move focus right", group = "client"}
     ),
-    awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
-              {description = "show main menu", group = "awesome"}),
 
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
@@ -534,7 +531,7 @@ awful.rules.rules = {
       properties = { tag = "Vb", switchtotag = true } },
 
     -- Video tag
-    { rule_any = { class = "Vlc","vlc", "Mpv", "mpv", "obs" },
+    { rule_any = { class = "Vlc", "vlc", "Mpv", "mpv", "obs" },
       properties = { tag = "Video", switchtotag = true } },
 
     -- Meld tag
@@ -607,8 +604,10 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
--- Autostart applications
-awful.spawn("imwheel")
--- awful.spawn("nitrogen --restore")
-awful.spawn("mailspring --background")
-awful.spawn("discord-canary --no-sandbox --start-minimized")
+if awesome.startup then
+    -- Autostart applications
+    awful.spawn("imwheel")
+    -- awful.spawn("nitrogen --restore")
+    awful.spawn("mailspring --background")
+    awful.spawn("discord-canary --no-sandbox --start-minimized")
+end
