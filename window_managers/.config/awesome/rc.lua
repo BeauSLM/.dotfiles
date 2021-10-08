@@ -5,6 +5,11 @@
 -- Startup once hook for autostart apps
 -- use awful.tag.add to give tags rules,
 -- add tags to specific screens
+-- borders and "gaps" between clients
+-- resize clients directionally
+-- tag layouts?
+-- sick widgets/extensions
+-- rip some stuff from arcolinux awesome config
 
 -- If LuaRocks is installed, make sure that packages installed through it are
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
