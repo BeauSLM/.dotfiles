@@ -10,6 +10,7 @@
 -- sick widgets/extensions
 -- rip some stuff from arcolinux awesome config
 -- mess with old commented out bindings for hjkl
+-- Add compositor (picom)
 
 -- If LuaRocks is installed, make sure that packages installed through it are
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
@@ -536,7 +537,7 @@ awful.rules.rules = {
       properties = { tag = "Chat", switchtotag = true } },
 
     -- Office tag
-    { rule_any = { class = { "libreoffice", "p3x-onenote", "notion", "notion-app", "FoxitReader", "org.pwmt.zathura" } },
+    { rule_any = { class = { "libreoffice", "p3x-onenote", "notion", "notion-app", "FoxitReader", "Zathura" } },
       properties = { tag = "Office", switchtotag = true } },
 
     -- Mail tag
