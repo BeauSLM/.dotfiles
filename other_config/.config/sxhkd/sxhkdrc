@@ -48,8 +48,8 @@ super + KP_Enter
 	kitty
 
 #OneNote
-super + o
-    p3x-onenote
+# super + o
+#     p3x-onenote
 
 # Selected area screenshot
 super + s

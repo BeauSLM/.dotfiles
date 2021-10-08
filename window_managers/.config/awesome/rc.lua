@@ -1,6 +1,5 @@
 -- TODO:
 -- dmenu/dmscript bindings
--- app launch bindings
 -- Mess with the tiling
 -- Startup once hook for autostart apps
 -- use awful.tag.add to give tags rules,
@@ -10,6 +9,7 @@
 -- tag layouts?
 -- sick widgets/extensions
 -- rip some stuff from arcolinux awesome config
+-- mess with old commented out bindings for hjkl
 
 -- If LuaRocks is installed, make sure that packages installed through it are
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
@@ -244,7 +244,7 @@ root.buttons(gears.table.join(
 
 -- {{{ Key bindings
 globalkeys = gears.table.join(
-    awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
+    awful.key({ modkey,           }, "b",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
               {description = "view previous", group = "tag"}),
@@ -548,7 +548,7 @@ awful.rules.rules = {
       properties = { tag = "Files", switchtotag = true } },
 
     -- Music tag
-    { rule = { class = "Spotify" },
+    { rule_any = { class = { "Spotify", "spotify" } },
       properties = { tag = "Music", switchtotag = true } },
 
     -- Vb tag
@@ -557,7 +557,7 @@ awful.rules.rules = {
       properties = { tag = "Vb", switchtotag = true } },
 
     -- Video tag
-    { rule_any = { class = "Vlc", "vlc", "Mpv", "mpv", "obs" },
+    { rule_any = { class = { "Vlc", "vlc", "Mpv", "mpv", "obs" } },
       properties = { tag = "Video", switchtotag = true } },
 
 }
@@ -627,11 +627,10 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
--- lol this if does literally nothing so fix it
-if awesome.startup then
-    -- Autostart applications
-    awful.spawn("imwheel")
-    -- awful.spawn("nitrogen --restore")
-    awful.spawn("mailspring --background")
-    awful.spawn("discord-canary --no-sandbox --start-minimized")
-end
+-- TODO: MAKE THIS A FOR LOOP ITERATING THROUGH AN ARRAY OF STRINGS
+-- Autostart applications
+awful.spawn.once("imwheel")
+-- awful.spawn.once("nitrogen --restore")
+awful.spawn.once("mailspring --background")
+awful.spawn.once("discord-canary --no-sandbox --start-minimized")
+awful.spawn.once("sxhkd")

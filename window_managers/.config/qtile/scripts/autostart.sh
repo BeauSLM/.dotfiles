@@ -30,7 +30,7 @@ run dex $HOME/.config/autostart/arcolinux-welcome-app.desktop &
 (conky -c $HOME/.config/qtile/scripts/system-overview) &
 
 #start sxhkd to replace Qtile native key-bindings
-run sxhkd -c ~/.config/qtile/sxhkd/sxhkdrc &
+run sxhkd
 
 
 #starting utility applications at boot time
