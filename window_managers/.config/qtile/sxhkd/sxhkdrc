@@ -10,10 +10,6 @@
 # SUPER + ... KEYS
 #################################################################
 
-#Code
-super + e
-    code
-
 #Brave
 super + w
     brave
@@ -22,13 +18,9 @@ super + w
 super + c
     conky-toggle
 
-#arcolinux-logout
-super + x
-    arcolinux-logout
-
 #Pavucontrol
-super + v
-    pavucontrol
+# super + v
+    # pavucontrol
 
 #Mailspring
 super + m
@@ -45,10 +37,6 @@ super + Escape
 #dmenu
 super + d
     dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
-
-#GitKraken
-super + g
-    gitkraken
 
 #Thunderbird
 super + t
@@ -84,12 +72,12 @@ super + shift + s
 #################################################################
 
 #conky-rotate
-ctrl + alt + Next
-     conky-rotate -n
+# ctrl + alt + Next
+     # conky-rotate -n
 
 #conky-rotate
-ctrl + alt + Prior
-    conky-rotate -p
+# ctrl + alt + Prior
+#     conky-rotate -p
 
 #File-Manager
 ctrl + alt + t
@@ -98,10 +86,6 @@ ctrl + alt + t
 #Catfish
 ctrl + alt + c
      catfish
-
-#Chromium
-ctrl + alt + g
-    chromium -no-default-browser-check
 
 #Foxit Reader
 ctrl + alt + f
@@ -112,10 +96,6 @@ ctrl + alt + i
      nitrogen
 
 #arcolinux-logout
-ctrl + alt + k
-     arcolinux-logout
-
-#arcolinux-logout
 ctrl + alt + l
     arcolinux-logout
 
@@ -124,16 +104,16 @@ ctrl + alt + p
     pamac-manager
 
 #Xfce4-settings-manager
-ctrl + alt + m
-     xfce4-settings-manager
+# ctrl + alt + m
+     # xfce4-settings-manager
 
 #Pulse Audio Control
 ctrl + alt + u
      pavucontrol
 
 #Rofi theme selector
-ctrl + alt + r
-  rofi-theme-selector
+# ctrl + alt + r
+  # rofi-theme-selector
 
 #Spotify
 ctrl + alt + s
@@ -171,27 +151,11 @@ ctrl + shift + Escape
 #     SCREENSHOTS
 #################################################################
 
-#Scrot
-Print
-    scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
-
-#screeenshooter
-ctrl + Print
-     xfce4-screenshooter
-
-#Gnome-Screenshot
-ctrl + shift + Print
-     gnome-screenshot -i
-
+# TODO: main selected region clipboard
 
 #################################################################
 #     FUNCTION KEYS
 #################################################################
-
-#xfce4-terminal dropdown
-F12
-    xfce4-terminal --drop-down
-
 
 #################################################################
 #     MULTIMEDIA KEYS
