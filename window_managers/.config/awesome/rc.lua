@@ -628,7 +628,9 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
+-- TODO: check qtile autostart, see if I need anything else.
 -- TODO: MAKE THIS A FOR LOOP ITERATING THROUGH AN ARRAY OF STRINGS
+-- TODO: clipboard manager, volume icon
 -- Autostart applications
 awful.spawn.once("imwheel")
 -- awful.spawn.once("nitrogen --restore")
