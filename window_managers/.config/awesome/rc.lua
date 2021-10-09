@@ -629,11 +629,23 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 -- TODO: check qtile autostart, see if I need anything else.
--- TODO: MAKE THIS A FOR LOOP ITERATING THROUGH AN ARRAY OF STRINGS
 -- TODO: clipboard manager, volume icon
 -- Autostart applications
-awful.spawn.once("imwheel")
--- awful.spawn.once("nitrogen --restore")
-awful.spawn.once("mailspring --background")
-awful.spawn.once("discord-canary --no-sandbox --start-minimized")
-awful.spawn.once("sxhkd")
+local cmds = {
+    "nm-applet",
+    "numlockx on",
+    "blueberry-tray",
+    "picom --config $HOME/.config/qtile/scripts/picom.conf",
+    "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
+    "imwheel",
+    "mailspring --background",
+    "discord --no-sandbox --start-minimized",
+    "sxhkd",
+    "xfce4-clipman",
+    "xrandr --output DP-2 --brightness 0.7",
+    "xrandr --output DP-0 --brightness 0.7",
+}
+
+for _, cmd in pairs(cmds) do
+    awful.spawn.single_instance(cmd)
+end
