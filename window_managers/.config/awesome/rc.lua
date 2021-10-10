@@ -1,4 +1,5 @@
 -- TODO:
+-- Pick decent layouts lmao jesus
 -- dmenu/dmscript bindings
 -- Mess with the tiling
 -- Startup once hook for autostart apps
@@ -185,7 +186,7 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "Dev", "Web", "Chat", "Office", "Mail", "Files", "Music", "Vb", "Video" }, s, awful.layout.layouts[1])
+    awful.tag({ "Dev", "Web", "Chat", "Office", "Mail", "Files", "Image", "Vb", "Video" }, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -282,13 +283,13 @@ globalkeys = gears.table.join(
 
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.bydirection("down")    end,
-              {description = "swap with client below", group = "client"}),
+              {description = "swap down", group = "client"}),
     awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.bydirection("up")    end,
-              {description = "swap with client above", group = "client"}),
+              {description = "swap up", group = "client"}),
     awful.key({ modkey, "Shift"   }, "h", function () awful.client.swap.bydirection("left")    end,
-              {description = "swap with client below", group = "client"}),
+              {description = "swap left", group = "client"}),
     awful.key({ modkey, "Shift"   }, "l", function () awful.client.swap.bydirection("right")    end,
-              {description = "swap with client above", group = "client"}),
+              {description = "swap right", group = "client"}),
     awful.key({ modkey, }, ",", function () awful.screen.focus_bydirection("left") end,
               {description = "screen focus left", group = "screen"}),
     awful.key({ modkey, }, ".", function () awful.screen.focus_bydirection("right") end,
@@ -342,8 +343,8 @@ globalkeys = gears.table.join(
               {description = "restore minimized", group = "client"}),
 
     -- Prompt
-    awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
-              {description = "run prompt", group = "launcher"}),
+    -- awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
+    --           {description = "run prompt", group = "launcher"}),
 
     awful.key({ modkey }, "x",
               function ()
@@ -354,10 +355,10 @@ globalkeys = gears.table.join(
                     history_path = awful.util.get_cache_dir() .. "/history_eval"
                   }
               end,
-              {description = "lua execute prompt", group = "awesome"}),
+              {description = "lua execute prompt", group = "awesome"})
     -- Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"})
+    -- awful.key({ modkey }, "p", function() menubar.show() end,
+              -- {description = "show the menubar", group = "launcher"})
 )
 
 clientkeys = gears.table.join(
@@ -548,9 +549,9 @@ awful.rules.rules = {
     { rule_any = { class = { "Thunar", "Meld", "meld", "org.gnome.meld", "org.gnome.Meld" } },
       properties = { tag = "Files", switchtotag = true } },
 
-    -- Music tag
-    { rule_any = { class = { "Spotify", "spotify" } },
-      properties = { tag = "Music", switchtotag = true } },
+    -- Image tag
+    { rule_any = { class =  {"Gimp-2.10", "Nitrogen" } },
+      properties = { tag = "Image", switchtotag = true } },
 
     -- Vb tag
     { rule_any = { class = { "VirtualBox Manager", "VirtualBox Machine", "Vmplayer",
@@ -639,11 +640,11 @@ local cmds = {
     "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
     "imwheel",
     "mailspring --background",
-    "discord --no-sandbox --start-minimized",
+    "discord-canary --no-sandbox --start-minimized",
     "sxhkd",
     "xfce4-clipman",
-    "xrandr --output DP-2 --brightness 0.7",
-    "xrandr --output DP-0 --brightness 0.7",
+    "xrandr --output DP-2 --brightness 0.75",
+    "xrandr --output DP-0 --brightness 0.75",
 }
 
 for _, cmd in pairs(cmds) do

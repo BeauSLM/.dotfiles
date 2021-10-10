@@ -59,10 +59,6 @@ super + s
 # SUPER + SHIFT KEYS
 #################################################################
 
-#Discord
-super + shift + d
-    discord-canary --no-sandbox
-
 #reload sxhkd:
 super + shift + s
 	pkill -USR1 -x sxhkd
@@ -70,6 +66,10 @@ super + shift + s
 #################################################################
 # CONTROL + ALT KEYS
 #################################################################
+
+#Discord
+ctrl + alt + d
+    discord-canary --no-sandbox
 
 #conky-rotate
 # ctrl + alt + Next
