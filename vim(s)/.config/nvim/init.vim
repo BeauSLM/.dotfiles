@@ -12,14 +12,11 @@ call plug#begin(stdpath('data') . '/plugged')
 "--------------------vim-plug----------------------
 
 Plug 'vim-airline/vim-airline'
-Plug 'preservim/nerdcommenter'
-Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'preservim/nerdcommenter', { 'on': ['<plug>NERDCommenterToggle', '<plug>NERDCommenterSexy']}
 Plug 'christoomey/vim-tmux-navigator'
 
 " Plug 'flazz/vim-colorschemes'
 Plug 'gruvbox-community/gruvbox'
-
-Plug 'sbdchd/neoformat'
 
 Plug 'windwp/nvim-autopairs'
 Plug 'hrsh7th/nvim-compe'
@@ -27,10 +24,8 @@ Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
 
 Plug 'edkolev/tmuxline.vim'
-Plug 'bling/vim-bufferline'
 
 " ode to tpope
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim'
@@ -38,12 +33,12 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-eunuch'
 
-Plug 'mbbill/undotree'
+Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 Plug 'voldikss/vim-floaterm'
 "---------------Nightly/Lsp plugins----------------
 Plug 'neovim/nvim-lspconfig'
 Plug 'kabouzeid/nvim-lspinstall'
-Plug 'nvim-lua/lsp_extensions.nvim'
+Plug 'nvim-lua/lsp_extensions.nvim', { 'for': 'rust' }
 Plug 'simrat39/symbols-outline.nvim'
 Plug 'onsails/lspkind-nvim'
 
@@ -62,17 +57,16 @@ Plug 'p00f/nvim-ts-rainbow'
 " that prime guy's wizardry
 " Plug 'mhinz/vim-rfc'
 Plug 'ThePrimeagen/harpoon'
-Plug 'ThePrimeagen/refactoring.nvim'
+Plug 'ThePrimeagen/refactoring.nvim', { 'for': ['go', 'javascript', 'lua', 'python', 'typescript']}
 
 " debug
-Plug 'szw/vim-maximizer'
+Plug 'szw/vim-maximizer', { 'on': 'MaximizerToggle'}
 Plug 'puremourning/vimspector'
 
 " browser embed nvim
-Plug 'glacambre/firenvim'
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
-Plug 'ThePrimeagen/vim-be-good'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+Plug 'ThePrimeagen/vim-be-good', { 'on': 'VimBeGood' }
 "--------------------------------------------------
 " Initialize plugin system
 call plug#end()
@@ -122,10 +116,6 @@ nnoremap <C-q> :q!<CR>
 
 " tabout baby
 " inoremap <expr> <Tab> getline('.')[col('.')-1] =~? '[]>)}''"`]' ? '<Right>' : '<Tab>'
-
-" Comments
-map <leader>/ <plug>NERDCommenterToggle
-map <leader>? <plug>NERDCommenterSexy
 
 " Undotree
 nnoremap <leader>u :UndotreeToggle<CR>
