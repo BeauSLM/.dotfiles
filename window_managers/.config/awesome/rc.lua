@@ -526,7 +526,7 @@ awful.rules.rules = {
     -- },
 
     -- Dev tag
-    { rule_any = { class = { "kitty", "Alacritty", "Code", "emacs", "sun-awt-X11-XFramePeer" } },
+    { rule_any = { class = { "kitty", "Alacritty", "Code", "emacs", "MPLAB X IDE v5.50" } },
       properties = { tag = "Dev", switchtotag = true } },
 
     -- Web tag

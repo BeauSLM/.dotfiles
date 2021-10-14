@@ -2,6 +2,8 @@
 
 " TODO:
 " - move to williamboman/nvim-lsp-installer
+" - move to mfussenegger/nvim-dap
+" - move to packer?
 " - COMPE IS DEPRACATED GUESS WE'RE GOING TO CMP NOW FML
 " - load language plugins only for that language
 " - don't load all plugins when used as manpage
@@ -32,6 +34,7 @@ Plug 'junegunn/gv.vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-speeddating'
 
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 Plug 'voldikss/vim-floaterm'
@@ -60,8 +63,11 @@ Plug 'ThePrimeagen/harpoon'
 Plug 'ThePrimeagen/refactoring.nvim', { 'for': ['go', 'javascript', 'lua', 'python', 'typescript']}
 
 " debug
-Plug 'szw/vim-maximizer', { 'on': 'MaximizerToggle'}
+" extensions for nvim-dap
+" Plug 'mfussenegger/nvim-dap'
+" Plug 'Pocco81/DAPInstall.nvim'
 Plug 'puremourning/vimspector'
+Plug 'szw/vim-maximizer', { 'on': 'MaximizerToggle'}
 
 " browser embed nvim
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
