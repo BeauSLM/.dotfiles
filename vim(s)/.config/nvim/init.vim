@@ -4,9 +4,9 @@
 " - move to williamboman/nvim-lsp-installer
 " - move to mfussenegger/nvim-dap
 " - move to packer?
-" - COMPE IS DEPRACATED GUESS WE'RE GOING TO CMP NOW FML
 " - load language plugins only for that language
 " - don't load all plugins when used as manpage
+" - fix autopairs
 
 " Specify a directory for plugins
 " - Avoid using standard Vim directory names like 'plugin'
@@ -20,10 +20,19 @@ Plug 'christoomey/vim-tmux-navigator'
 " Plug 'flazz/vim-colorschemes'
 Plug 'gruvbox-community/gruvbox'
 
+" autocomplete
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-nvim-lua'
+Plug 'ray-x/cmp-treesitter'
+Plug 'kristijanhusak/vim-dadbod-completion'
 Plug 'windwp/nvim-autopairs'
-Plug 'hrsh7th/nvim-compe'
-Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
+Plug 'L3MON4D3/LuaSnip'
+Plug 'saadparwaiz1/cmp_luasnip'
+
+" Plug 'saecki/crates.nvim'
 
 Plug 'edkolev/tmuxline.vim'
 
@@ -35,6 +44,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-speeddating'
+Plug 'tpope/vim-dadbod'
 
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 Plug 'voldikss/vim-floaterm'
