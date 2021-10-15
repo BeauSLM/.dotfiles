@@ -20,7 +20,7 @@ nnoremap <leader>gs :lua require('telescope.builtin').git_status()<CR>
 " lsp stuff
 nnoremap <leader>gr :lua require('telescope.builtin').lsp_references(require('telescope.themes').get_dropdown({}))<CR>
 nnoremap <leader>ca :lua require('telescope.builtin').lsp_code_actions(require('telescope.themes').get_cursor({}))<CR>
-nnoremap <leader>sd :lua require('telescope.builtin').lsp_document_diagnostics(require('telescope.themes').get_dropdown({}))<CR>
+nnoremap <leader>SD :lua require('telescope.builtin').lsp_document_diagnostics(require('telescope.themes').get_dropdown({}))<CR>
 nnoremap <silent>gi :lua require('telescope.builtin').lsp_implementations()<CR>
 nnoremap <silent>gd :lua require('telescope.builtin').lsp_definitions()<CR>
 nnoremap <leader>D :lua require('telescope.builtin').lsp_type_definitions()<CR>
