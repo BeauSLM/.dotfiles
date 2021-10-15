@@ -4,7 +4,6 @@
 local nvim_lsp = require'lspconfig'
 
 -- use lsp snippets (from compe readme)
-require("beauslm.compe")
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 capabilities.textDocument.completion.completionItem.resolveSupport = {
@@ -87,7 +86,7 @@ local servers = {
 
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
-      -- for compe
+      -- for cmp
       capabilities = capabilities,
       on_attach = on_attach,
   }
