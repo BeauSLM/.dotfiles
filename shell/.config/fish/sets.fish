@@ -24,3 +24,8 @@ set -x VISUAL "nvim"
 # bat as manpager
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 # set -x MANPAGER "nvim +Man!"
+
+set fish_cursor_default     block      blink
+set fish_cursor_insert      line       blink
+set fish_cursor_replace_one underscore blink
+set fish_cursor_visual      block

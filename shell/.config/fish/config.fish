@@ -6,7 +6,7 @@
 set fish_greeting
 
 # sources
-source $__fish_config_dir/exports.fish
+source $__fish_config_dir/sets.fish
 source $__fish_config_dir/colors.fish
 source $__fish_config_dir/bindings.fish
 source $__fish_config_dir/aliases.fish
