@@ -15,7 +15,6 @@ call plug#begin(stdpath('data') . '/plugged')
 
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdcommenter', { 'on': ['<plug>NERDCommenterToggle', '<plug>NERDCommenterSexy']}
-Plug 'christoomey/vim-tmux-navigator'
 
 " Plug 'flazz/vim-colorschemes'
 Plug 'gruvbox-community/gruvbox'
@@ -47,7 +46,6 @@ Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-dadbod'
 
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
-Plug 'voldikss/vim-floaterm'
 "---------------Nightly/Lsp plugins----------------
 Plug 'neovim/nvim-lspconfig'
 Plug 'kabouzeid/nvim-lspinstall'
@@ -149,6 +147,20 @@ vnoremap K :m '<-2<CR>gv=gv
 
 " Harpoon baby
 nnoremap <silent> <C-f> :silent !tmux neww tmux-sessionizer<CR>
+
+" navigation in general lets go
+:tnoremap <C-h> <C-\><C-N><C-w>h
+:tnoremap <C-j> <C-\><C-N><C-w>j
+:tnoremap <C-k> <C-\><C-N><C-w>k
+:tnoremap <C-l> <C-\><C-N><C-w>l
+:inoremap <C-h> <C-\><C-N><C-w>h
+:inoremap <C-j> <C-\><C-N><C-w>j
+:inoremap <C-k> <C-\><C-N><C-w>k
+:inoremap <C-l> <C-\><C-N><C-w>l
+:nnoremap <C-h> <C-w>h
+:nnoremap <C-j> <C-w>j
+:nnoremap <C-k> <C-w>k
+:nnoremap <C-l> <C-w>l
 
 augroup highlight_yank
     autocmd!
