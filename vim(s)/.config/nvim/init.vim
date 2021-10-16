@@ -16,6 +16,7 @@ call plug#begin(stdpath('data') . '/plugged')
 "--------------------vim-plug----------------------
 
 Plug 'vim-airline/vim-airline'
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 " Plug 'flazz/vim-colorschemes'
 Plug 'gruvbox-community/gruvbox'
