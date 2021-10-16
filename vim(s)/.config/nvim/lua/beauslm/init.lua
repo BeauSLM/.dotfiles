@@ -26,7 +26,6 @@ if pcall(require, 'plenary') then
 end
 
 -- symbols outline
-
 local opts = {
     highlight_hovered_item = true,
     show_guides = true,
@@ -36,3 +35,7 @@ local opts = {
 
 require('symbols-outline').setup(opts)
 
+-- tabout.nvim
+require('tabout').setup {
+    completion = false,
+}

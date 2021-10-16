@@ -1,6 +1,8 @@
 "--------------------init.vim----------------------
 
 " TODO:
+" - read ins-completion help
+" - split mapping for sure holy fuck this is urgent
 " - move to williamboman/nvim-lsp-installer
 " - move to mfussenegger/nvim-dap
 " - move to packer?
@@ -14,7 +16,6 @@ call plug#begin(stdpath('data') . '/plugged')
 "--------------------vim-plug----------------------
 
 Plug 'vim-airline/vim-airline'
-Plug 'preservim/nerdcommenter', { 'on': ['<plug>NERDCommenterToggle', '<plug>NERDCommenterSexy']}
 
 " Plug 'flazz/vim-colorschemes'
 Plug 'gruvbox-community/gruvbox'
@@ -47,6 +48,7 @@ Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-dadbod'
 
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
+Plug 'preservim/nerdcommenter', { 'on': ['<plug>NERDCommenterToggle', '<plug>NERDCommenterSexy']}
 "---------------Nightly/Lsp plugins----------------
 Plug 'neovim/nvim-lspconfig'
 Plug 'kabouzeid/nvim-lspinstall'
@@ -81,6 +83,7 @@ Plug 'szw/vim-maximizer', { 'on': 'MaximizerToggle'}
 " browser embed nvim
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
+Plug 'abecodes/tabout.nvim'
 Plug 'ThePrimeagen/vim-be-good', { 'on': 'VimBeGood' }
 "--------------------------------------------------
 " Initialize plugin system
@@ -128,9 +131,6 @@ let mapleader = " "
 
 " FINALLY WE CAN EXIT VIM EASY
 nnoremap <C-q> :q!<CR>
-
-" tabout baby
-" inoremap <expr> <Tab> getline('.')[col('.')-1] =~? '[]>)}''"`]' ? '<Right>' : '<Tab>'
 
 " Undotree
 nnoremap <leader>u :UndotreeToggle<CR>
