@@ -1,14 +1,17 @@
--- Setup nvim-cmp.
-local has_words_before = function()
-  local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-  return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
-end
+-------cmp.lua----------
+-- TODO:
+-- Turn off automatic popups
+-- Autocommands to load completions for a given
+
+-- Setup nvim-cmp
 
 local luasnip = require("luasnip")
 local cmp = require'cmp'
 
 cmp.setup({
     enabled = true,
+    -- TODO: find a way to make this nice
+    -- completion = { autocomplete = false, },
     snippet = {
       expand = function(args)
         require('luasnip').lsp_expand(args.body)
@@ -41,16 +44,20 @@ cmp.setup({
       ['<C-Space>'] = cmp.mapping.complete(),
       ['<C-e>'] = cmp.mapping.close(),
       ['<CR>'] = cmp.mapping.confirm({ select = true }),
+      ['<C-y>'] = cmp.mapping.confirm {
+          behavior = cmp.ConfirmBehavior.Insert,
+          select = true,
+      },
     },
     sources = {
       { name = 'nvim_lua' },
-      { name = 'luasnip' },
+      { name = 'crates' },
       { name = 'vim-dadbod-completion' },
+      { name = 'luasnip' },
       { name = 'nvim_lsp' },
       { name = 'treesitter' },
       { name = 'path' },
-      { name = 'buffer' },
-      -- { name = 'crates' },
+      { name = 'buffer', keyword_length = 4 },
     },
     formatting = {
       format = require("lspkind").cmp_format({with_text = true, menu = ({
@@ -63,4 +70,9 @@ cmp.setup({
           path = "[Path]",
         })}),
     },
+    experimental = {
+        native_menu = false,
+        ghost_text = true,
+    }
 })
+

@@ -11,5 +11,7 @@ nnoremap <leader>l :lua require("harpoon.ui").nav_file(3)<CR>
 nnoremap <leader>; :lua require("harpoon.ui").nav_file(4)<CR>
 nnoremap <leader>tj :lua require("harpoon.term").gotoTerminal(1)<CR>
 nnoremap <leader>tk :lua require("harpoon.term").gotoTerminal(2)<CR>
+tnoremap <leader>tj :lua require("harpoon.term").gotoTerminal(1)<CR>
+tnoremap <leader>tk :lua require("harpoon.term").gotoTerminal(2)<CR>
 nnoremap <leader>cj :lua require("harpoon.term").sendCommand(1, 1)<CR>
 nnoremap <leader>ck :lua require("harpoon.term").sendCommand(1, 2)<CR>

@@ -34,7 +34,7 @@ Plug 'rafamadriz/friendly-snippets'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
 
-" Plug 'saecki/crates.nvim'
+Plug 'saecki/crates.nvim'
 
 Plug 'edkolev/tmuxline.vim'
 
@@ -47,6 +47,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-dadbod'
+Plug 'kristijanhusak/vim-dadbod-ui'
 
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 Plug 'preservim/nerdcommenter', { 'on': ['<plug>NERDCommenterToggle', '<plug>NERDCommenterSexy']}
@@ -102,7 +103,7 @@ set shiftwidth=4
 set expandtab
 set smarttab
 set cindent
-set scrolloff=10
+set scrolloff=12
 set colorcolumn=80
 set signcolumn=yes
 set signcolumn=number
@@ -132,6 +133,13 @@ let mapleader = " "
 
 " FINALLY WE CAN EXIT VIM EASY
 nnoremap <C-q> :q!<CR>
+
+" KILL THEM BUFFERS FUCK 
+nnoremap <leader>bd :bd<CR>
+
+" COME BACK FROM THE TERMINAL
+tnoremap <C-o> <C-\><C-n><C-o>
+tnoremap <C-q> <C-\><C-n>:bd!<CR>
 
 " Undotree
 nnoremap <leader>u :UndotreeToggle<CR>
