@@ -8,6 +8,10 @@
 local luasnip = require("luasnip")
 local cmp = require'cmp'
 
+-- cmp + autopairs
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+cmp.event:on( 'confirm_done', cmp_autopairs.on_confirm_done())
+
 cmp.setup({
     enabled = true,
     -- TODO: find a way to make this nice
