@@ -80,3 +80,4 @@ cmp.setup({
     }
 })
 
+vim.cmd("autocmd FileType TelescopePrompt lua require('cmp').setup.buffer { enabled = false }")
