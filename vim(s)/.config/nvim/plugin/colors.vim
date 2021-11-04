@@ -43,8 +43,8 @@ highlight IndentBlanklineIndent4 guifg=#56B6C2 gui=nocombine
 highlight IndentBlanklineIndent5 guifg=#61AFEF gui=nocombine
 highlight IndentBlanklineIndent6 guifg=#C678DD gui=nocombine
 
-set list
-set listchars=space:.,eol:↴
+" set list
+" set listchars=space:.
 
 lua << EOF
 require("indent_blankline").setup {
