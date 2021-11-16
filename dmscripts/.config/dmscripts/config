@@ -41,7 +41,7 @@ esac
 # last dash. This gives us the word after the - which is what we are searching for in the case
 # statement. ie dm-man -> man
 
-# An awk equivalent is: 
+# An awk equivalent is:
 # awk -F"-" '{print $NF}'
 # Sadly cut has no easy equivalent
 
@@ -49,7 +49,7 @@ esac
 # TODO: Make some of the more useful ones general variables
 # IE a pictures directory, an audio directory, config locations, etc
 
-# dm-bookman 
+# dm-bookman
 bookman_show_source=1
 
 # dm-sounds
@@ -68,20 +68,13 @@ note_dir="${HOME}/.config/dmscripts/dmnote"
 # dm-confedit
 declare -A confedit_list
 confedit_list[dmscripts]="$HOME/.config/dmscripts/config"
-confedit_list[airline]="$HOME/.config/nvim/plugin/airline.vim"
 confedit_list[alacritty]="$HOME/.config/alacritty/alacritty.yml"
-confedit_list[autopairs]="$HOME/.config/nvim/lua/beauslm/autopairs.lua"
 confedit_list[autostart-qtile]="$HOME/.config/qtile/scripts/autostart.sh"
 confedit_list[awesome]="$HOME/.config/awesome/rc.lua"
 confedit_list[bash]="$HOME/.bashrc"
 confedit_list[broot]="$HOME/.config/broot/conf.toml"
 confedit_list[bspwm]="$HOME/.config/bspwm/bspwmrc"
 confedit_list[clean-env]="$HOME/.dotfiles/clean-env"
-confedit_list[closetag.vim]="$HOME/.config/nvim/plugin/closetag.vim"
-confedit_list[coc]="$HOME/.config/nvim/plugin/coc.vim"
-confedit_list[coc-settings]="$HOME/.config/nvim/coc-settings.json"
-confedit_list[colors]="$HOME/.config/nvim/plugin/colors.vim"
-confedit_list[compe.lua]="$HOME/.config/nvim/lua/beauslm/compe.lua"
 confedit_list[doom emacs config.el]="$HOME/.config/doom/config.el"
 confedit_list[doom emacs config.org]="$HOME/.config/doom/config.org"
 confedit_list[doom emacs init.el]="$HOME/.config/doom/init.el"
@@ -96,24 +89,13 @@ confedit_list[fish colors]="$HOME/.config/fish/colors.fish"
 confedit_list[fish exports]="$HOME/.config/fish/exports.fish"
 confedit_list[fish keybinds]="$HOME/.config/fish/bindings.fish"
 confedit_list[git]="$HOME/.gitconfig"
-confedit_list[fugitive]="$HOME/.config/nvim/plugin/git.vim"
-confedit_list[git-worktree.lua]="$HOME/.config/nvim/lua/beauslm/git-worktree.lua"
-confedit_list[harpoon]="$HOME/.config/nvim/plugin/harpoon.vim"
-confedit_list[harpoon.lua]="$HOME/.config/nvim/lua/beauslm/harpoon.lua"
 confedit_list[herbstluftwm]="$HOME/.config/herbstluftwm/autostart"
 confedit_list[i3]="$HOME/.config/i3/config"
 confedit_list[imwheel]="$HOME/.imwheelrc"
-confedit_list[init.lua]="$HOME/.config/nvim/lua/beauslm/init.lua"
 confedit_list[install]="$HOME/.dotfiles/install"
 confedit_list[kitty]="$HOME/.config/kitty/kitty.conf"
-confedit_list[lsp]="$HOME/.config/nvim/plugin/lsp.vim"
-# confedit_list[lspsaga]="$HOME/.config/nvim/plugin/saga.vim"
-confedit_list[lsp.lua]="$HOME/.config/nvim/lua/beauslm/lsp.lua"
 confedit_list[ncmpcpp]="$HOME/.config/ncmpcpp/config"
-confedit_list[neoformat]="$HOME/.config/nvim/plugin/neoformat.vim"
-confedit_list[neovim]="$HOME/.config/nvim/init.vim"
-confedit_list[nerdcommenter]="$HOME/.config/nvim/plugin/nerdcommenter.vim"
-confedit_list[nerdtree]="$HOME/.config/nvim/plugin/nerdtree.vim"
+confedit_list[neovim]="$HOME/.config/nvim/init.lua"
 confedit_list[paru]="$HOME/.config/paru/paru.conf"
 confedit_list[picom]="$HOME/.config/picom/picom.conf"
 confedit_list[polybar]="$HOME/.config/polybar/config"
@@ -121,7 +103,6 @@ confedit_list[qtile]="$HOME/.config/qtile/config.py"
 confedit_list[qutebrowser bookmarks]="$HOME/.config/qutebrowser/bookmarks/urls"
 confedit_list[qutebrowser quickmarks]="$HOME/.config/qutebrowser/quickmarks"
 confedit_list[qutebrowser config.py]="$HOME/.config/qutebrowser/config.py"
-confedit_list[refactoring]="$HOME/.config/nvim/lua/beauslm/refactoring.lua"
 confedit_list[rtorrent]="$HOME/.rtorrent.rc"
 confedit_list[spectrwm]="$HOME/.spectrwm.conf"
 confedit_list[ssh]="$HOME/.ssh/config"
@@ -131,11 +112,8 @@ confedit_list[stumpwm]="$HOME/.config/stumpwm/config"
 confedit_list[surf]="$HOME/surf-distrotube/config.def.h"
 confedit_list[sxhkd]="$HOME/.config/sxhkd/sxhkdrc"
 confedit_list[sxhkd-qtile]="$HOME/.config/qtile/sxhkd/sxhkdrc"
-confedit_list[symbols outline]="$HOME/.config/nvim/plugin/symbols.vim"
 confedit_list[system overview]="$HOME/.config/qtile/scripts/system-overview"
 confedit_list[tabbed]="$HOME/tabbed-distrotube/config.def.h"
-confedit_list[telescope]="$HOME/.config/nvim/plugin/telescope.vim"
-confedit_list[telescope.lua]="$HOME/.config/nvim/lua/beauslm/telescope.lua"
 confedit_list[termite]="$HOME/.config/termite/config"
 confedit_list[tmux]="$HOME/.tmux.conf"
 confedit_list[tmux-cht]="$HOME/.local/bin/tmux-cht"
@@ -143,10 +121,8 @@ confedit_list[tmux-cht-command]="$HOME/.tmux-cht-command"
 confedit_list[tmux-cht-languages]="$HOME/.tmux-cht-languages"
 confedit_list[tmux-sessionizer]="$HOME/.local/bin/tmux-sessionizer"
 confedit_list[tmux-windowizer]="$HOME/.local/bin/tmux-windowizer"
-confedit_list[treesitter.lua]="$HOME/.config/nvim/lua/beauslm/treesitter.lua"
 confedit_list[vifm]="$HOME/.config/vifm/vifmrc"
 confedit_list[vim]="$HOME/.vimrc"
-confedit_list[vimspector]="$HOME/.config/nvim/plugin/vimspector.vim"
 confedit_list[vscode settings.json]="$HOME/.config/Code/User/settings.json"
 confedit_list[xmobar mon1]="$HOME/.config/xmobar/xmobarrc0"
 confedit_list[xmobar mon2]="$HOME/.config/xmobar/xmobarrc1"
@@ -174,7 +150,7 @@ declare -a reddit_list=(
 "r/vim"
 )
 
-# Search engine config 
+# Search engine config
 websearch_browser="$DMBROWSER"
 declare -A websearch
 # Syntax:
