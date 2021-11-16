@@ -4,3 +4,5 @@
 [submodule "vim(s)/.config/nvim"]
 	path = vim(s)/.config/nvim
 	url = git@github.com:BeauSLM/nvim.git
+[submodule "git@github.com:BeauSLM/nvim.git"]
+	branch = my_setup
