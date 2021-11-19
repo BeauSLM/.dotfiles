@@ -307,6 +307,9 @@ alias personal='cp -Rf /personal/* ~'
 # Add doom emacs commands to path
 export PATH=$HOME/.emacs.d/bin:$PATH
 
+# jdtls
+export JDTLS_HOME=$HOME/Code/Source_Installs/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository
+
 . "$HOME/.cargo/env"
 
 source /home/beaum/.config/broot/launcher/bash/br
