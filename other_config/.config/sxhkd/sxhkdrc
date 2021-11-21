@@ -28,7 +28,7 @@ super + m
 
 #Terminal
 super + Return
-    kitty
+    alacritty
 
 #Xkill
 super + Escape
@@ -45,7 +45,7 @@ super + t
 #Keyboard dependent
 # Terminal
 super + KP_Enter
-	kitty
+	alacritty
 
 #OneNote
 # super + o
@@ -127,7 +127,7 @@ ctrl + alt + a
 #Keyboard dependent
 # Terminal
 #ctrl + alt + KP_Enter
-#     kitty
+#     alacritty
 
 
 #################################################################

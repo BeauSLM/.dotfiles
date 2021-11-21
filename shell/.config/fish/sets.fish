@@ -4,7 +4,7 @@
 set -e fish_user_paths
 set -U fish_user_paths /usr/local/bin $HOME/.local/bin/ $HOME/.bin $HOME/.emacs.d/bin $fish_user_paths
 
-set -x TERMINAL kitty
+set -x TERMINAL alacritty
 
 # XDG_CONFIG
 set -x XDG_CONFIG_HOME $HOME/.config
