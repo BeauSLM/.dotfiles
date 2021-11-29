@@ -539,7 +539,7 @@ awful.rules.rules = {
 
     -- Office tag
     { rule_any = { class = { "libreoffice", "p3x-onenote", "notion", "notion-app", "FoxitReader", "Zathura" } },
-      properties = { tag = "Office", switchtotag = true } },
+      properties = { tag = "Office", switchtotag = false } },
 
     -- Mail tag
     { rule_any = { class = { "Mail", "mailspring", "Mailspring", "Thunderbird" } },

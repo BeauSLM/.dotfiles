@@ -3,13 +3,10 @@ Plug 'gruvbox-community/gruvbox'
 
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdcommenter'
-Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'gruvbox-community/gruvbox'
 
-Plug 'edkolev/tmuxline.vim'
-Plug 'bling/vim-bufferline'
-
+Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim'
@@ -81,47 +78,35 @@ nnoremap <leader>grom :Git rebase origin/master<CR>
 nnoremap <leader>grbi :Git rebase -i HEAD~
 
 nmap <leader>gd :Git diff<CR>
+nmap <leader>gb :Git blame<CR>
 nmap <leader>gj :diffget //3<CR>
 nmap <leader>gf :diffget //2<CR>
 nmap <leader>gs :G<CR>
-nmap <leader>gl :Git log<CR>
+
+nmap <leader>gl :GV<CR>
+vmap <leader>gl :GV<CR>
+nmap <leader>gv :GV!<CR>
+vmap <leader>gv :GV!<CR>
+nmap <leader>gl :GV! --patch<CR>
+vmap <leader>gl :GV! --patch<CR>
+nmap <leader>gL :G log --patch<CR>
 
 set termguicolors
-let g:gruvbox_italic=1
-
-let g:beauslm_colorscheme = "gruvbox"
-fun! ColorMyPencils()
-    if exists('+termguicolors')
-        let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-        let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-    endif
-    let g:gruvbox_invert_selection='0'
-
-    set background=dark
-    if has('nvim')
-        call luaeval('vim.cmd("colorscheme " .. _A[1])', [g:beauslm_colorscheme])
-    else
-        colorscheme gruvbox
-    endif
-
-    highlight ColorColumn ctermbg=0 guibg=grey
-endfun
-call ColorMyPencils()
-
-nnoremap <leader>cmp :call ColorMyPencils()<CR>
-nnoremap <leader>vwb :let g:beauslm_colorscheme =
-
-let g:airline_powerline_fonts = 1
-let g:bufferline_echo = 0
-let g:airline#extensions#branch#enabled = 1
-
-let g:neoformat_basic_format_trim = 1
-
+if exists('+termguicolors')
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
+let g:gruvbox_invert_selection='0'
+set background=dark
+colorscheme gruvbox
 
 fun! GotoWindow(id)
     call win_gotoid(a:id)
     MaximizerToggle
 endfun
+
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#branch#enabled = 1
 
 " Debugger remaps
 nnoremap <leader>m :MaximizerToggle!<CR>
