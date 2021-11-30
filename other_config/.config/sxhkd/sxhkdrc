@@ -22,9 +22,9 @@ super + c
 # super + v
     # pavucontrol
 
-#Mailspring
+#Neomutt (email)
 super + m
-    mailspring
+    alacritty -e neomutt
 
 #Terminal
 super + Return

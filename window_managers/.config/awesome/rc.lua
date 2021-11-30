@@ -64,7 +64,7 @@ beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = os.getenv("TERMINAL") or "alacritty"
-editor = os.getenv("EDITOR") or "nano"
+editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -186,7 +186,7 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "Dev", "Web", "Chat", "Office", "Mail", "Files", "Image", "Vb", "Video" }, s, awful.layout.layouts[1])
+    awful.tag({ "Dev", "Web", "Chat", "Office", "Files", "Image", "Vb", "Video" }, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -541,10 +541,6 @@ awful.rules.rules = {
     { rule_any = { class = { "libreoffice", "p3x-onenote", "notion", "notion-app", "FoxitReader", "Zathura" } },
       properties = { tag = "Office", switchtotag = false } },
 
-    -- Mail tag
-    { rule_any = { class = { "Mail", "mailspring", "Mailspring", "Thunderbird" } },
-      properties = { tag = "Mail", switchtotag = true } },
-
     -- Files tag
     { rule_any = { class = { "Thunar", "Meld", "meld", "org.gnome.meld", "org.gnome.Meld" } },
       properties = { tag = "Files", switchtotag = true } },
@@ -639,12 +635,11 @@ local cmds = {
     "picom -b",
     "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
     "imwheel",
-    "mailspring --background",
     "discord-canary --no-sandbox --start-minimized",
     "sxhkd",
     "copyq",
-    "xrandr --output DP-2 --brightness 0.75",
-    "xrandr --output DP-0 --brightness 0.75",
+    "xrandr --output DP-2 --brightness 0.65",
+    "xrandr --output DP-0 --brightness 0.65",
 }
 
 for _, cmd in pairs(cmds) do
