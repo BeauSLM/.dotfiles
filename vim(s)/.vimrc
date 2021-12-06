@@ -2,7 +2,7 @@ call plug#begin()
 Plug 'gruvbox-community/gruvbox'
 
 Plug 'vim-airline/vim-airline'
-Plug 'preservim/nerdcommenter'
+Plug 'tpope/vim-commentary'
 
 Plug 'gruvbox-community/gruvbox'
 
@@ -52,9 +52,6 @@ set shortmess+=c
 let mapleader = " "
 
 nnoremap <C-q> :q!<CR>
-
-map <leader>/ <plug>NERDCommenterToggle
-map <leader>? <plug>NERDCommenterSexy
 
 nnoremap <leader>u :UndotreeToggle<CR>
 
@@ -147,10 +144,3 @@ nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
 
 let g:vimspector_install_gadgets = [ 'vscode-cpptools', 'CodeLLDB', 'debugpy', 'vscode-bash-debug', 'local-lua-debugger-vscode', 'debugger-for-chrome', 'vscode-java-debug', 'netcoredbg' ]
-
-let g:NERDCreateDefaultMappings = 0
-let g:NERDSpaceDelims = 1
-let g:NERDDefaultAlign = 'left'
-let g:NERDCommentEmptyLines = 1
-let g:NERDTrimTrailingWhitespace = 1
-let g:NERDToggleCheckAllLines = 1
