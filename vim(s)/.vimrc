@@ -9,6 +9,7 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
+Plug 'shumphrey/fugitive-gitlab.vim'
 Plug 'junegunn/gv.vim'
 
 Plug 'mbbill/undotree'
