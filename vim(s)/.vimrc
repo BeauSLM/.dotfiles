@@ -4,8 +4,6 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-commentary'
 
-Plug 'gruvbox-community/gruvbox'
-
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
