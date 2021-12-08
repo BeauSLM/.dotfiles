@@ -1,4 +1,4 @@
-# exports.fish
+# sets.fish
 
 # PATH
 set -e fish_user_paths

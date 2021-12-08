@@ -497,8 +497,3 @@ zinit light zsh-users/zsh-autosuggestions
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 
 eval "$(starship init zsh)"
-
-
-# BEGIN_KITTY_SHELL_INTEGRATION
-if test -e "$HOME/Code/Source_Installs/kitty/shell-integration/kitty.zsh"; then source "$HOME/Code/Source_Installs/kitty/shell-integration/kitty.zsh"; fi
-# END_KITTY_SHELL_INTEGRATION
