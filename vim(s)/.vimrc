@@ -1,15 +1,15 @@
 call plug#begin()
 Plug 'gruvbox-community/gruvbox'
-
 Plug 'vim-airline/vim-airline'
-Plug 'tpope/vim-commentary'
 
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'shumphrey/fugitive-gitlab.vim'
 Plug 'junegunn/gv.vim'
 
+Plug 'liuchengxu/vim-clap', {'do': ':Clap install-binary!'}
 Plug 'mbbill/undotree'
 
 Plug 'szw/vim-maximizer'
