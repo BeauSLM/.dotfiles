@@ -24,11 +24,11 @@ super + c
 
 #Neomutt (email)
 super + m
-    alacritty -e neomutt
+    $TERMINAL -e neomutt
 
 #Terminal
 super + Return
-    alacritty
+    $TERMINAL
 
 #Xkill
 super + Escape
@@ -45,7 +45,7 @@ super + t
 #Keyboard dependent
 # Terminal
 super + KP_Enter
-	alacritty
+	$TERMINAL
 
 #OneNote
 # super + o
@@ -127,7 +127,7 @@ ctrl + alt + a
 #Keyboard dependent
 # Terminal
 #ctrl + alt + KP_Enter
-#     alacritty
+#     $TERMINAL
 
 
 #################################################################
