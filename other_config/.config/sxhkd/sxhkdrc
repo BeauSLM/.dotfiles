@@ -87,9 +87,9 @@ ctrl + alt + t
 ctrl + alt + c
      catfish
 
-#Foxit Reader
+#File manager
 ctrl + alt + f
-     foxitreader
+    $TERMINAL -e ranger
 
 #Nitrogen
 ctrl + alt + i
