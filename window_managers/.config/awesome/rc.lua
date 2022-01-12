@@ -533,13 +533,17 @@ awful.rules.rules = {
     { rule = { class = "Brave-browser" },
       properties = { tag = "Web", switchtotag = true } },
 
-    -- Chat tag
-    { rule_any = { class = { "discord", "zoom" } },
+    -- discord
+    { rule = { class =  "discord" },
       properties = { tag = "Chat", switchtotag = true } },
+
+    -- zoom
+    { rule = { class =  "zoom" },
+      properties = { tag = "Chat", switchtotag = false } },
 
     -- Office tag
     { rule_any = { class = { "libreoffice", "p3x-onenote", "notion", "notion-app", "FoxitReader", "Zathura" } },
-      properties = { tag = "Office", switchtotag = false } },
+      properties = { tag = "Office", switchtotag = true } },
 
     -- Files tag
     { rule_any = { class = { "Thunar", "Meld", "meld", "org.gnome.meld", "org.gnome.Meld" } },
