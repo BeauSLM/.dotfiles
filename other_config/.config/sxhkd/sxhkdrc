@@ -69,7 +69,7 @@ super + shift + s
 
 #Discord
 ctrl + alt + d
-    discord-canary --no-sandbox
+    discord --no-sandbox
 
 #conky-rotate
 # ctrl + alt + Next

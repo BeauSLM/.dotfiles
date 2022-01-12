@@ -635,7 +635,7 @@ local cmds = {
     "picom -b",
     "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
     "imwheel",
-    "discord-canary --no-sandbox --start-minimized",
+    "discord --no-sandbox --start-minimized",
     "sxhkd",
     "copyq",
     "xrandr --output DP-2 --brightness 0.65",

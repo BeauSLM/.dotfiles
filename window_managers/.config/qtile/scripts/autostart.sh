@@ -47,7 +47,7 @@ picom --config $HOME/.config/qtile/scripts/picom.conf &
 #starting user applications at boot time
 run mailspring --background &
 run volumeicon &
-run discord-canary --no-sandbox --start-minimized &
+run discord --no-sandbox --start-minimized &
 nitrogen --restore &
 #run caffeine -a &
 #run vivaldi-stable &
