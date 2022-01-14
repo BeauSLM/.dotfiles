@@ -6,7 +6,8 @@ if [[ $# -eq 1 ]]; then
 else
     items=`fd . '/home/beaum/Code' --min-depth 2 --max-depth 2 --type d\
         ; echo /home/beaum/.dotfiles\
-        ; echo /home/beaum/.dotfiles/scripts`
+        ; echo /home/beaum/.dotfiles/scripts\
+        ; fd . '/home/beaum/School' --min-depth 2 --max-depth 2 --type d`
     selected=`echo "$items" | fzf`
 fi
 
