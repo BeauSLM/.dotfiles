@@ -642,8 +642,8 @@ local cmds = {
     "discord --no-sandbox --start-minimized",
     "sxhkd",
     "copyq",
-    "xrandr --output DP-2 --brightness 0.65",
-    "xrandr --output DP-0 --brightness 0.65",
+    "xrandr --output DP-2 --brightness 0.55",
+    "xrandr --output DP-0 --brightness 0.55",
 }
 
 for _, cmd in pairs(cmds) do
