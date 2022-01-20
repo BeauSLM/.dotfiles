@@ -212,14 +212,6 @@ alias rmgitcache="rm -r ~/.cache/git"
 #moving your personal files and folders from /personal to ~
 alias personal='cp -Rf /personal/* ~'
 
-
-
-
-# main monitor brightness
-alias brightness1='xrandr --output DP-2 --brightness'
-# second monitor brightness
-alias brightness2='xrandr --output DP-0 --brightness'
-
 # nvim config
 alias vrc='tmux-sessionizer /home/beaum/.dotfiles/vim\(s\)/.config/nvim'
 
