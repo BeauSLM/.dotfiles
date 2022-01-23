@@ -217,3 +217,6 @@ alias vrc='tmux-sessionizer /home/beaum/.dotfiles/vim\(s\)/.config/nvim'
 
 # Source_Installs
 alias si='tmux-sessionizer /home/beaum/Code/Source_Installs'
+
+# TODO
+alias todo='nvim ~/TODO.md'
