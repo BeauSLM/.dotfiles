@@ -313,7 +313,6 @@ export JDTLS_HOME=$HOME/Code/Source_Installs/eclipse.jdt.ls/org.eclipse.jdt.ls.p
 . "$HOME/.cargo/env"
 
 source /home/beaum/.config/broot/launcher/bash/br
-source /home/beaum/Code/Source_Installs/alacritty/extra/completions/alacritty.bash
 
 # Random colorscripts
 # colorscript random
