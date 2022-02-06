@@ -144,7 +144,7 @@ ctrl + alt + a
 
 #htop
 ctrl + shift + Escape
-    kitty -e htop
+    $TERMINAL -e btop
 
 
 #################################################################
