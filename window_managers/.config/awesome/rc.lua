@@ -77,8 +77,8 @@ modkey = "Mod4"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
     awful.layout.suit.tile.left,
-    awful.layout.suit.tile.top,
     awful.layout.suit.floating,
+    -- awful.layout.suit.tile.top,
     -- awful.layout.suit.tile,
     -- awful.layout.suit.tile.bottom,
     -- awful.layout.suit.fair,
@@ -306,14 +306,6 @@ globalkeys = gears.table.join(
               {description = "screen focus right", group = "screen"}),
     awful.key({ modkey,           }, "u", awful.client.urgent.jumpto,
               {description = "jump to urgent client", group = "client"}),
-    awful.key({ modkey,           }, "Tab",
-        function ()
-            awful.client.focus.history.previous()
-            if client.focus then
-                client.focus:raise()
-            end
-        end,
-        {description = "go back", group = "client"}),
 
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
@@ -335,7 +327,7 @@ globalkeys = gears.table.join(
               {description = "increase the number of columns", group = "layout"}),
     awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1, nil, true)    end,
               {description = "decrease the number of columns", group = "layout"}),
-    awful.key({ modkey,           }, "space", function () awful.layout.inc( 1)                end,
+    awful.key({ modkey,           }, "Tab", function () awful.layout.inc( 1)                end,
               {description = "select next", group = "layout"}),
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
               {description = "select previous", group = "layout"}),
@@ -536,11 +528,11 @@ awful.rules.rules = {
     -- },
 
     -- Dev tag
-    { rule_any = { class = { "kitty", "Alacritty", "Code", "emacs", "MPLAB X IDE v5.50" } },
-      properties = { tag = "Dev", switchtotag = true } },
+    { rule_any = { class = { "kitty", "Alacritty", "Code", "emacs", "MPLAB X IDE v5.50", "Eclipse" } },
+      properties = { tag = "Dev", switchtotag = false } },
 
     -- Web tag
-    { rule = { class = "Brave-browser" },
+    { rule_any = { class = { "Brave-browser", "firefox" } },
       properties = { tag = "Web", switchtotag = true } },
 
     -- discord
