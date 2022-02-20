@@ -78,7 +78,7 @@ modkey = "Mod4"
 awful.layout.layouts = {
     awful.layout.suit.tile.left,
     awful.layout.suit.floating,
-    -- awful.layout.suit.tile.top,
+    awful.layout.suit.tile.top,
     -- awful.layout.suit.tile,
     -- awful.layout.suit.tile.bottom,
     -- awful.layout.suit.fair,
@@ -329,7 +329,7 @@ globalkeys = gears.table.join(
               {description = "decrease the number of columns", group = "layout"}),
     awful.key({ modkey,           }, "Tab", function () awful.layout.inc( 1)                end,
               {description = "select next", group = "layout"}),
-    awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
+    awful.key({ modkey, "Shift"   }, "Tab", function () awful.layout.inc(-1)                end,
               {description = "select previous", group = "layout"}),
 
     awful.key({ modkey, "Control" }, "n",
