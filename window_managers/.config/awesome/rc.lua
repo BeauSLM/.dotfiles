@@ -565,7 +565,7 @@ awful.rules.rules = {
       properties = { tag = "Video", switchtotag = true } },
 
     -- Web tag
-    { rule = { class = "Steam" },
+    { rule_any = { class = { "Steam", "r2modman", "Lutris" } },
       properties = { tag = "Game", switchtotag = true } },
 
 }
