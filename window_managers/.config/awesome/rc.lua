@@ -643,13 +643,12 @@ local cmds = {
     "numlockx on",
     "blueberry-tray",
     "picom -b",
-    "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
     "imwheel",
     "discord --no-sandbox --start-minimized",
     "sxhkd",
     "copyq",
-    "xrandr --output DP-2 --brightness 0.55",
-    "xrandr --output DP-0 --brightness 0.55",
+    "xrandr --output DP-2 --brightness 0.45",
+    "xrandr --output DP-0 --brightness 0.45",
 }
 
 for _, cmd in pairs(cmds) do
