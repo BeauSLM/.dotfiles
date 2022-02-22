@@ -650,6 +650,7 @@ local cmds = {
     "xrandr --output DP-2 --brightness 0.45",
     "xrandr --output DP-0 --brightness 0.45",
     "cbatticon",
+    "gkraken --hide-window",
 }
 
 for _, cmd in pairs(cmds) do
