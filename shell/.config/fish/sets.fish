@@ -21,6 +21,9 @@ set -x DOTFILES $HOME/.dotfiles
 set -x EDITOR "nvim"
 set -x VISUAL "nvim"
 
+# brave as browser
+set -x BROWSER "brave"
+
 # bat as manpager
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 # set -x MANPAGER "nvim +Man!"
