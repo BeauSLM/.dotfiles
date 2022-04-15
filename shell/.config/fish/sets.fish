@@ -31,6 +31,9 @@ set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 # jdtls
 set -x JDTLS_HOME $HOME/Code/Source_Installs/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository
 
+# helix runtime
+set -x HELIX_RUNTIME ~/Code/Source_Installs/helix/runtime
+
 set fish_cursor_default     block      blink
 set fish_cursor_insert      line       blink
 set fish_cursor_replace_one underscore blink
