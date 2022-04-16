@@ -15,7 +15,7 @@ DMBROWSER="brave"
 
 DMTERM="${TERMINAL} -e"
 
-DMEDITOR="${DMTERM} nvim"
+DMEDITOR="${DMTERM} $EDITOR"
 
 DMPDFVIEWER="${DMTERM} zathura"
 
@@ -89,6 +89,7 @@ confedit_list[fish colors]="$HOME/.config/fish/colors.fish"
 confedit_list[fish sets]="$HOME/.config/fish/sets.fish"
 confedit_list[fish keybinds]="$HOME/.config/fish/bindings.fish"
 confedit_list[git]="$HOME/.gitconfig"
+confedit_list[helix]="$HOME/.config/helix/config.toml"
 confedit_list[herbstluftwm]="$HOME/.config/herbstluftwm/autostart"
 confedit_list[i3]="$HOME/.config/i3/config"
 confedit_list[imwheel]="$HOME/.imwheelrc"
