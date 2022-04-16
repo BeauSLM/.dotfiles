@@ -2,5 +2,5 @@
 	path = scripts
 	url = git@github.com:BeauSLM/Scripts.git
 [submodule "nvim"]
-	path = vim(s)/.config/nvim
+	path = text_editors/.config/nvim
 	url = git@github.com:BeauSLM/nvim.git
