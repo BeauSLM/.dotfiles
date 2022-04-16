@@ -147,10 +147,10 @@ alias xd="ls /usr/share/xsessions"
 alias rmgitcache="rm -r ~/.cache/git"
 
 # nvim config
-alias vrc='tmux-sessionizer /home/beaum/.dotfiles/vim\(s\)/.config/nvim'
+alias vrc='tmux-sessionizer $DOTFILES/text_editors/.config/nvim'
 
 # Source_Installs
-alias si='tmux-sessionizer /home/beaum/Code/Source_Installs'
+alias si='tmux-sessionizer $SOURCE_INSTALLS'
 
 # TODO
 alias todo='$EDITOR ~/TODO.md'
