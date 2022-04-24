@@ -21,8 +21,8 @@ set -x DOTFILES $HOME/.dotfiles
 set -x SOURCE_INSTALLS $HOME/Code/Source_Installs
 
 # nvim as editor
-set -x EDITOR "nvim"
-set -x VISUAL "nvim"
+set -x EDITOR "hx"
+set -x VISUAL "hx"
 
 # brave as browser
 set -x BROWSER "brave"
