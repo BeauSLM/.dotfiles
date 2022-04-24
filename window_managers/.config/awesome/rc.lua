@@ -552,7 +552,7 @@ awful.rules.rules = {
       properties = { tag = "Files", switchtotag = true } },
 
     -- Image tag
-    { rule_any = { class =  {"Gimp", "Nitrogen" } },
+    { rule_any = { class =  { "Gimp", "Nitrogen", "feh" } },
       properties = { tag = "Image", switchtotag = true } },
 
     -- Vb tag
@@ -564,7 +564,7 @@ awful.rules.rules = {
     { rule_any = { class = { "Vlc", "vlc", "Mpv", "mpv", "obs" } },
       properties = { tag = "Video", switchtotag = true } },
 
-    -- Web tag
+    -- Game tag
     { rule_any = { class = { "Steam", "r2modman", "Lutris" } },
       properties = { tag = "Game", switchtotag = true } },
 
@@ -636,7 +636,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 -- TODO: check qtile autostart, see if I need anything else.
--- TODO: clipboard manager, volume icon
+-- TODO: volume icon
 -- Autostart applications
 local cmds = {
     "nm-applet",

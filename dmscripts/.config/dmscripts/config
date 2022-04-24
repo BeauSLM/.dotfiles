@@ -11,7 +11,7 @@
 
 DMENU="dmenu -i -l 20 -p"
 
-DMBROWSER="brave"
+DMBROWSER="$BROWSER"
 
 DMTERM="${TERMINAL} -e"
 
