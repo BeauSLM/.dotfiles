@@ -18,7 +18,7 @@ set -x STOW_FOLDERS "cli_utilities,dmscripts,git,other_config,scripts,shell,term
 set -x DOTFILES $HOME/.dotfiles
 
 # add source installs
-set -x SOURCE_INSTALLS $HOME/Code/Source_Installs
+set -x SOURCE_INSTALLS $HOME/si
 
 # nvim as editor
 set -x EDITOR "hx"

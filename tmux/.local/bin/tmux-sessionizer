@@ -1,13 +1,11 @@
 #!/usr/bin/env bash
 
-# dmenu script
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    items=$(fd . '/home/beaum/Code' --min-depth 2 --max-depth 2 --type d\
-        ; echo /home/beaum/.dotfiles\
-        ; echo /home/beaum/.dotfiles/scripts\
-        ; fd . '/home/beaum/School' --min-depth 2 --max-depth 2 --type d)
+    items=$(fd . ~/books ~/dev ~/uni $SOURCE_INSTALLS -d 1 --type d\
+        ; echo $DOTFILES\
+        ; echo $DOTFILES/scripts)
     selected=$(echo "$items" | fzf)
 fi
 
