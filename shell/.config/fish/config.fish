@@ -11,6 +11,11 @@ source $__fish_config_dir/colors.fish
 source $__fish_config_dir/bindings.fish
 source $__fish_config_dir/aliases.fish
 
-# Randiom colorscripts
+# zoxide
+zoxide init fish | source
+
+# Random colorscripts
 # colorscript random
+
+# starship
 starship init fish | source
