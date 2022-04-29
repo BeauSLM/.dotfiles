@@ -5,7 +5,8 @@ if [[ $# -eq 1 ]]; then
 else
     items=$(fd . ~/books ~/dev ~/uni $SOURCE_INSTALLS -d 1 --type d\
         ; echo $DOTFILES\
-        ; echo $DOTFILES/scripts)
+        ; echo $DOTFILES/scripts\
+        ; echo $HOME/todo)
     selected=$(echo "$items" | fzf)
 fi
 

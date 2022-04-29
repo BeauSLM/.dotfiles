@@ -56,5 +56,5 @@ alias vrc='tmux-sessionizer $DOTFILES/text_editors/.config/nvim'
 # Source_Installs
 alias si='tmux-sessionizer $SOURCE_INSTALLS'
 
-# TODO
-alias todo='$EDITOR ~/TODO.md'
+# todo
+alias todo='$EDITOR ~/todo/todo.md'
