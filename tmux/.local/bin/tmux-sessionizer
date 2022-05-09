@@ -6,6 +6,7 @@ else
     items=$(fd . ~/books ~/dev ~/uni $SOURCE_INSTALLS -d 1 --type d\
         ; echo $DOTFILES\
         ; echo $DOTFILES/scripts\
+        ; echo $HOME/notes\
         ; echo $HOME/todo)
     selected=$(echo "$items" | fzf)
 fi
