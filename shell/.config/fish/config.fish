@@ -15,7 +15,7 @@ source $__fish_config_dir/bindings.fish
 source $__fish_config_dir/aliases.fish
 
 # zoxide
-zoxide init fish | source
+zoxide init --cmd cd fish | source
 
 # Random colorscripts
 # colorscript random
