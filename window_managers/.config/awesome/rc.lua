@@ -552,7 +552,7 @@ awful.rules.rules = {
       properties = { tag = "Files", switchtotag = true } },
 
     -- Image tag
-    { rule_any = { class =  { "Gimp", "Nitrogen", "feh" } },
+    { rule_any = { class =  { "Gimp", "Nitrogen", "feh", "LDtk" } },
       properties = { tag = "Image", switchtotag = true } },
 
     -- Vb tag
