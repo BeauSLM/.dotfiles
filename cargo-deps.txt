@@ -1,0 +1,12 @@
+audit
+edit
+modules
+nextest
+outdated
+release
+show
+tree
+update
+watch
+sccache
+starship
