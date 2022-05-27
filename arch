@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [[ -z $STOW_FOLDERS ]]; then
     STOW_FOLDERS="cli_utilities,dmscripts,git,other_config,scripts,shell,terminal,tmux,text_editors,window_managers"
