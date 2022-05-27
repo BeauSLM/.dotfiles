@@ -635,23 +635,38 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
--- TODO: check qtile autostart, see if I need anything else.
--- TODO: volume icon
 -- Autostart applications
 local cmds = {
-    "nm-applet",
-    "numlockx on",
-    "blueberry-tray",
     "picom -b",
-    "imwheel",
-    "discord --no-sandbox --start-minimized",
     "sxhkd",
     "copyq",
-    "xrandr --output DP-2 --brightness 0.45",
-    "xrandr --output DP-0 --brightness 0.45",
-    "cbatticon",
 }
 
+io.input("/etc/hostname")
+local host = io.read("*all")
+--io.input("stdin")
+local machine_specific
+
+if "beau-Desktop\n" == host then
+    machine_specific = {
+        "imwheel",
+        "xrandr --output DP-2 --brightness 0.45",
+        "xrandr --output DP-0 --brightness 0.45",
+        "discord --start-minimized",
+    }
+else
+    machine_specific = {
+        "cbatticon",
+        "nm-applet",
+        "numlockx on",
+    }
+end
+
 for _, cmd in pairs(cmds) do
+    awful.spawn.single_instance(cmd)
+end
+
+-- machine-specific startup commands
+for _, cmd in pairs(machine_specific) do
     awful.spawn.single_instance(cmd)
 end
