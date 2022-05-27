@@ -14,14 +14,6 @@
 super + w
     brave
 
-#Conky-toggle
-super + c
-    conky-toggle
-
-#Pavucontrol
-# super + v
-    # pavucontrol
-
 #Neomutt (email)
 super + m
     $TERMINAL -e neomutt
@@ -38,22 +30,10 @@ super + Escape
 super + d
     dmenu_run
 
-#Thunderbird
-super + t
-    thunderbird
-
 #Keyboard dependent
 # Terminal
 super + KP_Enter
 	$TERMINAL
-
-#OneNote
-# super + o
-#     p3x-onenote
-
-# Selected area screenshot
-super + s
-    maim -s | xclip -selection clipboard -t image/png
 
 #################################################################
 # SUPER + SHIFT KEYS
@@ -69,23 +49,11 @@ super + shift + s
 
 #Discord
 ctrl + alt + d
-    discord --no-sandbox
-
-#conky-rotate
-# ctrl + alt + Next
-     # conky-rotate -n
-
-#conky-rotate
-# ctrl + alt + Prior
-#     conky-rotate -p
+    discord
 
 #File-Manager
 ctrl + alt + t
      thunar
-
-#Catfish
-ctrl + alt + c
-     catfish
 
 #File manager
 ctrl + alt + f
@@ -94,35 +62,6 @@ ctrl + alt + f
 #Nitrogen
 ctrl + alt + i
      nitrogen
-
-#arcolinux-logout
-ctrl + alt + l
-    arcolinux-logout
-
-#Pamac-manager
-ctrl + alt + p
-    pamac-manager
-
-#Xfce4-settings-manager
-# ctrl + alt + m
-     # xfce4-settings-manager
-
-#Pulse Audio Control
-ctrl + alt + u
-     pavucontrol
-
-#Rofi theme selector
-# ctrl + alt + r
-  # rofi-theme-selector
-
-#Spotify
-ctrl + alt + s
-   spotify
-
-#Xfce4-appfinder
-ctrl + alt + a
-    xfce4-appfinder
-
 
 #Keyboard dependent
 # Terminal
@@ -142,7 +81,7 @@ ctrl + alt + a
 # CONTROL + SHIFT KEYS
 #################################################################
 
-#htop
+#btop
 ctrl + shift + Escape
     $TERMINAL -e btop
 
@@ -151,11 +90,9 @@ ctrl + shift + Escape
 #     SCREENSHOTS
 #################################################################
 
-# TODO: main selected region clipboard
-
-#################################################################
-#     FUNCTION KEYS
-#################################################################
+# Selected area screenshot
+super + s
+    maim -s | xclip -selection clipboard -t image/png
 
 #################################################################
 #     MULTIMEDIA KEYS
@@ -220,10 +157,6 @@ XF86MonBrightnessDown
 # CTRL + ALT KEYS
 #################################################################
 
-#Picom Toggle
-ctrl + alt + o
-    ~/.config/qtile/scripts/picom-toggle.sh
-
 #################################################################
 # SUPER + KEYS
 #################################################################
@@ -235,14 +168,6 @@ ctrl + alt + o
 #################################################################
 # SUPER + SHIFT KEYS
 #################################################################
-
-#Notion
-super + shift + n
-    /opt/notion-app/notion %u
-
-#LibreOffice
-super + shift + o
-    libreoffice
 
 #################################################################
 # SUPER + ALT KEYS
