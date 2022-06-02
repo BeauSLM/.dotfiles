@@ -2,7 +2,7 @@ theme = "gruvbox"
 
 [editor]
 line-number = "relative"
-scrolloff = 12
+scrolloff = 8
 idle-timeout = 0
 
 [editor.lsp]
