@@ -644,7 +644,6 @@ local cmds = {
 
 io.input("/etc/hostname")
 local host = io.read("*all")
---io.input("stdin")
 local machine_specific
 
 if "beau-Desktop\n" == host then
@@ -657,7 +656,6 @@ if "beau-Desktop\n" == host then
 else
     machine_specific = {
         "cbatticon",
-        "nm-applet",
         "numlockx on",
     }
 end
