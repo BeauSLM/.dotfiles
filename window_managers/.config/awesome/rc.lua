@@ -651,7 +651,7 @@ if "beau-Desktop\n" == host then
         "imwheel",
         "xrandr --output DP-2 --brightness 0.45",
         "xrandr --output DP-0 --brightness 0.45",
-        "discord --start-minimized",
+        "discord-canary --start-minimized",
     }
 else
     machine_specific = {

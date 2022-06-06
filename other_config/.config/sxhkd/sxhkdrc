@@ -49,7 +49,7 @@ super + shift + s
 
 #Discord
 ctrl + alt + d
-    discord
+    discord-canary
 
 #File-Manager
 ctrl + alt + t
