@@ -1,9 +1,5 @@
 # sets.fish
 
-# PATH
-set -e fish_user_paths
-set -U fish_user_paths /usr/local/bin $HOME/.local/bin/
-
 set -x TERMINAL alacritty
 
 # XDG_CONFIG
