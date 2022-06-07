@@ -50,8 +50,7 @@ alias big="expac -H M '%m\t%n' | sort -h | nl"
 #systeminfo
 alias sysfailed="systemctl list-units --failed"
 
-# nvim config
-alias vrc='tmux-sessionizer $DOTFILES/text_editors/.config/nvim'
+alias lg='lazygit'
 
 # Source_Installs
 alias si='tmux-sessionizer $SOURCE_INSTALLS'
