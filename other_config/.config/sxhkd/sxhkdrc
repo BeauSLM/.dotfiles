@@ -10,9 +10,9 @@
 # SUPER + ... KEYS
 #################################################################
 
-#Brave
+#Browser
 super + w
-    brave
+    $BROWSER
 
 #Neomutt (email)
 super + m
