@@ -528,7 +528,7 @@ awful.rules.rules = {
     -- },
 
     -- Dev tag
-    { rule_any = { class = { "kitty", "Alacritty", "Code", "emacs", "MPLAB X IDE v5.50", "Eclipse" } },
+    { rule_any = { class = { "kitty", "Alacritty", "Code", "Emacs", "MPLAB X IDE v5.50", "Eclipse" } },
       properties = { tag = "Dev", switchtotag = false } },
 
     -- Web tag
