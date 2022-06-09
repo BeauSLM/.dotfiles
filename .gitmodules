@@ -1,6 +1,0 @@
-[submodule "scripts"]
-	path = scripts
-	url = git@github.com:BeauSLM/Scripts.git
-[submodule "nvim"]
-	path = text_editors/.config/nvim
-	url = git@github.com:BeauSLM/nvim.git
