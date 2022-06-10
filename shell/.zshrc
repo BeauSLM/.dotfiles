@@ -60,7 +60,7 @@ export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
 
 # add stow folders
-export STOW_FOLDERS="cli_utilities,dmscripts,git,other_config,scripts,shell,terminal,tmux,vim(s),window_managers"
+export STOW_FOLDERS="cli_utilities,dmscripts,git,other_config,shell,terminal,tmux,vim(s),window_managers"
 
 # add dotfiles
 export DOTFILES=$HOME/.dotfiles
