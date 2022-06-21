@@ -1,7 +1,8 @@
 alias ls='exa'
+alias lt='ls -T'
 alias la='ls -a'
 alias ll='ls -la --git'
-alias l='ls'
+alias llt='ll -T'
 alias l.="ls -a | rg '^\.'"
 
 #fix obvious typo
