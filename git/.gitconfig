@@ -8,3 +8,5 @@
 	clean = git-lfs clean -- %f
 [rebase]
     autoStash = true
+[push]
+	default = current
