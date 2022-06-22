@@ -18,6 +18,14 @@ super + w
 super + Escape
     xkill
 
+#dm-confedit
+super + c
+    dm-confedit
+
+#dm-wiki
+super + e
+    dm-wiki
+
 #################################################################
 # SUPER + SHIFT KEYS
 #################################################################
