@@ -2,11 +2,6 @@
 
 set -x TERMINAL alacritty
 
-# XDG_CONFIG
-set -x XDG_CONFIG_HOME $HOME/.config
-set -x XDG_CACHE_HOME $HOME/.cache
-set -x XDG_DATA_HOME $HOME/.local/share
-
 # add stow folders
 set -x STOW_FOLDERS "cli_utilities,dmscripts,git,other_config,shell,terminal,tmux,text_editors,window_managers"
 
