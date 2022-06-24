@@ -59,3 +59,7 @@ alias si='tmux-sessionizer $SOURCE_INSTALLS'
 # todo
 alias todo='bat ~/todo/todo.md'
 alias goals='bat ~/todo/goals.md'
+
+# sudo -> doas
+alias sudo='doas'
+alias su='doas -s'
