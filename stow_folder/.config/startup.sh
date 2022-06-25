@@ -10,7 +10,6 @@ run() {
 
 # instant commands - not daemons
 polybar-msg cmd quit                   # close all polybars
-nvidia-settings --load-config-only     # load brightness settings
 "$HOME"/.fehbg                         # reload wallpaper
 
 # IFS='<line feed>'
