@@ -1,10 +1,7 @@
 #!/bin/bash
 
 pushd $DOTFILES
-for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
-do
-    echo "Installing $folder"
-    stow -R -S $folder
-done
+echo "Installing configs"
+stow -R -S stow_folder
 popd
 

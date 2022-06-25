@@ -1,12 +1,8 @@
 #!/bin/bash
 
-if [[ -z $STOW_FOLDERS ]]; then
-    STOW_FOLDERS="cli_utilities,dmscripts,git,other_config,shell,terminal,tmux,text_editors,window_managers"
-fi
-
 if [[ -z $DOTFILES ]]; then
     DOTFILES=$HOME/.dotfiles
 fi
 
-STOW_FOLDERS=$STOW_FOLDERS DOTFILES=$DOTFILES $DOTFILES/install
+DOTFILES=$DOTFILES $DOTFILES/install
 
