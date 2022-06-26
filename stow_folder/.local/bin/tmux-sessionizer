@@ -3,10 +3,9 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    items=$(fd . ~/books ~/dev ~/uni ~/notes $SOURCE_INSTALLS -d 1 --type d\
-        ; echo $DOTFILES\
-        ; echo $DOTFILES/scripts\
-        ; echo $HOME/todo)
+    items=$(fd . ~/books ~/dev ~/uni ~/notes "$SOURCE_INSTALLS" -d 1 --type d\
+        ; echo "$DOTFILES"\
+        ; echo "$HOME/todo")
     selected=$(echo "$items" | fzf)
 fi
 
