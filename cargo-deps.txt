@@ -1,12 +1,13 @@
 audit
+binutils
 edit
+embed
+generate
 modules
 nextest
 outdated
-release
 show
 tree
 update
 watch
-sccache
 starship
