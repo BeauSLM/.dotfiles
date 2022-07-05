@@ -65,16 +65,8 @@ export STOW_FOLDERS="cli_utilities,dmscripts,git,other_config,shell,terminal,tmu
 # add dotfiles
 export DOTFILES=$HOME/.dotfiles
 
-# Add doom emacs commands to path
-export PATH=$HOME/.emacs.d/bin:$PATH
-
-# jdtls
-export JDTLS_HOME=$HOME/Code/Source_Installs/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository
-
-# nvim as manpager
-export MANPAGER='nvim +Man!'
-# bat as manpager???
-# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+# bat as manpager
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # man 2 select
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -108,9 +100,9 @@ setopt SHARE_HISTORY
 
 export HISTCONTROL=ignoreboth:erasedups
 
-# Make nvim the default editor
-export EDITOR='nvim'
-export VISUAL='nvim'
+# Make hx the default editor
+export EDITOR='hx'
+export VISUAL='hx'
 
 #PS1='[\u@\h \W]\$ '
 
@@ -382,22 +374,6 @@ alias personal='cp -Rf /personal/* ~'
 
 [[ -f ~/.zshrc-personal ]] && . ~/.zshrc-personal
 
-# reporting tools - install when not installed
-# neofetch
-#screenfetch
-#alsi
-#paleofetch
-#fetch
-#hfetch
-#sfetch
-#ufetch
-#ufetch-arco
-#pfetch
-#sysinfo
-#sysinfo-retro
-#cpufetch
-#sysinfo-retro | lolcat
-
 # ME ME ME
 
 #enable autocomplete
@@ -406,16 +382,8 @@ compinit
 # autoload -U +X bashcompinit && bashcompinit
 # autoload -U +X compinit && compinit
 
-# main monitor brightness
-alias brightness1='xrandr --output DP-2 --brightness'
-# second monitor brightness
-alias brightness2='xrandr --output DP-0 --brightness'
-
-# nvim config
-alias vrc='tmux-sessionizer /home/beaum/.dotfiles/vim\(s\)/.config/nvim'
-
 # Source_Installs
-alias si='tmux-sessionizer /home/beaum/Code/Source_Installs'
+alias si='tmux-sessionizer $SOURCE_INSTALLS
 
 # tmux-sessionizer
 bindkey -s ^f "^utmux-sessionizer\n"

@@ -14,11 +14,11 @@
 
 export HISTCONTROL=ignoreboth:erasedups
 
-# Make nvim the default editor
+# Make hx the default editor
 
-export EDITOR='nvim'
-export VISUAL='nvim'
-export MANPAGER='nvim +Man!'
+export EDITOR='hx'
+export VISUAL='hx'
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 PS1='[\u@\h \W]\$ '
 
