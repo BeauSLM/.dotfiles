@@ -1,5 +1,7 @@
 # sets.fish
 
+set -ga fish_user_paths $HOME/{.local/bin, .nimble/bin} $SOURCE_INSTALLS/{Odin, ols}
+
 set -x TERMINAL alacritty
 
 set -x DOTFILES $HOME/.dotfiles
