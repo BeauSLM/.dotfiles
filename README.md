@@ -1,7 +1,10 @@
 # .dotfiles
 
-This is the repo containing all my dotfiles. 
+This is the repo containing all my dotfiles. Basically just me learning how to
+configure stuff on youtube and trying it here lul.
 
-## How it works
+# How I use it
 
-Essentially, I have the repo in a folder in my home directory. I can then use the `stow` utility to install all my dotfiles to the appropriate locations, as symlinks pointing to this directory.
+I simply clone in my home directory, and run the `arch` script. It uses GNU-stow
+to symlink every file in the appropriate location - see the `stow_folder` for
+the placement of my config files.
