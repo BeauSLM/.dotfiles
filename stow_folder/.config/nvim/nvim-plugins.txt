@@ -1,0 +1,46 @@
+Completion:
+- nvim-cmp
+    - cmp-nvim-lsp
+    - cmp-nvim-lsp-document-symbol
+    - cmp-nvim-lsp-signature-help
+    - cmp-path
+    - cmp-git
+    - cmp-conventionalcommits
+    - cmp-cmdline
+    - cmp-fish
+    - cmp-npm
+    - cmp-copilot or clippy
+    - crates.nvim
+    - cmp-latex-symbols
+    - cmp-nvim-lua
+    - cmp-treesitter
+- luasnip
+- copilot
+- friendly-snippets
+
+Editor:
+- nvim-autopairs
+- comment.nvim
+- vim-sandwhich or surround.nvim?
+
+Lang:
+- nvim treesitter
+    - nvim-ts-rainbow
+    - nvim-ts-autotag
+- nvim-dap
+- null-ls? (gets me eslint, very nice)
+- rust-tools.nvim
+
+Tools:
+- harpoon?
+
+UI:
+- sonokai or gruvbox
+- windline?
+
+ME:
+- fugitive
+    - gv
+    - rhubarb
+    - fugitive-gitlab
+- tabout
