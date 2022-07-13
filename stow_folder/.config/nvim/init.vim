@@ -4,6 +4,7 @@ lua require('plugins')
 filetype plugin indent on
 syntax on
 set nowrap
+set nu
 set relativenumber
 set tabstop=4
 set softtabstop=4

@@ -7,14 +7,29 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'itchyny/lightline.vim'
   use {
-    'neovim/nvim-lspconfig',
-    config = config.lspconfig,
+    'ray-x/navigator.lua',
+    requires = {
+      { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' },
+      'neovim/nvim-lspconfig',
+      'ray-x/lsp_signature.nvim',
+      'simrat39/rust-tools.nvim',
+      'p00f/clangd_extensions.nvim',
+    },
+    config = config.navigator
+  }
+
+  use {
+    'szw/vim-maximizer',
+    config = function()
+      -- TODO: mess with default mapping ig
+      vim.g.maximizer_set_default_mapping = 0
+    end
   }
 
   use 'tpope/vim-fugitive'
-  use { 'junegunn/gv.vim', after = 'vim-fugitive', requires = 'vim-fugitive' }
-  use { 'tpope/vim-rhubarb', after = 'vim-fugitive', requires = 'vim-fugitive' }
-  use { 'shumphrey/fugitive-gitlab.vim', after = 'vim-fugitive', requires = 'vim-fugitive' }
+  use { 'junegunn/gv.vim', requires = 'vim-fugitive' }
+  use { 'tpope/vim-rhubarb', requires = 'vim-fugitive' }
+  use { 'shumphrey/fugitive-gitlab.vim', requires = 'vim-fugitive' }
 
   use {
     'nvim-treesitter/nvim-treesitter',
@@ -45,8 +60,7 @@ return require('packer').startup(function(use)
       'JoosepAlviste/nvim-ts-context-commentstring',
       after = 'nvim-treesitter',
       config = function()
-        require('nvim-treesitter.configs').setup {
-          context_commentstring { enable = true, enable_autocmd = false, } }
+        require('nvim-treesitter.configs').setup { context_commentstring { enable = true, enable_autocmd = false, } }
       end
     },
     config = config.comment,
@@ -56,7 +70,7 @@ return require('packer').startup(function(use)
     'hrsh7th/nvim-cmp',
     disable = true,
     -- after = "LuaSnip",
-    after = { 'nvim-lspconfig' },
+    after = 'nvim-lspconfig',
     requires = {
       { "hrsh7th/cmp-nvim-lsp", after = "nvim-cmp", opt = true },
       -- { "hrsh7th/cmp-nvim-lsp-document-symbol", after = "nvim-cmp", opt = true },
