@@ -1,6 +1,8 @@
+set termguicolors
 lua require('plugins')
 
 filetype plugin indent on
+syntax on
 set nowrap
 set relativenumber
 set tabstop=4
@@ -13,8 +15,6 @@ set scrolloff=10
 set colorcolumn=80
 set hidden
 set cmdheight=2
-syntax on
-
 set incsearch
 set nohlsearch
 set ignorecase

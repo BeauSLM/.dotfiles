@@ -20,27 +20,17 @@ Completion:
 
 Editor:
 - nvim-autopairs
-- comment.nvim
 - vim-sandwhich or surround.nvim?
+- lspkind
 
 Lang:
 - nvim treesitter
     - nvim-ts-rainbow
     - nvim-ts-autotag
 - nvim-dap
-- null-ls? (gets me eslint, very nice)
-- rust-tools.nvim
 
 Tools:
 - harpoon?
 
-UI:
-- sonokai or gruvbox
-- windline?
-
 ME:
-- fugitive
-    - gv
-    - rhubarb
-    - fugitive-gitlab
 - tabout
