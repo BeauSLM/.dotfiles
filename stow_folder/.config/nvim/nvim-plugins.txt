@@ -17,6 +17,7 @@ Completion:
 - luasnip
 - copilot
 - friendly-snippets
+- coq_nvim
 
 Editor:
 - nvim-autopairs

@@ -38,6 +38,21 @@ return require('packer').startup(function(use)
   }
 
   use {
+    'p00f/nvim-ts-rainbow',
+    after = 'nvim-treesitter',
+    config = config.ts_rainbow,
+  }
+
+  -- do I need this?
+  -- use {
+  --   'windwp/nvim-ts-autotag',
+  --   after = 'nvim-treesitter',
+  --   config = function()
+  --     require('nvim-ts-autotag').setup()
+  --   end,
+  -- }
+
+  use {
     'sainnhe/gruvbox-material',
     config = config.gruvbox,
   }
@@ -46,12 +61,6 @@ return require('packer').startup(function(use)
     'sainnhe/sonokai',
     disable = true,
     config = config.sonokai,
-  }
-
-  use {
-    'p00f/nvim-ts-rainbow',
-    after = 'nvim-treesitter',
-    config = config.ts_rainbow,
   }
 
   use {
@@ -67,9 +76,13 @@ return require('packer').startup(function(use)
   }
 
   use {
+    'L3MON4D3/LuaSnip',
+    requires = 'rafamadriz/friendly-snippets',
+  }
+
+  use {
     'hrsh7th/nvim-cmp',
-    disable = true,
-    -- after = "LuaSnip",
+    -- after = { "LuaSnip", "nvim-autopairs" },
     after = 'nvim-lspconfig',
     requires = {
       { "hrsh7th/cmp-nvim-lsp", after = "nvim-cmp", opt = true },
