@@ -45,7 +45,9 @@ return require('packer').startup(function(use)
     'abecodes/tabout.nvim',
     requires = 'nvim-treesitter',
     config = function()
-      require('tabout').setup()
+      require('tabout').setup({
+        completion = false,
+      })
     end
   }
 
@@ -98,13 +100,13 @@ return require('packer').startup(function(use)
       -- { "hrsh7th/cmp-nvim-lsp-signature-help" },
       { "hrsh7th/cmp-path" },
       { "hrsh7th/cmp-nvim-lua" },
-      { "hrsh7th/cmp-cmdline", },
+      -- { "hrsh7th/cmp-cmdline", },
       -- { "hrsh7th/cmp-copilot", },
       -- { "petertriho/cmp-git", },
-      { "davidsierradz/cmp-conventionalcommits", },
+      -- { "davidsierradz/cmp-conventionalcommits", },
       { "mtoohey31/cmp-fish" },
       { "kdheepak/cmp-latex-symbols" },
-      { "ray-x/cmp-treesitter" },
+      -- { "ray-x/cmp-treesitter" },
 
       { "David-Kunz/cmp-npm", requires = "nvim-lua/plenary.nvim",
         config = function() require('cmp-npm').setup() end, },
