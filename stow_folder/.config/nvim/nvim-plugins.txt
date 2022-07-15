@@ -1,37 +1,16 @@
 Completion:
 - nvim-cmp
-    - cmp-nvim-lsp
-    - cmp-nvim-lsp-document-symbol
-    - cmp-nvim-lsp-signature-help
-    - cmp-path
-    - cmp-git
-    - cmp-conventionalcommits
-    - cmp-cmdline
-    - cmp-fish
-    - cmp-npm
     - cmp-copilot or clippy
-    - crates.nvim
-    - cmp-latex-symbols
-    - cmp-nvim-lua
-    - cmp-treesitter
-- luasnip
-- copilot
-- friendly-snippets
-- coq_nvim
 
 Editor:
-- nvim-autopairs
 - vim-sandwhich or surround.nvim?
-- lspkind
+- lspkind?
 
 Lang:
 - nvim treesitter
-    - nvim-ts-rainbow
-    - nvim-ts-autotag
+    - nvim-ts-autotag?
 - nvim-dap
 
 Tools:
 - harpoon?
-
-ME:
-- tabout
+- telescope or clap?

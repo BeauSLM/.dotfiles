@@ -1,7 +1,7 @@
 set termguicolors
+filetype plugin indent on
 lua require('plugins')
 
-filetype plugin indent on
 syntax on
 set nowrap
 set nu

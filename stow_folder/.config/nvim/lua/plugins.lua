@@ -1,11 +1,9 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
-
 local config = require('config')
 
 return require('packer').startup(function(use)
-  -- Packer can manage itself
   use 'wbthomason/packer.nvim'
   use 'itchyny/lightline.vim'
+  use 'neovim/nvim-lspconfig'
   use {
     'ray-x/navigator.lua',
     requires = {
@@ -39,14 +37,22 @@ return require('packer').startup(function(use)
 
   use {
     'p00f/nvim-ts-rainbow',
-    after = 'nvim-treesitter',
+    requires = 'nvim-treesitter',
     config = config.ts_rainbow,
+  }
+
+  use {
+    'abecodes/tabout.nvim',
+    requires = 'nvim-treesitter',
+    config = function()
+      require('tabout').setup()
+    end
   }
 
   -- do I need this?
   -- use {
   --   'windwp/nvim-ts-autotag',
-  --   after = 'nvim-treesitter',
+  --   requires = 'nvim-treesitter',
   --   config = function()
   --     require('nvim-ts-autotag').setup()
   --   end,
@@ -67,7 +73,7 @@ return require('packer').startup(function(use)
     'numToStr/Comment.nvim',
     requires = {
       'JoosepAlviste/nvim-ts-context-commentstring',
-      after = 'nvim-treesitter',
+      requires = 'nvim-treesitter',
       config = function()
         require('nvim-treesitter.configs').setup { context_commentstring { enable = true, enable_autocmd = false, } }
       end
@@ -78,39 +84,36 @@ return require('packer').startup(function(use)
   use {
     'L3MON4D3/LuaSnip',
     requires = 'rafamadriz/friendly-snippets',
+    config = config.luasnip,
   }
+
+  use 'windwp/nvim-autopairs'
 
   use {
     'hrsh7th/nvim-cmp',
-    -- after = { "LuaSnip", "nvim-autopairs" },
-    after = 'nvim-lspconfig',
     requires = {
-      { "hrsh7th/cmp-nvim-lsp", after = "nvim-cmp", opt = true },
-      -- { "hrsh7th/cmp-nvim-lsp-document-symbol", after = "nvim-cmp", opt = true },
-      -- { "hrsh7th/cmp-nvim-lsp-signature-help", after = "nvim-cmp", opt = true },
-      -- { "hrsh7th/cmp-nvim-lua", after = "nvim-cmp", opt = true },
-      -- { "saadparwaiz1/cmp_luasnip", after = { "nvim-cmp", "LuaSnip" } },
-      -- { "hrsh7th/cmp-path", after = "nvim-cmp", opt = true },
-      -- { "hrsh7th/cmp-cmdline", after = "nvim-cmp", opt = true },
-      -- { "hrsh7th/cmp-copilot", after = "nvim-cmp", opt = true },
-      -- { "petertriho/cmp-git", after = "nvim-cmp", opt = true },
-      -- { "davidsierradz/cmp-conventionalcommits", after = "nvim-cmp", opt = true },
-      -- { "mtoohey31/cmp-fish", after = "nvim-cmp", opt = true },
-      -- { "David-Kunz/cmp-npm", after = "nvim-cmp", opt = true },
-      -- { "kdheepak/cmp-latex-symbols", after = "nvim-cmp", opt = true },
-      -- { "ray-x/cmp-treesitter", after = "nvim-cmp", opt = true },
+      { "hrsh7th/cmp-nvim-lsp" },
+      { "saadparwaiz1/cmp_luasnip" },
+      { "hrsh7th/cmp-buffer" },
+      -- { "hrsh7th/cmp-nvim-lsp-signature-help" },
+      { "hrsh7th/cmp-path" },
+      { "hrsh7th/cmp-nvim-lua" },
+      { "hrsh7th/cmp-cmdline", },
+      -- { "hrsh7th/cmp-copilot", },
+      -- { "petertriho/cmp-git", },
+      { "davidsierradz/cmp-conventionalcommits", },
+      { "mtoohey31/cmp-fish" },
+      { "kdheepak/cmp-latex-symbols" },
+      { "ray-x/cmp-treesitter" },
 
-      -- ME ME ME
-      -- {
-      --   "saecki/crates.nvim",
-      --   after = "nvim-cmp",
-      --   config = function()
-      --     require('crates').setup()
-      --   end,
-      --   opt = true
-      -- },
-      config = config.cmp,
+      { "David-Kunz/cmp-npm", requires = "nvim-lua/plenary.nvim",
+        config = function() require('cmp-npm').setup() end, },
+      { "saecki/crates.nvim",
+        requires = "nvim-lua/plenary.nvim",
+        config = function() require('crates').setup() end,
+      },
     },
+    config = config.cmp,
   }
 
   -- Post-install/update hook with call of vimscript function with argument

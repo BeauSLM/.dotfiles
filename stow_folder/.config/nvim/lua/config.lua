@@ -48,7 +48,14 @@ function config.ts_rainbow()
 end
 
 function config.cmp()
+  vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
   local cmp = require('cmp')
+
+  local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+  cmp.event:on(
+    'confirm_done',
+    cmp_autopairs.on_confirm_done()
+  )
 
   cmp.setup({
     snippet = {
@@ -64,23 +71,53 @@ function config.cmp()
       ['<C-e>'] = cmp.mapping.abort(),
       ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     }),
-    sources = cmp.config.sources({
+    sources = {
+      { name = 'crates' },
+      { name = 'npm' },
+      { name = 'conventionalcommits' },
+      { name = 'latex_symbols' },
+      { name = 'fish' },
+      { name = 'nvim_lua' },
       { name = 'nvim_lsp' },
-      { name = 'luasnip' }, -- For luasnip users.
-    }, {
-      { name = 'buffer' },
-    })
+      { name = 'luasnip' },
+      { name = 'treesitter' },
+      { name = 'path' },
+      { name = 'buffer' }
+    }
   })
+  cmp.setup.cmdline(':', {
+    sources = {
+      { name = 'cmdline' }
+    }
+  })
+end
+
+function config.luasnip()
+  require('luasnip.loaders.from_vscode').lazy_load()
+  -- vim.cmd([[
+  --   " press <Tab> to expand or jump in a snippet. These can also be mapped separately
+  --   " via <Plug>luasnip-expand-snippet and <Plug>luasnip-jump-next.
+  --   imap <silent><expr> <Tab> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>' 
+  --   " -1 for jumping backwards.
+  --   inoremap <silent> <S-Tab> <cmd>lua require'luasnip'.jump(-1)<Cr>
+  --
+  --   snoremap <silent> <Tab> <cmd>lua require('luasnip').jump(1)<Cr>
+  --   snoremap <silent> <S-Tab> <cmd>lua require('luasnip').jump(-1)<Cr>
+  --
+  --   " For changing choices in choiceNodes (not strictly necessary for a basic setup).
+  --   imap <silent><expr> <C-E> luasnip#choice_active() ? '<Plug>luasnip-next-choice' : '<C-E>'
+  --   smap <silent><expr> <C-E> luasnip#choice_active() ? '<Plug>luasnip-next-choice' : '<C-E>'
+  -- ]])
 end
 
 function config.navigator()
   -- nvim-autopairs
-  -- require('nvim-autopairs').setup { disable_filetype = { "TelescopePrompt" , "guihua", "guihua_rust", "clap_input" }, }
+  require('nvim-autopairs').setup { disable_filetype = { "TelescopePrompt" , "guihua", "guihua_rust", "clap_input" }, }
 
   -- cmp
-  -- if vim.o.ft == 'clap_input' and vim.o.ft == 'guihua' and vim.o.ft == 'guihua_rust' then
-  --   require'cmp'.setup.buffer { completion = {enable = false} }
-  -- end
+  if vim.o.ft == 'clap_input' and vim.o.ft == 'guihua' and vim.o.ft == 'guihua_rust' then
+    require('cmp').setup.buffer { completion = {enable = false} }
+  end
 
   require('navigator').setup {
     lsp = {
@@ -92,6 +129,7 @@ function config.navigator()
       disable_lsp = { "rust_analyzer", "clangd" },
       format_on_save = false,
     },
+    lsp_signature_help = false,
     lsp_signature_help = true,
     signature_help_cfg = require('lsp_signature').setup {
       always_trigger = true,
@@ -102,7 +140,6 @@ function config.navigator()
     server = {
       on_attach = function(client, bufnr)
         require('navigator.lspclient.mapping').setup({ client = client, bufnr = bufnr }) -- setup navigator keymaps here,
-        -- otherwise, you can define your own commands to call navigator functions
       end,
     }
   })
@@ -111,7 +148,6 @@ function config.navigator()
     server = {
       on_attach = function(client, bufnr)
         require('navigator.lspclient.mapping').setup({ client = client, bufnr = bufnr }) -- setup navigator keymaps here,
-        -- otherwise, you can define your own commands to call navigator functions
       end,
     }
   }
