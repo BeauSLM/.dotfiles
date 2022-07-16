@@ -24,6 +24,11 @@ return require('packer').startup(function(use)
     end
   }
 
+  use {
+    'thePrimeagen/harpoon',
+    requires = 'nvim-lua/plenary.nvim',
+  }
+
   use 'mg979/vim-visual-multi'
 
   -- use {
