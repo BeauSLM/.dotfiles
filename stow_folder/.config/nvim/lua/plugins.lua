@@ -56,6 +56,12 @@ return require('packer').startup(function(use)
       require('diffview').setup { use_icons = false, }
     end,
   }
+  use {
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require('gitsigns').setup()
+    end
+  }
 
   use {
     'nvim-treesitter/nvim-treesitter',
