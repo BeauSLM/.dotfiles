@@ -26,14 +26,14 @@ function config.sonokai()
 end
 
 function config.gruvbox()
-vim.opt.background = "dark"
-vim.g.gruvbox_material_invert_selection = 0
-vim.g.gruvbox_material_enable_italic = 1
-vim.g.gruvbox_material_improved_strings = 1
-vim.g.gruvbox_material_improved_warnings = 1
-vim.g.gruvbox_material_enable_bold = 1
-vim.g.gruvbox_material_palette = "original"
-vim.cmd("colorscheme gruvbox-material")
+  vim.opt.background = "dark"
+  vim.g.gruvbox_material_invert_selection = 0
+  vim.g.gruvbox_material_enable_italic = 1
+  vim.g.gruvbox_material_improved_strings = 1
+  vim.g.gruvbox_material_improved_warnings = 1
+  vim.g.gruvbox_material_enable_bold = 1
+  vim.g.gruvbox_material_palette = "original"
+  vim.cmd("colorscheme gruvbox-material")
 end
 
 function config.ts_rainbow()
@@ -46,7 +46,7 @@ function config.ts_rainbow()
 end
 
 function config.cmp()
-  vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
+  vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
   local cmp = require('cmp')
 
   local cmp_autopairs = require('nvim-autopairs.completion.cmp')
@@ -66,7 +66,7 @@ function config.cmp()
       ['<C-b>'] = cmp.mapping.scroll_docs(-4),
       ['<C-f>'] = cmp.mapping.scroll_docs(4),
       ['<C-Space>'] = cmp.mapping.complete(),
-     ['<C-e>'] = cmp.mapping.abort(),
+      ['<C-e>'] = cmp.mapping.abort(),
       ['<CR>'] = cmp.mapping.confirm({ select = false }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     }),
     sources = {
@@ -103,11 +103,11 @@ end
 
 function config.navigator()
   -- nvim-autopairs
-  require('nvim-autopairs').setup { disable_filetype = { "TelescopePrompt" , "guihua", "guihua_rust", "clap_input" }, }
+  require('nvim-autopairs').setup { disable_filetype = { "TelescopePrompt", "guihua", "guihua_rust", "clap_input" }, }
 
   -- cmp
   if vim.o.ft == 'clap_input' and vim.o.ft == 'guihua' and vim.o.ft == 'guihua_rust' then
-    require('cmp').setup.buffer { completion = {enable = false} }
+    require('cmp').setup.buffer { completion = { enable = false } }
   end
 
   require('navigator').setup {
