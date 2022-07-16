@@ -19,15 +19,33 @@ return require('packer').startup(function(use)
   use {
     'szw/vim-maximizer',
     config = function()
-      -- TODO: mess with default mapping ig
       vim.g.maximizer_set_default_mapping = 0
+      vim.api.nvim_set_keymap('n', '<leader>m', ':MaximizerToggle<CR>', { noremap = true })
     end
   }
 
+  use 'mg979/vim-visual-multi'
+
+  -- use {
+  --   'TimUntersberger/neogit',
+  --   requires = { 'nvim-lua/plenary.nvim', 'sindrets/diffview.nvim' },
+  --   config = function()
+  --     require('neogit').setup {
+  --       integrations = { diffview = true, },
+  --     }
+  --   end
+  -- }
   use 'tpope/vim-fugitive'
   use { 'junegunn/gv.vim', requires = 'vim-fugitive' }
   use { 'tpope/vim-rhubarb', requires = 'vim-fugitive' }
   use { 'shumphrey/fugitive-gitlab.vim', requires = 'vim-fugitive' }
+  use {
+    'sindrets/diffview.nvim',
+    requires = 'nvim-lua/plenary.nvim',
+    config = function()
+      require('diffview').setup { use_icons = false, }
+    end,
+  }
 
   use {
     'nvim-treesitter/nvim-treesitter',
@@ -117,8 +135,4 @@ return require('packer').startup(function(use)
     },
     config = config.cmp,
   }
-
-  -- Post-install/update hook with call of vimscript function with argument
-  use { 'glacambre/firenvim', run = function() vim.fn['firenvim#install'](0) end }
-
 end)

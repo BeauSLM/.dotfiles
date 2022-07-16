@@ -21,4 +21,18 @@ set smartcase
 
 set noswapfile
 
+" mappings
 let mapleader=' '
+
+nnoremap <C-q> :q!<CR>
+
+nnoremap <leader>gs :Git<CR>
+nnoremap <leader>gd :DiffviewOpen<CR>
+nnoremap <leader>gl :GV<CR>
+vnoremap <leader>gl :GV<CR>
+nnoremap <leader>gv :GV!<CR>
+vnoremap <leader>gv :GV!<CR>
+nnoremap <leader>gp :GV --patch<CR>
+vnoremap <leader>gp :GV --patch<CR>
+
+nnoremap <leader>F :lua vim.lsp.buf.formatting()<CR>

@@ -19,7 +19,10 @@ function config.sonokai()
   local v = opt[math.random(1, #opt)]
   vim.g.sonokai_style = v
   vim.g.sonokai_enable_italic = 1
-  vim.cmd('colorscheme sonokai')
+  vim.cmd([[
+    colorscheme sonokai
+    " hi TSKeyword gui=Bold
+  ]])
 end
 
 function config.gruvbox()
