@@ -13,12 +13,29 @@ return require('packer').startup(function(use)
       'simrat39/rust-tools.nvim',
       'p00f/clangd_extensions.nvim',
     },
-    config = config.navigator
+    config = config.navigator,
+  }
   use {
     'jose-elias-alvarez/null-ls.nvim',
     config = config.null_ls,
   }
+  use {
+    'simrat39/rust-tools.nvim',
+    requires = { 'nvim-lua/plenary.nvim', 'mfussenegger/nvim-dap' },
+  }
 
+  use 'mfussenegger/nvim-dap'
+  use {
+    'rcarriga/nvim-dap-ui',
+    requires = 'mfussenegger/nvim-dap',
+    config = config.dapui
+  }
+  use {
+    'theHamsta/nvim-dap-virtual-text',
+    requires = { 'mfussenegger/nvim-dap', 'nvim-treesitter' },
+    config = function()
+      require('nvim-dap-virtual-text').setup()
+    end
   }
 
   use {

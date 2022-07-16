@@ -1,16 +1,4 @@
-Completion:
-- nvim-cmp
-    - cmp-copilot or clippy
-
-Editor:
 - vim-sandwhich or surround.nvim?
 - lspkind?
-
-Lang:
-- nvim treesitter
-    - nvim-ts-autotag?
-- nvim-dap
-
-Tools:
-- harpoon?
 - telescope or clap?
+- trouble.nvim
