@@ -14,6 +14,11 @@ return require('packer').startup(function(use)
       'p00f/clangd_extensions.nvim',
     },
     config = config.navigator
+  use {
+    'jose-elias-alvarez/null-ls.nvim',
+    config = config.null_ls,
+  }
+
   }
 
   use {
