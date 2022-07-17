@@ -1,5 +1,85 @@
 local config = {}
 
+-- TODO: make these not global lul
+local extension_path = vim.env.HOME .. '/.vscode-oss/extensions/vadimcn.vscode-lldb-1.7.2/'
+CODELLDB_PATH = extension_path .. 'adapter/codelldb'
+LIBLLDB_PATH = extension_path .. 'lldb/lib/liblldb.so'
+
+function config.dap()
+  local dap = require('dap')
+
+  dap.adapters.codelldb = {
+    type = 'server',
+    port = "${port}",
+    executable = {
+      command = CODELLDB_PATH,
+      args = {"--port", "${port}"},
+    }
+  }
+  dap.configurations.c = {
+    {
+      name = "Launch file",
+      type = "codelldb",
+      request = "launch",
+      program = function()
+        return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+      end,
+      cwd = '${workspaceFolder}',
+      stopOnEntry = true,
+    },
+  }
+  dap.configurations.cpp = dap.configurations.c
+end
+
+function config.navigator()
+  -- nvim-autopairs
+  require('nvim-autopairs').setup { disable_filetype = { "TelescopePrompt", "guihua", "guihua_rust", "clap_input" }, }
+
+  -- cmp
+  if vim.o.ft == 'clap_input' and vim.o.ft == 'guihua' and vim.o.ft == 'guihua_rust' then
+    require('cmp').setup.buffer { completion = { enable = false } }
+  end
+
+  require('navigator').setup {
+    lsp = {
+      code_lens_action = { enable = false },
+      servers = {
+        'cssmodules_ls',
+        'eslint',
+        'tailwindcss',
+      },
+      disable_lsp = { "rust_analyzer", "clangd" },
+      format_on_save = false,
+    },
+    lsp_signature_help = true,
+    signature_help_cfg = require('lsp_signature').setup {
+      always_trigger = true,
+    }
+  }
+
+  local opts = {
+    dap = {
+      adapter = require('rust-tools.dap').get_codelldb_adapter(
+        CODELLDB_PATH, LIBLLDB_PATH)
+    },
+    server = {
+      on_attach = function(client, bufnr)
+        require('navigator.lspclient.mapping').setup({ client = client, bufnr = bufnr }) -- setup navigator keymaps here,
+      end,
+    }
+  }
+
+  require('rust-tools').setup(opts)
+
+  require("clangd_extensions").setup {
+    server = {
+      on_attach = function(client, bufnr)
+        require('navigator.lspclient.mapping').setup({ client = client, bufnr = bufnr }) -- setup navigator keymaps here,
+      end,
+    }
+  }
+end
+
 function config.treesitter()
   require 'nvim-treesitter.configs'.setup {
     auto_install = true,
@@ -95,63 +175,10 @@ function config.luasnip()
   require('luasnip.loaders.from_vscode').lazy_load()
   vim.cmd([[
     imap <silent><expr> <C-k> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<C-k>'
-    inoremap <silent> <C-j> <cmd>lua require'luasnip'.jump(-1)<Cr>
+    inoremap <silent> <C-j> <cmd>lua require('luasnip').jump(-1)<Cr>
     snoremap <silent> <C-k> <cmd>lua require('luasnip').jump(1)<Cr>
     snoremap <silent> <C-j> <cmd>lua require('luasnip').jump(-1)<Cr>
   ]])
-end
-
-function config.navigator()
-  -- nvim-autopairs
-  require('nvim-autopairs').setup { disable_filetype = { "TelescopePrompt", "guihua", "guihua_rust", "clap_input" }, }
-
-  -- cmp
-  if vim.o.ft == 'clap_input' and vim.o.ft == 'guihua' and vim.o.ft == 'guihua_rust' then
-    require('cmp').setup.buffer { completion = { enable = false } }
-  end
-
-  require('navigator').setup {
-    lsp = {
-      code_lens_action = { enable = false },
-      servers = {
-        'cssmodules_ls',
-        'eslint',
-        'tailwindcss',
-      },
-      disable_lsp = { "rust_analyzer", "clangd" },
-      format_on_save = false,
-    },
-    lsp_signature_help = true,
-    signature_help_cfg = require('lsp_signature').setup {
-      always_trigger = true,
-    }
-  }
-
-  local extension_path = vim.env.HOME .. '/.vscode-oss/extensions/vadimcn.vscode-lldb-1.7.2/'
-  local codelldb_path = extension_path .. 'adapter/codelldb'
-  local liblldb_path = extension_path .. 'lldb/lib/liblldb.so'
-
-  local opts = {
-    dap = {
-      adapter = require('rust-tools.dap').get_codelldb_adapter(
-        codelldb_path, liblldb_path)
-    },
-    server = {
-      on_attach = function(client, bufnr)
-        require('navigator.lspclient.mapping').setup({ client = client, bufnr = bufnr }) -- setup navigator keymaps here,
-      end,
-    }
-  }
-
-  require('rust-tools').setup(opts)
-
-  require("clangd_extensions").setup {
-    server = {
-      on_attach = function(client, bufnr)
-        require('navigator.lspclient.mapping').setup({ client = client, bufnr = bufnr }) -- setup navigator keymaps here,
-      end,
-    }
-  }
 end
 
 function config.comment()
