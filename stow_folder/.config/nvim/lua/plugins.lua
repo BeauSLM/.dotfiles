@@ -19,6 +19,7 @@ return require('packer').startup(function(use)
       'p00f/clangd_extensions.nvim',
     },
     config = config.navigator,
+    commit = '05753da8db0e7fdb979cc5fc396965b150e09d79',
   }
   use {
     'jose-elias-alvarez/null-ls.nvim',
@@ -135,7 +136,7 @@ return require('packer').startup(function(use)
       'JoosepAlviste/nvim-ts-context-commentstring',
       requires = 'nvim-treesitter',
       config = function()
-        require('nvim-treesitter.configs').setup { context_commentstring { enable = true, enable_autocmd = false, } }
+        require('nvim-treesitter.configs').setup { context_commentstring = { enable = true, enable_autocmd = false, } }
       end
     },
     config = config.comment,
