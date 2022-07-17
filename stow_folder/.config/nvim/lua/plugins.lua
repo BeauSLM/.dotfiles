@@ -2,7 +2,12 @@ local config = require('config')
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-  use 'itchyny/lightline.vim'
+  use {
+    'windwp/windline.nvim',
+    config = function()
+      require('wlsample.evil_line')
+    end
+  }
   use 'neovim/nvim-lspconfig'
   use {
     'ray-x/navigator.lua',
