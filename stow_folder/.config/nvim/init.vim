@@ -26,6 +26,8 @@ let mapleader=' '
 
 nnoremap <C-q> :q!<CR>
 
+nnoremap <leader>m :MaximizerToggle!<CR>
+
 " fugitive
 nnoremap <leader>gs :Git<CR>
 nnoremap <leader>gd :DiffviewOpen<CR>
