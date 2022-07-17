@@ -110,13 +110,13 @@ return require('packer').startup(function(use)
   }
 
   -- do I need this?
-  -- use {
-  --   'windwp/nvim-ts-autotag',
-  --   requires = 'nvim-treesitter',
-  --   config = function()
-  --     require('nvim-ts-autotag').setup()
-  --   end,
-  -- }
+  use {
+    'windwp/nvim-ts-autotag',
+    requires = 'nvim-treesitter',
+    config = function()
+      require('nvim-ts-autotag').setup()
+    end,
+  }
 
   use {
     'sainnhe/gruvbox-material',
