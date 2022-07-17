@@ -10,7 +10,7 @@ return require('packer').startup(function(use)
       { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' },
       'neovim/nvim-lspconfig',
       'ray-x/lsp_signature.nvim',
-      'simrat39/rust-tools.nvim',
+      'gigablaster/rust-tools.nvim', -- TODO: go back to original when https://github.com/simrat39/rust-tools.nvim/issues/157 is fixed
       'p00f/clangd_extensions.nvim',
     },
     config = config.navigator,
@@ -20,7 +20,7 @@ return require('packer').startup(function(use)
     config = config.null_ls,
   }
   use {
-    'simrat39/rust-tools.nvim',
+    'gigablaster/rust-tools.nvim',
     requires = { 'nvim-lua/plenary.nvim', 'mfussenegger/nvim-dap' },
   }
 

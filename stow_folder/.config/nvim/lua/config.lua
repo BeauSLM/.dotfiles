@@ -127,13 +127,23 @@ function config.navigator()
     }
   }
 
-  require('rust-tools').setup({
+  local extension_path = vim.env.HOME .. '/.vscode-oss/extensions/vadimcn.vscode-lldb-1.7.2/'
+  local codelldb_path = extension_path .. 'adapter/codelldb'
+  local liblldb_path = extension_path .. 'lldb/lib/liblldb.so'
+
+  local opts = {
+    dap = {
+      adapter = require('rust-tools.dap').get_codelldb_adapter(
+        codelldb_path, liblldb_path)
+    },
     server = {
       on_attach = function(client, bufnr)
         require('navigator.lspclient.mapping').setup({ client = client, bufnr = bufnr }) -- setup navigator keymaps here,
       end,
     }
-  })
+  }
+
+  require('rust-tools').setup(opts)
 
   require("clangd_extensions").setup {
     server = {
