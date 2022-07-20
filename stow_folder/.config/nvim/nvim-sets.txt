@@ -1,8 +1,0 @@
-hidden = true
-ignorecase = true
-smartcase = true
-incsearch = true
-hlsearch = false
-cmdheight = 2
-cindent = true
-scrolloff = j8

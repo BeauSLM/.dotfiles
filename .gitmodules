@@ -1,0 +1,3 @@
+[submodule "stow_folder/.config/nvim"]
+	path = stow_folder/.config/nvim
+	url = git@github.com:BeauSLM/nvim.git

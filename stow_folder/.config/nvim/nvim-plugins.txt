@@ -1,4 +1,0 @@
-- vim-sandwhich or surround.nvim?
-- lspkind?
-- telescope or clap?
-- trouble.nvim
