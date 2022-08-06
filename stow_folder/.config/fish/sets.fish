@@ -1,6 +1,6 @@
 # sets.fish
 
-set -ga fish_user_paths $HOME/{.local/bin, .nimble/bin, go/bin} $SOURCE_INSTALLS/{Odin, ols, zig-bin}
+set -ga fish_user_paths $HOME/{.local/bin, .nimble/bin, go/bin} $SOURCE_INSTALLS/{Odin, ols, zig/build/stage1/bin, zls/zig-out/bin}
 
 set -x TERMINAL alacritty
 
@@ -8,8 +8,8 @@ set -x DOTFILES $HOME/.dotfiles
 
 set -x SOURCE_INSTALLS $HOME/si
 
-set -x EDITOR "nvim"
-set -x VISUAL "nvim"
+set -x EDITOR "hx"
+set -x VISUAL "hx"
 
 set -x BROWSER "brave"
 
