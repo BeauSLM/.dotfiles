@@ -16,9 +16,6 @@ alias fgrep='fgrep --color=auto'
 #readable output
 alias df='df -h'
 
-#continue download
-alias wget="wget -c"
-
 # Aliases for software managment
 # paru as aur helper - updates everything
 alias upall="paru -Syu --noconfirm"
