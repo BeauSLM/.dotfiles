@@ -6,7 +6,10 @@ scrolloff = 8
 idle-timeout = 0
 cursorline = true
 auto-format = false
+auto-completion = false
 rulers = [80]
+mouse = false
+auto-pairs = false
 
 [editor.lsp]
 display-messages = true
@@ -15,9 +18,7 @@ display-messages = true
 hidden = false
 
 [editor.whitespace.render]
-space = "none"
-tab = "all"
-newline = "all"
+render = false
 
 [editor.indent-guides]
 render = true
