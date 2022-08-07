@@ -48,12 +48,11 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-if command -v nvidia-settings
-then
-    nvidia-settings --load-config-only # load brightness settings
-fi
 
-# startup.sh
+
+# ME ME ME
+
+
 # run if not running
 run() {
   if ! pgrep -f "$1" ;
@@ -62,25 +61,29 @@ run() {
   fi
 }
 
-# instant commands - not daemons
-polybar-msg cmd quit                   # close all polybars
-"$HOME"/.fehbg                         # reload wallpaper
+# PLATFORM SPECIFIC
 
-# IFS='<line feed>'
-IFS='
-'
-for m in $(polybar --list-monitors); do
-  n=$(echo "$m" | cut -d ":" -f1)
-  if echo "$m" | grep -q "primary"
-  then
-    bar="tray"
-    logfile="/polybar_tray.log"
-  else
-    bar="normal"
-    logfile="/polybar_normal.log"
-  fi
-  MONITOR=$n polybar -r "$bar" 2>&1 | tee -a /tmp/"$logfile" &
-done
+
+# load brightness settings
+if command -v nvidia-settings
+then
+    nvidia-settings --load-config-only 
+fi
+
+# battery icon
+if command -v cbatticon
+then
+    cbatticon # battery icon
+fi
+
+if command -v discord
+then
+    run discord --start-minimized
+fi
+
+
+# instant commands - not daemons
+"$HOME"/.fehbg                         # reload wallpaper
 
 run dunst          # notifications
 run picom -b       # compositor
@@ -89,7 +92,5 @@ run imwheel        # scrollwheel improvements
 run nm-applet      # network manager tray icon
 run copyq          # cool clipboard thing that I'd honestly like to get rid of
 
-# exec penrose_config 2> /tmp/penrose.log 1> /tmp/penrose.log
-# exec "$SOURCE_INSTALLS"/penrose_config/target/debug/penrose_config 2> /tmp/penrose.log 1> /tmp/penrose.log # for debugging
 # exec startlxqt
 exec dwm
