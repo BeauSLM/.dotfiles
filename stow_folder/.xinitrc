@@ -70,17 +70,15 @@ then
     nvidia-settings --load-config-only 
 fi
 
-# battery icon
-if command -v cbatticon
-then
-    cbatticon # battery icon
-fi
-
 if command -v discord
 then
     run discord --start-minimized
 fi
 
+if command -v imwheel
+then
+    run imwheel
+fi
 
 # instant commands - not daemons
 "$HOME"/.fehbg                         # reload wallpaper
@@ -88,9 +86,7 @@ fi
 run dunst          # notifications
 run picom -b       # compositor
 run sxhkd          # hotkey daemon
-run imwheel        # scrollwheel improvements
-run nm-applet      # network manager tray icon
-run copyq          # cool clipboard thing that I'd honestly like to get rid of
+run dwmblocks
 
 # exec startlxqt
 exec dwm
