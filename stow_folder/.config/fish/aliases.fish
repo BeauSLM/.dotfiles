@@ -60,3 +60,5 @@ alias goals='bat ~/todo/goals.md'
 # sudo -> doas
 alias sudo='doas'
 alias su='doas -s'
+
+alias vrc='tmux-sessionizer $DOTFILES/stow_folder/.config/nvim'

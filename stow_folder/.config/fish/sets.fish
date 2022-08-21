@@ -2,7 +2,7 @@
 
 set -ga fish_user_paths $HOME/{.local/bin, .nimble/bin, go/bin} $SOURCE_INSTALLS/{Odin, ols, zig/build/stage1/bin, zls/zig-out/bin}
 
-set -x TERMINAL alacritty
+set -x TERMINAL st
 
 set -x DOTFILES $HOME/.dotfiles
 
@@ -14,10 +14,6 @@ set -x VISUAL "hx"
 set -x BROWSER "brave"
 
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
-# set -x MANPAGER "nvim +Man!"
-
-# jdtls
-set -x JDTLS_HOME $SOURCE_INSTALLS/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository
 
 set -x HELIX_RUNTIME $SOURCE_INSTALLS/helix/runtime
 
