@@ -10,6 +10,7 @@ auto-completion = false
 rulers = [80]
 mouse = false
 auto-pairs = false
+true-color = true
 
 [editor.lsp]
 display-messages = true
