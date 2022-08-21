@@ -86,7 +86,7 @@ fi
 run dunst          # notifications
 run picom -b       # compositor
 run sxhkd          # hotkey daemon
-run dwmblocks
 
 # exec startlxqt
+run dwmblocks
 exec dwm
