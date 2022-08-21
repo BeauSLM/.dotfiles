@@ -1,3 +1,7 @@
+# terminal
+super + Return
+    $TERMINAL
+
 #Browser
 super + w
     $BROWSER
