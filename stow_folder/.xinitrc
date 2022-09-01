@@ -80,7 +80,6 @@ then
     run imwheel
 fi
 
-# instant commands - not daemons
 if command -v cbatticon
 then
     run cbatticon
@@ -91,10 +90,8 @@ fi
 
 "$HOME"/.fehbg                         # reload wallpaper
 
-run dunst          # notifications
 run picom -b       # compositor
 run sxhkd          # hotkey daemon
 
 # exec startlxqt
-run dwmblocks
-exec dwm
+exec i3
