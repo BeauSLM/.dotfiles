@@ -1,14 +1,10 @@
 # terminal
-super + Return
-    $TERMINAL
+# super + Return
+#     $TERMINAL
 
 #Browser
 super + w
     $BROWSER
-
-#Xkill
-super + Escape
-    xkill
 
 #reload sxhkd:
 super + shift + s
@@ -17,10 +13,6 @@ super + shift + s
 #Discord
 ctrl + alt + d
     discord
-
-#File-Manager
-ctrl + alt + t
-     thunar
 
 #File manager
 ctrl + alt + f
