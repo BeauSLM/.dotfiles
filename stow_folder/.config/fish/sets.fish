@@ -1,6 +1,6 @@
 # sets.fish
 
-set -ga fish_user_paths $HOME/{.local/bin, .nimble/bin, go/bin} $SOURCE_INSTALLS/{Odin, ols, zig/build/stage1/bin, zls/zig-out/bin}
+set -ga fish_user_paths $HOME/{.local/bin, .nimble/bin, go/bin} $SOURCE_INSTALLS/{Odin, ols, zig/build/stage3/bin, zls/zig-out/bin}
 
 set -x TERMINAL alacritty
 
