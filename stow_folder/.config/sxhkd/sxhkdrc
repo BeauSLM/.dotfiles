@@ -3,12 +3,8 @@
 #     $TERMINAL
 
 #Browser
-super + w
+super + b
     $BROWSER
-
-#reload sxhkd:
-super + shift + s
-	pkill -USR1 -x sxhkd
 
 #Discord
 ctrl + alt + d
@@ -27,7 +23,7 @@ ctrl + shift + Escape
     $TERMINAL -e btop
 
 # Selected area screenshot
-super + s
+super + shift + s
     maim -s | xclip -selection clipboard -t image/png
 
 #Brightness up
