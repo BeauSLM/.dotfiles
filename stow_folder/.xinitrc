@@ -81,6 +81,14 @@ then
 fi
 
 # instant commands - not daemons
+if command -v cbatticon
+then
+    run cbatticon
+fi
+
+
+
+
 "$HOME"/.fehbg                         # reload wallpaper
 
 run dunst          # notifications
