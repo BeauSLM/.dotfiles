@@ -14,6 +14,7 @@ true-color = true
 
 [editor.lsp]
 display-messages = true
+display-signature-help-docs = false
 
 [editor.file-picker]
 hidden = false
