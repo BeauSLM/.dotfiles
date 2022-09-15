@@ -27,10 +27,10 @@ super + shift + s
     maim -s | xclip -selection clipboard -t image/png
 
 #Brightness up
-#XF86MonBrightnessUp
-#    xbacklight -inc 10
+XF86MonBrightnessUp
+    xbacklight -inc 5%
 
 #Brightness down
-#XF86MonBrightnessDown
-#    xbacklight -dec 10
+XF86MonBrightnessDown
+    xbacklight -dec 5%
 
