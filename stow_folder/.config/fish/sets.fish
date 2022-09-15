@@ -8,8 +8,8 @@ set -x DOTFILES $HOME/.dotfiles
 
 set -x SOURCE_INSTALLS $HOME/si
 
-set -x EDITOR "hx"
-set -x VISUAL "hx"
+set -x EDITOR "nvim"
+set -x VISUAL "nvim"
 
 set -x BROWSER "brave"
 
