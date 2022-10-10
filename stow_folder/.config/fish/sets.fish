@@ -17,6 +17,8 @@ set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
 set -x HELIX_RUNTIME $SOURCE_INSTALLS/helix/runtime
 
+set -x NEXT_TELEMETRY_DISABLED 1 # the fuck is this?
+
 set fish_cursor_default     block      blink
 set fish_cursor_insert      line       blink
 set fish_cursor_replace_one underscore blink
