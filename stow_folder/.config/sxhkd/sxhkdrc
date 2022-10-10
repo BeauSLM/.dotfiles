@@ -3,7 +3,7 @@
 #     $TERMINAL
 
 #Browser
-super + b
+super + shift + b
     $BROWSER
 
 #Discord
