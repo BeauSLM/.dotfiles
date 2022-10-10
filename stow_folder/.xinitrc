@@ -89,4 +89,5 @@ run picom -b       # compositor
 run sxhkd          # hotkey daemon
 
 # exec startlxqt
-exec i3
+# exec i3
+exec xmonad
