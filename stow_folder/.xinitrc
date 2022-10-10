@@ -80,6 +80,10 @@ then
     run imwheel
 fi
 
+if command -v cbatticon
+then
+    run cbatticon
+fi
 
 
 
