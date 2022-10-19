@@ -14,7 +14,7 @@ layouts = tiled ||| Full
     where
         tiled = reflectHoriz $ Tall nmaster delta ratio
         nmaster = 1
-        ratio = 3/5
+        ratio = 1/2
         delta = 3/100
 
 myManageHook :: ManageHook
