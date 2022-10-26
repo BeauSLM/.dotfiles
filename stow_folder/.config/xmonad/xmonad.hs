@@ -10,6 +10,8 @@ import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.StatusBar
 import XMonad.Hooks.ManageHelpers
 
+import System.Exit
+
 layouts = tiled ||| Full
     where
         tiled = reflectHoriz $ Tall nmaster delta ratio
@@ -35,4 +37,13 @@ main = xmonad
     , layoutHook = layouts
     , manageHook = myManageHook
     }
+    `removeKeysP`
+    [ "M-S-c"
+    , "M-q"
+    ]
+    `additionalKeysP`
+    [ ("M-S-r", spawn "if type xmonad; then xmonad --recompile && xmonad --restart; else xmessage xmonad not in \\$PATH: \"$PATH\"; fi")
+    , ("M-S-q", io exitSuccess)
+    , ("M-q", kill)
+    ]
 
