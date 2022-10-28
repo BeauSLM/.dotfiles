@@ -13,5 +13,5 @@ Config { overrideRedirect = False
                     ]
        , sepChar  = "%"
        , alignSep = "}{"
-       , template = "%XMonadLog% }{ %alsa:default:Master% | %cpu% | %memory% * %swap% | %EGPF% | %date% "
+       , template = "%XMonadLog% }{ %cpu% | %memory% * %swap% | %date% "
        }
