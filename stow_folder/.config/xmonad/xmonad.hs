@@ -23,6 +23,7 @@ myManageHook :: ManageHook
 myManageHook = composeAll
     [ className =? "Gimp" --> doFloat
     , className =? "chaos_insurgency" --> doFloat
+    , className =? "CPSC 453" --> doFloat
     , isDialog            --> doFloat
     ]
 
