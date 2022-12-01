@@ -41,10 +41,12 @@ main = xmonad
     `removeKeysP`
     [ "M-S-c"
     , "M-q"
+    , "M-space"
     ]
     `additionalKeysP`
     [ ("M-S-r", spawn "if type xmonad; then xmonad --recompile && xmonad --restart; else xmessage xmonad not in \\$PATH: \"$PATH\"; fi")
     , ("M-S-q", io exitSuccess)
+    , ("M-f", sendMessage NextLayout)
     , ("M-q", kill)
     ]
 
