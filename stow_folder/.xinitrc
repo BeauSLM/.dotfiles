@@ -67,7 +67,7 @@ run() {
 # load brightness settings
 if command -v nvidia-settings
 then
-    nvidia-settings --load-config-only 
+    sudo nvidia-settings --load-config-only 
 fi
 
 if command -v discord
