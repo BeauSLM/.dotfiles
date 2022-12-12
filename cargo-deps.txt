@@ -10,4 +10,3 @@ show
 tree
 update
 watch
-starship
