@@ -21,9 +21,6 @@ grub
 hexyl
 imwheel
 linux-firmware
-linux-zen
-linux-zen-docs
-linux-zen-headers
 lld
 lldb
 maim
