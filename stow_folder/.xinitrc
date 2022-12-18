@@ -84,7 +84,10 @@ if command -v cbatticon
 then
     run cbatticon
 fi
-
+if command -v emacs
+then
+    run emacs --daemon
+fi
 
 
 "$HOME"/.fehbg                         # reload wallpaper
