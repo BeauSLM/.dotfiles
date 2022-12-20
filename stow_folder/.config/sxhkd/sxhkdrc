@@ -11,6 +11,9 @@ ctrl + alt + d
 ctrl + shift + Escape
     $TERMINAL -e btop
 
+ctrl + alt + Escape
+    $TERMINAL -e nvtop
+
 # Selected area screenshot
 super + shift + s
     maim -s | xclip -selection clipboard -t image/png
