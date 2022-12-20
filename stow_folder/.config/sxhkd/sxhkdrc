@@ -2,23 +2,12 @@
 # super + Return
 #     $TERMINAL
 
-#Browser
 super + shift + b
     $BROWSER
 
-#Discord
 ctrl + alt + d
     discord
 
-#File manager
-ctrl + alt + f
-    $TERMINAL -e ranger
-
-#Nitrogen
-ctrl + alt + i
-     nitrogen
-
-#btop
 ctrl + shift + Escape
     $TERMINAL -e btop
 
