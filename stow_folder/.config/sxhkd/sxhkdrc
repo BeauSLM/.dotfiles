@@ -18,6 +18,9 @@ ctrl + alt + Escape
 super + shift + s
     maim -s | xclip -selection clipboard -t image/png
 
+super + c
+    emacsclient -nc
+
 #Brightness up
 XF86MonBrightnessUp
     xbacklight -inc 5%
