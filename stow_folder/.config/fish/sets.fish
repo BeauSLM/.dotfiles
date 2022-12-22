@@ -11,8 +11,8 @@ set -x DOTFILES $HOME/.dotfiles
 
 set -x SOURCE_INSTALLS $HOME/si
 
-set -x EDITOR "nvim"
-set -x VISUAL "nvim"
+set -x EDITOR "emacsclient"
+set -x VISUAL "emacsclient"
 
 set -x BROWSER "brave"
 
