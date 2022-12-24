@@ -1,6 +1,0 @@
-[submodule "stow_folder/.config/nvim"]
-	path = stow_folder/.config/nvim
-	url = git@github.com:BeauSLM/nvim.git
-[submodule "stow_folder/.config/doom"]
-	path = stow_folder/.config/doom
-	url = git@github.com:BeauSLM/doom.git
