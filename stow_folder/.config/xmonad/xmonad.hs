@@ -26,6 +26,7 @@ myManageHook = composeAll
     , className =? "CPSC 453" --> doFloat
     , className =? "zoom" --> doFloat
     , isDialog            --> doFloat
+    , className =? "Mach core"          --> doFloat
     ]
 
 main :: IO ()
