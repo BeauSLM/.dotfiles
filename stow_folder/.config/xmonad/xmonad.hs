@@ -14,19 +14,19 @@ import System.Exit
 
 layouts = tiled ||| Full
     where
-        tiled = reflectHoriz $ Tall nmaster delta ratio
-        nmaster = 1
-        ratio = 1/2
-        delta = 3/100
+        tiled       = reflectHoriz $ Tall nmaster delta ratio
+        nmaster     = 1
+        ratio       = 1/2
+        delta       = 3/100
 
 myManageHook :: ManageHook
 myManageHook = composeAll
-    [ className =? "Gimp" --> doFloat
-    , className =? "chaos_insurgency" --> doFloat
-    , className =? "CPSC 453" --> doFloat
-    , className =? "zoom" --> doFloat
-    , isDialog            --> doFloat
-    , className =? "Mach core"          --> doFloat
+    [ className =? "Gimp"                   --> doFloat
+    , className =? "chaos_insurgency"       --> doFloat
+    , className =? "CPSC 453"               --> doFloat
+    , className =? "zoom"                   --> doFloat
+    , className =? "Mach core"              --> doFloat
+    , isDialog                              --> doFloat
     ]
 
 main :: IO ()
