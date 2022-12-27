@@ -1,7 +1,6 @@
 # sets.fish
 
-set -ga fish_user_paths $HOME/{.local/bin, .nimble/bin, go/bin, .emacs.d/bin} \
-        $SOURCE_INSTALLS/{Odin, ols, zig-bin, zls/zig-out/bin} 
+set -ga fish_user_paths $HOME/{ .local/bin, go/bin, .emacs.d/bin }
 
 set -x DOOMDIR $HOME/.config/doom
 
