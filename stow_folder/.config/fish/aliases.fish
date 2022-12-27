@@ -51,7 +51,7 @@ alias sysfailed="systemctl list-units --failed"
 alias lg='lazygit'
 
 # Source_Installs
-alias si='tmux-sessionizer $SOURCE_INSTALLS'
+alias si='tmux-sessionizer $SI'
 
 # todo
 alias todo='bat ~/todo/todo.md'

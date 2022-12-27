@@ -8,7 +8,7 @@ set -x TERMINAL alacritty
 
 set -x DOTFILES $HOME/.dotfiles
 
-set -x SOURCE_INSTALLS $HOME/si
+set -x SI $HOME/si
 
 set -x EDITOR "emacsclient"
 set -x VISUAL "emacsclient"
@@ -17,7 +17,7 @@ set -x BROWSER "brave"
 
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
-set -x HELIX_RUNTIME $SOURCE_INSTALLS/helix/runtime
+set -x HELIX_RUNTIME $SI/helix/runtime
 
 set -x NEXT_TELEMETRY_DISABLED 1 # the fuck is this?
 

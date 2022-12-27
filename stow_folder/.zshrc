@@ -383,7 +383,7 @@ compinit
 # autoload -U +X compinit && compinit
 
 # Source_Installs
-alias si='tmux-sessionizer $SOURCE_INSTALLS
+alias si='tmux-sessionizer $SI
 
 # tmux-sessionizer
 bindkey -s ^f "^utmux-sessionizer\n"
