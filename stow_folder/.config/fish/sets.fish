@@ -10,8 +10,8 @@ set -x DOTFILES $HOME/.dotfiles
 
 set -x SI $HOME/si
 
-set -x EDITOR "emacsclient"
-set -x VISUAL "emacsclient"
+set -x EDITOR "emacsclient -t"
+set -x VISUAL "emacsclient -c"
 
 set -x BROWSER "brave"
 
