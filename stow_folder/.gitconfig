@@ -10,3 +10,7 @@
     autoStash = true
 [push]
 	default = current
+[github]
+	user = BeauSLM
+[gitlab]
+	user = BeauSLM
