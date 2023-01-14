@@ -21,6 +21,8 @@ set -x HELIX_RUNTIME $SI/helix/runtime
 
 set -x NEXT_TELEMETRY_DISABLED 1 # the fuck is this?
 
+set -x CMAKE_BUILD_PARALLEL_LEVEL $( rg -c ^processor /proc/cpuinfo )
+
 set fish_cursor_default     block      blink
 set fish_cursor_insert      line       blink
 set fish_cursor_replace_one underscore blink
