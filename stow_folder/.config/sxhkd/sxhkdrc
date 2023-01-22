@@ -2,6 +2,10 @@
 # super + Return
 #     $TERMINAL
 
+# reload sxhkd settings
+super + shift + s
+    pkill -USR1 sxhkd
+
 super + shift + b
     $BROWSER
 
