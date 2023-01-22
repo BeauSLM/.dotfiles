@@ -25,11 +25,9 @@ super + shift + s
 super + c
     emacsclient -nc
 
-#Brightness up
 XF86MonBrightnessUp
     xbacklight -inc 5%
 
-#Brightness down
 XF86MonBrightnessDown
     xbacklight -dec 5%
 
