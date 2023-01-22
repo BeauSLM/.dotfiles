@@ -21,13 +21,13 @@ layouts = tiled ||| Full
 
 myManageHook :: ManageHook
 myManageHook = composeAll
-    [ className =? "Gimp"                   --> doFloat
-    , className =? "chaos_insurgency"       --> doFloat
-    , className =? "CPSC 453"               --> doFloat
-    , className =? "zoom"                   --> doFloat
-    , className =? "Mach core"              --> doFloat
-    , className =? "megachess"              --> doFloat
-    , isDialog                              --> doFloat
+    [ className =? "Gimp"             --> doFloat
+    , className =? "chaos_insurgency" --> doFloat
+    , className =? "CPSC 453"         --> doFloat
+    , className =? "zoom"             --> doFloat
+    , className =? "Mach core"        --> doFloat
+    , className =? "megachess"        --> doFloat
+    , isDialog                        --> doFloat
     ]
 
 main :: IO ()
