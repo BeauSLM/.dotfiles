@@ -26,6 +26,7 @@ myManageHook = composeAll
     , className =? "CPSC 453"               --> doFloat
     , className =? "zoom"                   --> doFloat
     , className =? "Mach core"              --> doFloat
+    , className =? "megachess"              --> doFloat
     , isDialog                              --> doFloat
     ]
 
