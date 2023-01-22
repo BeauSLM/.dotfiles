@@ -1,11 +1,6 @@
 [user]
 	email = beau@beaumccartney.xyz
 	name = Beau McCartney
-[filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
 [init]
 	defaultBranch = main
 [rebase]
@@ -16,3 +11,8 @@
 	user = BeauSLM
 [gitlab]
 	user = BeauSLM
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
