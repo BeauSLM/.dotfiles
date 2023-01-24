@@ -13,6 +13,8 @@ Plug 'junegunn/gv.vim'
 
 " Plug 'liuchengxu/vim-clap', {'do': ':Clap install-binary!'}
 Plug 'mbbill/undotree'
+
+Plug 'jansedivy/jai.vim'
 call plug#end()
 
 set termguicolors
