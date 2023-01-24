@@ -62,3 +62,5 @@ alias sudo='doas'
 alias su='doas -s'
 
 alias vrc='tmux-sessionizer $DOTFILES/stow_folder/.config/nvim'
+
+alias make='make -j$(nproc)'
