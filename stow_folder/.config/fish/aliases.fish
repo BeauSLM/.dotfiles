@@ -8,10 +8,6 @@ alias l.="ls -a | rg '^\.'"
 #fix obvious typo
 alias upal="paru -Syu --noconfirm"
 
-## Colorize the grep command output for ease of use (good for log files)##
-alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
 
 #readable output
 alias df='df -h'
