@@ -1,9 +1,9 @@
 abbr ls 'exa'
-abbr lt 'ls -T'
-abbr la 'ls -a'
-abbr ll 'ls -la --git'
-abbr llt 'll -T'
-abbr l. "ls -a | rg '^\.'"
+abbr lt 'exa -T'
+abbr la 'exa -a'
+abbr ll 'exa -la --git'
+abbr llt 'exa -la --git -T'
+abbr l. "exa -a | rg '^\.'"
 
 #fix obvious typo
 abbr upal "paru -Syu --noconfirm"
