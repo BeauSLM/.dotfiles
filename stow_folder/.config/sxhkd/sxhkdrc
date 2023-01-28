@@ -19,7 +19,7 @@ ctrl + alt + Escape
     $TERMINAL -e nvtop
 
 # Selected area screenshot
-super + shift + s
+super + s
     maim -s | xclip -selection clipboard -t image/png
 
 super + c
