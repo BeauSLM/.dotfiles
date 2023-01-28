@@ -57,5 +57,3 @@ abbr sudo 'doas'
 abbr su 'doas -s'
 
 abbr vrc 'tmux-sessionizer $DOTFILES/stow_folder/.config/nvim'
-
-abbr make 'make -j$(nproc)'
