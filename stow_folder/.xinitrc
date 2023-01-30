@@ -75,11 +75,6 @@ then
     run discord --start-minimized
 fi
 
-if command -v imwheel
-then
-    run imwheel
-fi
-
 if command -v cbatticon
 then
     run cbatticon

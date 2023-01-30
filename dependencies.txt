@@ -19,7 +19,6 @@ git
 git-lfs
 grub
 hexyl
-imwheel
 linux-firmware
 lld
 lldb
