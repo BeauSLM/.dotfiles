@@ -1,6 +1,6 @@
 # sets.fish
 
-set -ga fish_user_paths $HOME/{ .local/bin, go/bin, .emacs.d/bin }
+set -ga fish_user_paths $HOME/{ .local/bin, .emacs.d/bin }
 
 set -x DOOMDIR $HOME/.config/doom
 
