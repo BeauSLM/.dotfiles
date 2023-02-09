@@ -9,6 +9,6 @@ source $__fish_config_dir/colors.fish
 source $__fish_config_dir/bindings.fish
 source $__fish_config_dir/aliases.fish
 
-zoxide init --cmd cd fish | source
+zoxide init fish | source
 
 starship init fish | source
