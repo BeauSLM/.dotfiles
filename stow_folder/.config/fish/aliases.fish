@@ -56,4 +56,4 @@ abbr goals 'bat ~/todo/goals.md'
 abbr sudo 'doas'
 abbr su 'doas -s'
 
-abbr vrc 'tmux-sessionizer $DOTFILES/stow_folder/.config/nvim'
+abbr vrc 'tmux-sessionizer $HOME/.config/nvim'
