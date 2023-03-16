@@ -2,7 +2,7 @@ abbr ls 'exa'
 abbr lt 'exa -T'
 abbr la 'exa -a'
 abbr ll 'exa -la --git'
-abbr llt 'exa -la --git -T'
+abbr llt 'exa -la --git -T --git-ignore'
 abbr l. "exa -a | rg '^\.'"
 
 #fix obvious typo
@@ -47,10 +47,6 @@ abbr lg 'lazygit'
 
 # Source_Installs
 abbr si 'tmux-sessionizer $SI'
-
-# todo
-abbr todo 'bat ~/todo/todo.md'
-abbr goals 'bat ~/todo/goals.md'
 
 # sudo -> doas
 abbr sudo 'doas'
