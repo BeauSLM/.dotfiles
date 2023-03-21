@@ -1,9 +1,6 @@
 # don't type cd anymore wooo
 $AUTO_CD = '1'
 
-# finished background jobs are resumed automatically
-$AUTO_CONTINUE = '1'
-
 # faster
 $COMMANDS_CACHE_SAVE_INTERMEDIATE = '1'
 
@@ -12,14 +9,18 @@ $DOTGLOB = '1'
 
 $VI_MODE = True
 
-xontrib load abbrevs fish_completer zoxide prompt_starship kitty xxh hist_navigator
+# TODO: xxh
+xontrib load abbrevs fish_completer zoxide prompt_starship kitty hist_navigator direnv omx_git
 
-abbrevs['upall'] = 'paru -Syu --noconfirm'
+abbrevs['ls'   ] = 'exa'
+abbrevs['ll'   ] = 'exa -la --git'
+abbrevs['mkdir'] = 'mkdir -p'
+
+abbrevs['upall'  ] = 'paru -Syu --noconfirm'
 abbrevs['cleanup'] = 'paru -Rns $(paru -Qtdq)'
+abbrevs['mirror' ] = 'sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist'
+abbrevs['rip'    ] = "expac --timefmt = '%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 
-abbrevs['mirror'] = 'sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist'
+abbrevs['lg'] = 'lazygit'
 
-abbr rip "expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
-
-abbrevs['gst'] = 'git status'
-abbrevs['gss'] = 'git status -s'
+abbrevs['e']  = 'nvim'
