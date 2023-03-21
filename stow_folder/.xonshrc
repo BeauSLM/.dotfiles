@@ -1,11 +1,14 @@
 # don't type cd anymore wooo
-$AUTO_CD = '1'
+$AUTO_CD = True
+
+$AUTO_SUGGEST_IN_COMPLETIONS = True
+$COMPLETION_MODE = 'menu-complete'
 
 # faster
-$COMMANDS_CACHE_SAVE_INTERMEDIATE = '1'
+$COMMANDS_CACHE_SAVE_INTERMEDIATE = True
 
 # * matches files beginning with '.'
-$DOTGLOB = '1'
+$DOTGLOB = True
 
 $VI_MODE = True
 
