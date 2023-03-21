@@ -31,13 +31,13 @@ myManageHook = composeAll
     ]
 
 main :: IO ()
-main = xmonad 
-    . ewmhFullscreen 
-    . ewmh 
+main = xmonad
+    . ewmhFullscreen
+    . ewmh
     . withEasySB (statusBarProp "xmobar ~/.config/xmobar/xmobarrc" (pure def)) defToggleStrutsKey -- TODO: fix bar key lul
     $ def
     { modMask = mod4Mask
-    , terminal = "alacritty"
+    , terminal = "kitty" -- TODO: set from $TERMINAL
     , layoutHook = layouts
     , manageHook = myManageHook
     }
