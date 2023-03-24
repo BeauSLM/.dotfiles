@@ -2,7 +2,8 @@
 $AUTO_CD = True
 
 $AUTO_SUGGEST_IN_COMPLETIONS = True
-$COMPLETION_MODE = 'menu-complete'
+$COMPLETION_MODE             = 'menu-complete'
+$COMPLETIONS_CONFIRM         = False
 
 # faster
 $COMMANDS_CACHE_SAVE_INTERMEDIATE = True
