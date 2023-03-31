@@ -2,6 +2,7 @@
 $AUTO_CD = True
 
 $AUTO_SUGGEST_IN_COMPLETIONS = True
+$CASE_SENSITIVE_COMPLETIONS  = False
 $COMPLETION_MODE             = 'menu-complete'
 $COMPLETIONS_CONFIRM         = False
 
