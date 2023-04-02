@@ -17,15 +17,16 @@ $VI_MODE = True
 # TODO: xxh
 xontrib load abbrevs fish_completer zoxide prompt_starship kitty hist_navigator direnv omx_git
 
-abbrevs['ls'   ] = 'exa'
-abbrevs['ll'   ] = 'exa -la --git'
-abbrevs['mkdir'] = 'mkdir -p'
+aliases['e'] = 'nvim'
 
-abbrevs['upall'  ] = 'paru -Syu --noconfirm'
-abbrevs['cleanup'] = 'paru -Rns $(paru -Qtdq)'
-abbrevs['mirror' ] = 'sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist'
-abbrevs['rip'    ] = "expac --timefmt = '%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
+aliases['mkdir'] = 'mkdir -p'
 
-abbrevs['lg'] = 'lazygit'
+aliases['ls'] = 'exa'
+aliases['ll'] = 'exa -la --git'
 
-abbrevs['e']  = 'nvim'
+aliases['upall'  ] = 'paru -Syu --noconfirm'
+aliases['cleanup'] = 'paru -Rns $(paru -Qtdq)'
+aliases['mirror' ] = 'sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist'
+aliases['rip'] = "expac --timefmt = '%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
+
+aliases['lg'] = 'lazygit'
