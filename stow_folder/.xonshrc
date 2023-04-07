@@ -22,8 +22,10 @@ aliases['e'] = $VISUAL
 
 aliases['mkdir'] = 'mkdir -p'
 
-aliases['ls'] = 'exa'
-aliases['ll'] = 'exa -la --git'
+aliases['ls' ] = 'exa'
+aliases['ll' ] = 'exa -la --git'
+aliases['lt' ] = 'exa --sort=time --reverse'
+aliases['lmr'] = 'll  --sort=time --reverse'
 
 aliases['upall'  ] = 'paru -Syu --noconfirm'
 aliases['cleanup'] = 'paru -Rns $(paru -Qtdq)'
