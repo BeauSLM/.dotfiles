@@ -33,3 +33,5 @@ aliases['mirror' ] = 'sudo reflector -f 30 -l 30 --number 10 --verbose --save /e
 aliases['rip'] = "expac --timefmt = '%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 
 aliases['lg'] = 'lazygit'
+
+aliases['zathura'] = 'zathura --fork'
