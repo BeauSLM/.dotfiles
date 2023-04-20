@@ -20,7 +20,7 @@ ctrl + alt + Escape
 
 # Selected area screenshot
 super + s
-    maim -s | xclip -selection clipboard -t image/png
+    maim --select | xclip -selection clipboard -target image/png
 
 super + c
     emacsclient -nc
