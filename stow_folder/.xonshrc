@@ -33,4 +33,4 @@ aliases['rip'] = "expac --timefmt = '%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200
 
 aliases['lg'] = 'lazygit'
 
-aliases['zathura'] = 'zathura --fork'
+aliases['zat'] = 'zathura --fork'
