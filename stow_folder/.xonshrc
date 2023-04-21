@@ -1,7 +1,6 @@
 # don't type cd anymore wooo
 $AUTO_CD = True
 
-$AUTO_SUGGEST_IN_COMPLETIONS = True
 $CASE_SENSITIVE_COMPLETIONS  = False
 $CMD_COMPLETIONS_SHOW_DESC   = True
 $COMPLETION_MODE             = 'menu-complete'
